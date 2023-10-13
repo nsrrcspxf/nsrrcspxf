@@ -3,16 +3,30 @@
 <!-- head:網頁的額外資訊，不在主畫面內 -->
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 控制裝置縮放維持在一倍-->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNEE4KVX62"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VNEE4KVX62');
+    </script>
+
+    <!-- 控制裝置縮放維持在一倍-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" /> <!-- 網頁編碼是utf-8(萬國碼)-->
-    
+
     <!-- 網頁標籤icon & 名稱-->
     <link rel="icon" type="image/png" href="img/NSRRC_logo3.jpg">
-    <title> Mail-in Service </title> 
+    <title> Mail-in Service </title>
 
     <!-- Boostrap 導入程式 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
     <!-- 連結Google提供的字體-->
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda|sans-serif"/>  -->
@@ -27,7 +41,7 @@
 
 <body>
     <header>
-    <!-- 第一區塊：導覽列 -->
+        <!-- 第一區塊：導覽列 -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <!-- Logo -->
@@ -37,7 +51,8 @@
                 <a class="navbar-brand" href="index.html">SPXF</a>
 
                 <!-- 第一部分：手機版 -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar" aria-controls="linkbar" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar"
+                    aria-controls="linkbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span> <!-- 產生下拉選單按鈕 -->
                 </button>
 
@@ -96,8 +111,10 @@
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">User Info.</a>
                             <!-- User Information 下拉式選單 -->
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="https://userportal.nsrrc.org.tw/APNSR/index/" target="_blank">NSRRC User Portal </a>
-                                <a class="dropdown-item" href="AcknowledgmentStatements.html" target="_blank">Acknowledgment Statements</a>
+                                <a class="dropdown-item" href="https://userportal.nsrrc.org.tw/APNSR/index/"
+                                    target="_blank">NSRRC User Portal </a>
+                                <a class="dropdown-item" href="AcknowledgmentStatements.html">Acknowledgment
+                                    Statements</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -130,10 +147,10 @@
     <br>
     <br>
     <br>
-    
 
-   <!-- 最下層：底部 footer -->
-   <footer>
+
+    <!-- 最下層：底部 footer -->
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-3 my-auto nsrrcinfo">
@@ -148,7 +165,7 @@
                     <p>101 Hsin-Ann Road, Hsinchu Science Park, Hsinchu 300092, Taiwan, R.O.C</p>
                     <p>TEL：+886-3-578-0281</p>
                     <p>FAX：+886-3-578-9816</p>
-                    <p>Copyright ©  Protein Diffraction Group </p>
+                    <p>Copyright © Protein Diffraction Group </p>
                 </div>
                 <div class="col-12 col-md-3 my-auto nsrrcinfo"></div>
                 <div class="col-12 col-md-2 my-auto funding-agencies">
@@ -156,20 +173,12 @@
                     <div class="FA">
                         <a href="https://www.nstc.gov.tw/"><img src="img/NSTC.jpg" alt="NSTC"></a>
                     </div>
-                    <div class="FA">    
+                    <div class="FA">
                         <a href="https://ncfb.nycu.edu.tw/index.html"><img src="img/NCFB.jpg" alt="NCFB"></a>
-                    </div>    
-                </div>     
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-  
-
-    <!-- Include Bootstrap’s CSS and JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
-
-
-
-      
+</html>
