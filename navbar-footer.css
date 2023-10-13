@@ -1,3 +1,17 @@
+/* 導覽列加捲軸 */
+.scrollable-navbar {
+    max-height: 70px; /* 設定適當的最大高度 */
+    overflow-y: auto; /* 添加垂直捲軸，僅在需要時顯示 */
+}
+
+/* 在小螢幕上進一步調整 */
+@media (max-width: 768px) {
+    .scrollable-navbar {
+        max-height: none; /* 移除最大高度，以適應小螢幕 */
+    }
+}
+
+
 /* 導覽列背景顏色 */
 .container-fluid {
     background-color: rgb(40, 47, 77);
@@ -17,16 +31,16 @@
 .img-fluid {
     width: 100%;
     height: auto;
-    margin-top: 75px;
+    margin-top: 75px; /* 避免BioNSRRC圖片上半被導覽列覆蓋 */
 }
 
-/* BioNSRRC  logo 字型樣式  */
+/* SPXF  logo 字型樣式  */
 .navbar-brand {
     color: #dadded  !important;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-shadow: 2px 2px 4px whitesmoke;
+    font-family: 'Comic Sans MS';
+    text-shadow: 1px 2px 3px rgb(241, 236, 172);
 }
 
 /* 小尺寸螢幕下拉選單區塊樣式 */
@@ -35,29 +49,30 @@
   }
   
 
-/* 導覽列文字區塊樣式 */
+/* 導覽列SPXF文字區塊樣式 */
 .nav-item {
     margin-left: 10px;    /* 左邊留白10px*/
     background-color: rgb(40, 47, 77);
     border-radius: 10px;
 }
 
-/* 導覽列下拉選單樣式 */
-.dropdown-item {
-    font-size: 14px;
-    text-align: center;
-    background-color:#4c5a9b;
-    border-radius: 10px;
-    position: relative;    /* 下拉選單對齊樣式，沒有設定會跑到最左邊 */
-    margin: auto;
-}
-
-/* 導覽列滑鼠指標設定 */
+/* 導覽列下拉選單設定，不要有任何背景和框線 */
 .dropdown-menu {
-    display: none;
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 .nav-item:hover .dropdown-menu {
     display: block;
+}
+
+/* 導覽列下拉選單選項樣式 */
+.dropdown-item {
+    font-size: 14px;
+    text-align: center;
+    background-color:#eeaf52;
+    position: relative;    /* 下拉選單對齊樣式，沒有設定會跑到最左邊 */
+    margin: auto;
 }
 
 /* 字型設定 */
