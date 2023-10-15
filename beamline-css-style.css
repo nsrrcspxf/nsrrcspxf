@@ -92,6 +92,7 @@
 /* 分散對齊中間欄位BL說明文字 */
 .justify-text {
     text-align: justify;
+    line-height: 1.58; /* 調整行距 */
   }
 /* 設定第一个字母的字體大小 */
 .justify-text::first-letter {
