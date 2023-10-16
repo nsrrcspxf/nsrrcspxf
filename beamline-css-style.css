@@ -1,8 +1,9 @@
 /* 主標題 */
 .title {
+  font-family: Georgia, Times, 'Times New Roman', serif;
   font-size: 48px;
   font-weight: bold;
-  color: #323B67;
+  color: #4c0a79;
   text-align: center;
   margin: 40px 20px; /*第一個值為上下，第二個值為左右 */
   }
@@ -83,10 +84,13 @@
 /* 中間欄位次標題 */
 .title2 {
     color: #282f4d;
-    font-size: 24px;
-    background-color: #a1a9cf;
+    font-size: 28px;
     border-radius: 5px;
     text-align: center;
+    background-image: linear-gradient(to bottom,#b4badb, #8791cf); /* 由紅色漸變到綠色 */
+    background-size: cover;
+    box-shadow: 0 3px 5px rgba(40, 47, 77, 0.5); /* 添加陰影效果 */
+  /* 水平偏移、垂直偏移、模糊半徑 顏色(半透明(0.5)黑色) */
 }
 
 /* 分散對齊中間欄位BL說明文字 */
@@ -94,26 +98,27 @@
     text-align: justify;
     line-height: 2; /* 調整行距 */
   }
-/* 設定第一个字母的字體大小 */
+/* 設定第一个字母的字體大小 
 .justify-text::first-letter {
   font-size: 2em; 
-} 
+} */
 
 /* 指定中文和英文列表項的不同樣式 */  /* 如果只想改變圓點顏色，就不要加 a */
   li.BLManual-Ch a {
-    color: rgb(146, 78, 236) !important; /* 設定中文列表項的文字顏色 */
+    color: #A73BEF !important; /* 設定中文列表項的文字顏色 */
     font-weight: bold; /* 設定粗體字體 */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* 設定字體 */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode'; /* 設定字體 */
     font-size: 16px; /* 設定字體大小 */
     line-height: 2.5; /* 2.5倍行高，可以根據需要調整 */
   }
   
   li.BLManual-En a {
-    color: #eb8759 !important; /* 設定英文列表項的文字顏色 */
+    color: #eeaf52 !important; /* 設定英文列表項的文字顏色 */
     font-style: italic; /* 設定斜體字體 */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* 設定字體 */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode'; /* 設定字體 */
     font-size: 16px; /* 設定字體大小 */
     line-height: 2.5; /* 2.5倍行高，可以根據需要調整 */
+    font-weight: bold;
   }
 
   /* 調整輪播投影片上下留空 (#: id 選擇器) */
