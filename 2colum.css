@@ -1,0 +1,165 @@
+.RAtitle {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(230, 131, 2);
+    text-align: center;
+    margin: 40px 20px; /*第一個值為上下，第二個值為左右 */
+    }
+
+.text1-navyblue {
+    margin: -5px 200px 10px 200px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #326F91;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid slategrey;
+}
+
+.text2-blue {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(76, 99, 199);
+}
+
+.text3-lineheight {
+    line-height: 1.6;
+}
+
+.left-title {
+    color: #282f4d;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #eae9fc;
+    border-radius: 6px;
+    padding: 5px;
+    text-align: left;
+    display:flex;        /* 使用 flex 布局，以便控制內容的排列方式 */   
+  }
+
+.left-organ {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    color:rgb(230, 131, 2);
+    font-size: 20px;
+    font-weight: bold;
+    margin:10px 0 10px 15px;
+}
+
+.bold-orang {
+    font-weight: bold;
+    color: rgb(255, 145, 0);
+}
+
+.bold-black {
+    font-weight: bold;
+    color: black;
+    line-height: 1.8;
+}
+
+.bold-red {
+    font-weight: bold;
+    color: rgb(242, 57, 57);
+}
+
+ol li {
+    line-height: 2;
+}
+
+/* 外部網站 */
+.link-orang {
+    color: rgb(244, 163, 56) !important;
+    text-decoration: underline;
+}
+
+/* Beamline Manual  */
+.link-green {
+    color: rgb(19, 123, 26) !important;
+    text-decoration: underline;
+}
+
+/* download spreadsheet & Shippiing info. */
+.link-blue {
+    color: rgb(96, 115, 221) !important;
+    font-weight: bold;
+}
+
+/* staff upload spreadsheet 網頁連結 */
+.link-black {
+    color: rgb(40, 35, 35) !important;
+    font-weight: bold;
+}
+
+.BLname {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.nsrrc-address {
+    margin-top: 10px;
+}
+
+.card {
+    background-color: rgb(248, 242, 235);
+}
+
+.BL-name {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    color: black !important;
+}
+
+.BL-name:hover {
+    font-style: italic;
+}
+
+.px-tel,
+.px-member {
+    color: #393939;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.px-mail {
+    color: #393939;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.note {
+    margin-top: 15px;
+    color: rgb(210, 42, 42);
+    font-weight: bold;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}
+
+/* 螢幕寬度小於1200px時，套用這個區塊的css */
+@media (max-width: 1200px) { 
+    .ra-text {
+        margin: 30px;}
+}
+
+ /* 螢幕寬度小於992px時，套用這個區塊的css */
+ @media (max-width: 992px) {
+    .ra-text {
+        margin: 20px;
+        font-size:18px;}   
+  
+ }
+
+ /* 螢幕寬度小於768px時，套用這個區塊的css */
+ @media (max-width: 768px) {
+
+ }
+
+  /* 螢幕寬度小於576px時，套用這個區塊的css */
+  @media (max-width: 576px) {
+    .ra-text {
+        margin: 10px;
+        font-size:16px;}   
+  
+  }
