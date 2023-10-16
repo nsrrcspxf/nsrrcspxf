@@ -1,0 +1,77 @@
+/* 表格樣式設定 */   
+table {
+border-collapse: collapse;
+border-spacing: 0;
+width: 100%;
+border: 1px solid #ddd;
+font-size: 14px;
+color: #323B67;
+background-color:white;
+}
+
+/* 表格設定 */
+th, td { 
+   padding: 12px;   /* 表格列高 */
+   text-align: left;
+   border: 1px solid #ddd; /* 設定內部邊框線 */
+   white-space: normal;    /* 强制表格列文字換行 */
+   overflow: hidden;
+   text-overflow: ellipsis;
+   max-width: 100px; /* 根據需要設置最大寬度 */
+   }
+/* 首列設定 */
+th {
+   color: #282F4D;
+}
+th:hover {
+   background-color: #323B67;   /* 滑鼠移到box時底色變黑 */
+   color: white;                /* 滑鼠移到box時文字變白 */
+}
+
+/* 首列超連結設定 */
+th a {
+   color:#323B67;
+}
+
+th a:hover {
+   color: white;
+}
+
+/* 設定表格的首行 */
+tr:first-child {
+   background-color: #EFEFEF;   /* 首行背景顏色 */
+}
+/* 設定表格的首列 */
+td:first-child {
+   background-color: #EFEFEF;  /* 首列背景顏色 */
+}
+   /* --單數/偶行添加底色 
+tr:nth-child(odd/even) {                
+background-color: #f2f2f2;
+}
+*/
+
+/* 右側欄位 NEWS */
+.news a {
+    color:black !important;
+    font-family: Verdana, sans-serif;
+}
+
+.news a:hover {
+    color:rgb(248, 247, 244) !important;
+    background-color:#eeaf52;
+    border-radius: 5px;
+    padding: 5px /* 用來增加BG顯示範圍 */   
+}
+
+
+/* 螢幕寬度小於1250px時，套用這個區塊的css */
+@media (max-width: 1250px) {
+   table {font-size: 14px;}
+}
+
+/* 螢幕寬度小於500px時，套用這個區塊的css */
+@media (max-width: 650px) {
+   table {font-size: 10px;}
+   
+}
