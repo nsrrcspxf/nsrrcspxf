@@ -78,17 +78,17 @@
     margin: 20px 0;
     padding: 30px 40px;    
     background-color: none;
-    border: 1px solid #f6e9fc;  
+    border: 1px solid #eed2fc;  
     border-radius: 20px;
 }
 
 /* 中間欄位次標題 */
 .title2 {
-    color: #282f4d;
+    color: rgb(247, 243, 252);
     font-size: 28px;
     border-radius: 5px;
     text-align: center;
-    background-image: linear-gradient(to bottom,#b4badb, #8791cf); /* 由紅色漸變到綠色 */
+    background-image: linear-gradient(to bottom,#959fd6, #302172); /* 漸變色 */
     background-size: cover;
     box-shadow: 0 3px 5px rgba(40, 47, 77, 0.5); /* 添加陰影效果 */
   /* 水平偏移、垂直偏移、模糊半徑 顏色(半透明(0.5)黑色) */
