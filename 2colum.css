@@ -107,6 +107,7 @@ ol li {
     background-color: rgb(248, 242, 235);
 }
 
+/* 卡片組件內的beamline名稱 */
 .BL-name {
     font-family: Georgia, Times, 'Times New Roman', serif;
     color: black !important;
