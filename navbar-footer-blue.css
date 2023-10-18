@@ -1,0 +1,144 @@
+/* 導覽列背景顏色, 不包含響應式下拉選單 */
+.container-fluid {
+    background-color:rgba(255, 255, 255, 0.5); /* 只有色彩透明，背景不透明 */
+    height: 65px; 
+}
+
+/* 導覽列樣式設定 */
+.navbar {
+    position: fixed;  /* 固定在上方，不會隨卷軸移動 (造成BioNSRRC圖片上半被覆蓋) */
+    width: 100%;
+    z-index: 100;  /* 移到最上層 (數值越高越上層) */
+    opacity: 0.9;  /* 透明度(會包含文字和下拉選單) */
+}
+
+/* 調整 BioNSRRC 圖片區塊 */
+/* 圖片設定 */
+.img-fluid {
+    width: 100%;
+    height: auto;
+    margin-top: 75px;  /* 避免BioNSRRC圖片上半被導覽列覆蓋 */
+}
+
+/* SPXF  logo 字型樣式  */
+.navbar-brand {
+    color:#060273  !important;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS';
+    text-shadow: 1px 2px 3px rgb(172, 177, 241);
+}
+
+/* 小尺寸螢幕下拉選單區塊樣式 */
+#linkbar.collapse {
+    border-radius: 20px;
+  }
+
+ /* RWD滑鼠按下時，顯示下拉選單選單 */
+ .nav-item:hover .dropdown-menu {
+    display: block; 
+}
+  
+/* 導覽列文字區塊樣式含RWD下拉選單 */
+.nav-item {
+    margin-left: 10px;    /* 左邊留白10px*/
+    background-color: #FFFFFF;
+}
+
+/* 導覽列下拉選單容器設定，不要有框線 */
+.dropdown-menu {
+    background:transparent; /*背景設為透明*/
+    border: none;
+    box-shadow: none;
+}
+
+/* 導覽列下拉選單文字樣式 */
+.dropdown-item {
+    font-size: 14px;
+    text-align: center;
+    background-color:rgba(194, 226, 248, 0.6);
+    position: relative;    /* 下拉選單對齊樣式，沒有設定會跑到最左邊 */
+    margin: auto;
+    transition: color 0.3s ease;
+    
+}
+
+/* 字型設定 */
+li a {
+    color:#060273 !important;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    position: relative; /* 添加相对定位，以支持绝对定位的伪元素 */
+}
+
+/* 滑鼠移到超連結時文字設定 讓底線有由左至右出現的效果 */
+
+li a::before {
+    content: ''; /* 必须有内容为空的伪元素 */
+    position: absolute; /* 使伪元素绝对定位 */
+    width: 0; /* 初始底线宽度为0 */
+    height: 2px; /* 底线的高度 */
+    background-color: transparent; /* 底线颜色 */
+    bottom: 0; /* 使底线位于链接的底部 */
+    left: 0; /* 初始位置在左侧 */
+    transition: width 0.3s ease; /* 宽度变化的过渡效果，0.3秒的持续时间，以"ease"方式平滑过渡 */
+  }
+li a:hover::before {
+    border-bottom: 2px solid #060273;
+    width: 100%; /* 当鼠标悬停时，底线宽度变为链接宽度，即从左到右扩展 */
+}
+
+li a:hover {
+    font-style: italic;
+    font-weight: bold;
+}
+    
+
+/* 手機板下拉選單按鈕樣式 */
+.navbar-toggler {
+    background-color: transparent;
+    margin-right: 20px;
+    line-height:normal;
+}
+
+/* footer 樣式設定 */
+  footer {
+    color: white;
+    font-size: 8px;
+    background-color: #050259;  
+    padding: 10px; 
+    opacity: 0.95; /* 透明度 */ 
+ }
+
+ footer img {
+    height: 30px;
+ }
+
+ .nsrrcinfo p {
+    margin-bottom: 5px;
+    text-align: left;
+ }
+
+ .funding-agency {
+    display: flex; /* 使用 Flex 布局 */
+    flex-direction: column;
+    align-items: center; /* 垂直居中对齐 */
+ }
+
+ .funding-agencies p {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;
+ }
+
+ .FA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin-top: 3px; 
+  }
+ 
+
