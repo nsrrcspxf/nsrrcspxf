@@ -20,6 +20,7 @@
 
 /* 左右欄位標題 */
 .title-side {
+  font-family: 'Amaranth';
   color: #282f4d;
   font-size: 24px;
   background-color: #eae9fc;
@@ -63,9 +64,10 @@
 }
 
 .onthispage {
+  font-family: 'Amaranth';
   color:#282F4D;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .onthispage img {
@@ -84,6 +86,7 @@
 
 /* 中間欄位次標題 */
 .title2 {
+    font-family: 'Amaranth';
     color: rgb(247, 243, 252);
     font-size: 28px;
     border-radius: 5px;
@@ -150,6 +153,12 @@
     margin-right: 10px; 
     margin-left: 15px;
   }
+
+/* 右邊欄位標題文字 */
+.title-side {
+  font-family: 'Amaranth';
+  font-size: 24px;
+}
 
 /* 右邊欄位區塊設定 */
 .BLtechiques {
