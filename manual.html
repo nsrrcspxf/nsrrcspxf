@@ -29,9 +29,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth"/> 
 
     <!-- 連結自設的CSS樣式表-->
-    <link rel="stylesheet" type="text/css" href="navbar-footer.css" /> <!--導覽列樣式-->
+    <link rel="stylesheet" type="text/css" href="navbar-footer-whiteline.css" /> <!--導覽列樣式-->
     <link rel="stylesheet" type="text/css" href="beamline-css-style.css" /> <!--Beamline頁面樣式-->
-    <link rel="stylesheet" type="text/css" href="service.css" /> <!--Service頁面樣式-->
+    <link rel="stylesheet" type="text/css" href="2colum.css" /> <!--Service頁面樣式-->
 </head>
 
 <!-- body:網頁內文 -->
@@ -127,20 +127,125 @@
     <!-- 第三區塊：主標題 title-->
     <div class="title">Beamline Manual Download</div>
     <br>
-    <div>
-        <p class="ra-text" style="font-size:60px; text-align: center; color:rgb(172, 32, 32);">Webpage under construction~ ~~~ </p>
+    <div class="container-fluid-main"> <!-- fluid: 水流樣式，for RWD -->
+        <div class="row justify-content-center"> <!-- 水平置中 (col少的份數變成左右空白) -->
+            <!-- 左邊欄位 -->
+            <div class="col-12 col-lg-4 fixed-left"> <!-- col-2(數字) 決定欄寬，total12份 -->
+                <br>
+                <div class="page-guiline">
+                    <div class="onthispage"><img src="img/News.png" width="30" height="30" class="my-auto" />On This
+                        Page</div>
+                    <ul class="BLinfo">
+                        <a class="page-link" href="#blinfo1">1. Data Collection</a>
+                        <a class="page-link" href="#blinfo2">2. Data Processing</a>
+                        <a class="page-link" href="#blinfo3">3. Robot Automation</a>
+                        <a class="page-link" href="#blinfo4">4. Spreadsheet</a>
+                        <a class="page-link" href="#blinfo5">5. NoMachine & WinSCP</a>
+                    </ul>
+                </div>
+                <br>
+            </div>
+            <!-- 右邊主欄位 -->
+            <div class="col-12 col-lg-7 main-content"> <!-- 文字靠左(可自行設定)-->
+                <!-- 次標題 title2-->
+                <!-- Data Collection -->
+                <div class="title2" id="blinfo1">Data Collection</div><br>
+                    <p class="BLname">TPS 07A</p>
+                    <ul>
+                        <li class="BLManual-Ch"><a
+                                href="https://drive.google.com/file/d/1LcUPBclGq_KNhx3g_7BNToAjj3evQiZS/view?usp=sharing"
+                                target="_blank">TPS 07A - Micro-focus beam Data Collection and
+                                Processing Methods_Chinese</a></li>
+                        <li class="BLManual-En"><a href="https://drive.google.com/file/d/1HpqDm8XEjfFqUBinjSySQjieQSq-D1OX/view?usp=sharing" target="_blank">TPS 07A - Micro-focus beam Data Collection and
+                                Processing Methods_English</a></li>
+                    </ul>
+
+                    <p class="BLname">TPS 05A</p>
+                    <ul>
+                        <li class="BLManual-Ch"><a
+                                href="https://drive.google.com/file/d/1888nt93C96nZETltkMv9SfSWQdMGKpAW/view?usp=sharing" target="_blank">TPS 05A - Micro-beam Data Collection Methods_Chinese</a></li>
+                        <li class="BLManual-En"><a href="https://drive.google.com/file/d/1FlpEklKnCm-BjjDiHSPZVgu4oD-476NB/view?usp=sharing" target="_blank">TPS 05A - Micro-beam Data Collection Methods_English</a></li>
+                    </ul>
+
+                    <p class="BLname">TPS 15A1</p>
+                    <ul>
+                        <li class="BLManual-Ch"><a
+                                href="https://drive.google.com/file/d/1kgIJ5obT-SkPLWyRGG6YSUBszRdmJ4ho/view?usp=sharing"
+                                target="_blank">TLS 15A1 - Native Data Collection Methods_Chinese</a></li>
+                        <li class="BLManual-Ch"><a
+                                href="https://drive.google.com/file/d/15VHJHK8mJw4XGW6jayyL6gbaQgzsufYn/view?usp=sharing"
+                                target="_blank">TLS 15A1 - MAD Data Collection Methods_Chinese</a></li>
+                    </ul>
+
+                <!-- Data Processing  -->
+                <div class="title2" id="blinfo2">Data Processing</div><br>
+                    <p class="BLname">XDS/KAMO</p>
+                    <ul>
+                        <li class="BLManual-Ch"><a
+                                href="https://drive.google.com/file/d/1h4gpE993J1IL6NPynFZWj-c2JtLMqUAo/view?usp=sharing"
+                                target="_blank">Tutorial of Data Processing by XDS and KAMO_Chinese</a></li>
+                        <li class="BLManual-En"><a
+                                href="#"
+                                target="_blank">Tutorial of Data Processing by XDS and KAMO_English</a></li>
+                    </ul>
+
+                    <p class="BLname">HKL2000</p>
+                    <ul>
+                        <li class="BLManual-Ch"><a
+                                href="https://drive.google.com/file/d/1SxStshh3VilmHZ_O2BBK-2VI4kFZNZ9S/view?usp=sharing"
+                                target="_blank">Tutorial of Data Processing by HKL2000_Chinese</a></li>
+                        <li class="BLManual-En"><a
+                                href="https://drive.google.com/file/d/1F9m5DOO5oPen9cXG6BV_sBoCrjHT4tGc/view?usp=sharing"
+                                target="_blank">Tutorial of Data Processing by HKL2000_English</a></li>
+                    </ul>
+
+                <!-- Robot Automation (ISARA / SAM) -->
+                <div class="title2" id="blinfo3">Robot Automation (ISARA / SAM)</div><br>
+                    <p class="BLname">TPS - ISARA</p>
+                    <ul>
+                        <li class="BLManual-Ch"><a href="#" target="_blank">TPS - Prepare Samples and the spreadsheet for
+                                the ISARA Sample Changer_Chinese</a></li>
+                        <li class="BLManual-En"><a href="#" target="_blank">TPS - Prepare Samples and the spreadsheet for
+                                the ISARA Sample Changer_English</a></li>
+                        <li class="BLManual-Ch"><a href="https://drive.google.com/file/d/1VHOJcFyyXVJ4kT64t1x5VC-_3N4dW3Yf/view?usp=sharing" target="_blank">TPS - Crystal Screening by the ISARA Sample
+                                Changer_Chinese</a></li>
+                        <li class="BLManual-En"><a href="https://drive.google.com/file/d/1JlAeKlVKhAjMtcPSjmRihtSe4YAQZmBP/view?usp=sharing" target="_blank">TPS - Crystal Screening by the ISARA Sample
+                                Changer_English</a></li>
+                    </ul>
+                    <hr>
+                    <p class="BLname">TLS - SAM</p>
+                    <ul>
+                        <li class="BLManual-En"><a href="#" target="_blank">TLS - Prepare Samples and the spreadsheet for
+                                the SAM System_English</a></li>
+                        <li class="BLManual-Ch"><a href="https://drive.google.com/file/d/1SObo-4wyf5yonzBnc8zE0yyt5hxONeor/view?usp=sharing" target="_blank">TLS - Crystal Screening by the SAM
+                                System_Chinese</a></li>
+                        <li class="BLManual-En"><a href="#" target="_blank">TLS - Crystal Screening by the SAM
+                                System_English</a></li>
+                    </ul>
+                 
+
+                <!-- Spreadsheet -->
+                <div class="title2" id="blinfo4">Spreadsheet</div><br>
+                    <p class="BLname">TPS - ISARA</p>
+                    <ul>
+                        <li class="BLManual-Ch"><a href="https://docs.google.com/spreadsheets/d/1uKf2WMduk5oSVXM_tYoIAmGLpkGiKJYH/edit?usp=sharing&ouid=105534107877302653325&rtpof=true&sd=true" target="_blank">puck_TPS_ISARA_bl_date_userID.xlsx</a></li>
+                    </ul>
+                    <hr>
+                    <p class="BLname">TLS - SAM</p>
+                    <ul>
+                        <li class="BLManual-Ch"><a href="https://docs.google.com/spreadsheets/d/1_blY_3bMtsMsaEAZ7sIwnWB0cBhODT7X/edit?usp=sharing&ouid=105534107877302653325&rtpof=true&sd=true" target="_blank">puck_TLS_bl_date_uid.xlsx</a></li>
+                    </ul>
+                 
+                <!-- NX Client & WinSCP -->
+                <div class="title2" id="blinfo5">NoMachine & WinSCP</div><br>
+                    <p class="BLname">NoMachine & WinSCP</p>
+                    <ul>
+                        <li class="BLManual-En"><a href="https://drive.google.com/file/d/1NgxESRgF9PytvcjSJsk86BTlNDtZ0bVd/view?usp=sharing" target="_blank">NoMachine and WinSCP Setup_English</a></li>
+                    </ul>
+                
+            </div>
+        </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     
 
    <!-- 最下層：底部 footer -->
