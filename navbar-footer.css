@@ -12,14 +12,6 @@
     opacity: 0.95; /* 透明度(會包含下拉選單) */
 }
 
-/* 調整 BioNSRRC 圖片區塊 */
-/* 圖片設定 */
-.img-fluid {
-    width: 100%;
-    height: auto;
-    margin-top: 75px; /* 避免BioNSRRC圖片上半被導覽列覆蓋 */
-}
-
 /* SPXF  logo 字型樣式  */
 .navbar-brand {
     color: #dadded  !important;
@@ -82,6 +74,13 @@ li a:hover {
     background-color: aliceblue;
     margin-right: 20px;
     line-height:normal;
+}
+
+/* Banner 圖片設定 */
+.img-fluid {
+    width: 100%;
+    height: auto;
+    margin-top: 75px; /* 避免Banner圖片上半被導覽列覆蓋 */
 }
 
 /* footer 樣式設定 */
