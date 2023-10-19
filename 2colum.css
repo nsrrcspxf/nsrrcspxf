@@ -41,7 +41,7 @@
     display:flex;        /* 使用 flex 布局，以便控制內容的排列方式 */   
   }
 
-.left-organ {
+.left-orange {
     font-family: Georgia, Times, 'Times New Roman', serif;
     color:rgb(230, 131, 2);
     font-size: 20px;
@@ -49,7 +49,7 @@
     margin:10px 0 10px 15px;
 }
 
-.bold-orang {
+.bold-orange {
     font-weight: bold;
     color: rgb(255, 145, 0);
 }
@@ -70,7 +70,7 @@ ol li {
 }
 
 /* 外部網站 */
-.link-orang {
+.link-orange {
     color: rgb(244, 163, 56) !important;
     text-decoration: underline;
 }
