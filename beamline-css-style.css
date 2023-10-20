@@ -4,6 +4,7 @@
   font-size: 48px;
   font-weight: bold;
   color: #4c0a79;
+  text-shadow: 1px 1px 2px rgb(82, 81, 82);
   text-align: center;
   margin: 40px 20px; /*第一個值為上下，第二個值為左右 */
   }
