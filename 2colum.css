@@ -3,6 +3,7 @@
     font-size: 48px;
     font-weight: bold;
     color: rgb(230, 131, 2);
+    text-shadow: 1px 1px 2px rgb(250, 194, 145);
     text-align: center;
     margin: 40px 20px; /*第一個值為上下，第二個值為左右 */
     }
