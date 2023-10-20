@@ -105,7 +105,7 @@ li a:hover {
 /* footer 樣式設定 */
   footer {
     color: white;
-    font-size: 8px;
+    font-size: 12px;
     background-color: #282f4d;  
     padding: 10px; 
     opacity: 0.95; /* 透明度 */ 
@@ -128,7 +128,7 @@ li a:hover {
 
  .funding-agencies p {
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     margin-bottom: 5px;
     margin-top: 5px;
