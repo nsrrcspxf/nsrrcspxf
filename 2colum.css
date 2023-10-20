@@ -14,6 +14,7 @@
     font-weight: bold;
     font-family:Georgia, 'Times New Roman', Times, serif;
     color: #326F91;
+    text-align: justify;
     border-radius: 10px;
     padding: 5px;
     border: 1px solid slategrey;
@@ -150,7 +151,16 @@ ol li {
     .ra-text {
         margin: 20px;
         font-size:18px;}   
-  
+    .text1-navyblue {
+        margin: 0px 30px 10px 30px;
+        font-size: 22px;
+        font-weight: bold;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: #326F91;
+        border-radius: 10px;
+        padding: 5px;
+        border: 1px solid slategrey;
+    }
  }
 
  /* 螢幕寬度小於768px時，套用這個區塊的css */
@@ -163,5 +173,15 @@ ol li {
     .ra-text {
         margin: 10px;
         font-size:16px;}   
-  
-  }
+    .text1-navyblue {
+        margin: 0 20px 10px 20px;
+        font-size: 22px;
+        font-weight: bold;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: #326F91;
+        text-align:left;
+        border-radius: 10px;
+        padding: 5px;
+        border: 1px solid slategrey;
+    }
+}
