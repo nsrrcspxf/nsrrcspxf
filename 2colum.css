@@ -9,7 +9,8 @@
     }
 
 /* 左側欄位 On This Page 文字區塊設定 */
-.RAinfo {
+ /* 特別for RA 分頁，因為要指定 industry 裡的 button 連結至 shipping information*/
+.RAinfo {  
     margin-top: 10px;
     padding-left: 10px;
     line-height: 2;
@@ -24,6 +25,7 @@
   }
   
   /* 左側欄位 On This Page 跳轉設定 */
+  /* 特別for RA 分頁，因為要指定 industry 裡的 button 連結至 shipping information*/
   #RAinfo1,
   #RAinfo2,
   #RAinfo3,
