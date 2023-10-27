@@ -25,7 +25,7 @@
     color:white;
   }
 
-  /* application */
+  /* Application Procedure*/
 .list {
     font-weight: bold;
     font-size: 20px;
@@ -36,6 +36,12 @@
     margin-left: 30px;
 }
 
+/* 按鈕位置 (2_Apply for user identity) */
+.botton-center {
+  text-align: center;
+}
+
+
 /* 右欄 Contacts */
 .card-body2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -43,6 +49,8 @@
     margin-left: 20px;
     margin-bottom: 10px;
 }
+
+
 
 
 /* 螢幕寬度小於768px時，套用這個區塊的css */
