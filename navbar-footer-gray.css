@@ -16,8 +16,7 @@
 .navbar-brand {
     color: #FEFEFE  !important;
     font-size: 30px;
-    font-weight: bold;
-    font-family: 'Comic Sans MS';
+    font-family: 'Monoton';
     text-shadow: 1px 2px 3px rgb(224, 224, 224);
 }
 
@@ -33,6 +32,7 @@
 
 /* 導覽列文字區塊樣式含RWD下拉選單 */
 .nav-item {
+    font-family: 'Amaranth';
     margin-left: 10px;    /* 左邊留白10px*/
     background-color:#5A6E79;
     }
@@ -46,7 +46,8 @@
 
 /* 導覽列下拉選單文字樣式 */
 .dropdown-item {
-    font-size: 14px;
+    font-family: 'Amaranth';
+    font-size: 16px;
     text-align: center;
     background-color:#faa84a;
     position: relative;    /* 下拉選單對齊樣式，沒有設定會跑到最左邊 */
@@ -61,7 +62,7 @@
 
 li a {
     color:#FEFEFE !important;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     text-decoration: none;
 }
@@ -85,7 +86,6 @@ li a:hover::before {
 
 li a:hover {
     font-style: italic;
-    font-weight: bold;
 }
 
 /* 手機板下拉選單按鈕樣式 */
@@ -96,7 +96,7 @@ li a:hover {
 }
 
 /* banner 圖片設定 */
-.img-fluid {
+.banner {
     width: 100%;
     height: auto;
     margin-top: 75px; /* 避免圖片上半被導覽列覆蓋 */
