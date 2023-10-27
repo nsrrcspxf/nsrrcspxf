@@ -1,0 +1,53 @@
+/* (Why Choose Us & application) 卡片組件內設定  */
+.card-body {
+    font-family:'Text Me One' ;
+    font-size: 16px;
+    font-weight: bold;
+    color:#4d4a4a;
+  }
+  
+  .card-title {
+    font-family:'Fugaz One' ;
+    color:#353535;
+    font-size: 18px ;
+    
+  }
+  
+  .card-title a {
+    color:#faa84a;
+    text-decoration: none;
+  }
+  
+  .card-title a:hover {
+    font-weight: bold;
+    font-style: italic;
+    background-color: #faa84a;
+    color:white;
+  }
+
+  /* application */
+.list {
+    font-weight: bold;
+    font-size: 20px;
+    color:#faa84a; 
+}
+
+.list li {
+    margin-left: 30px;
+}
+
+/* 右欄 Contacts */
+.card-body2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* 螢幕寬度小於768px時，套用這個區塊的css */
+@media (max-width: 768px) {
+    .card-title {font-size: 16px;}
+    .card-body {font-size: 14px;}
+    .list {font-size: 16px;}
+ }
