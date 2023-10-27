@@ -34,7 +34,8 @@
         crossorigin="anonymous"></script>
 
     <!-- 連結Google提供的字體-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth|Fugaz One|Text Me One" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth|Fugaz One|Text Me One|Monoton" />
+                                                                <!-- 三欄位內標題 | 大標題   |industry 內文|Navbar-SPXF -->
 
     <!-- 連結自設的CSS樣式表-->
     <link rel="stylesheet" type="text/css" href="navbar-footer-darkblue.css" /> <!--導覽列樣式-->
@@ -132,7 +133,7 @@
     <!-- 第二區塊：網頁上方圖片 -->
     <div class="top-picture">
         <a class="page-link" href="#blinfo1">
-            <img src="img/BioNSRRC_logo.jpg" alt="Banner" class="img-fluid"></a>
+            <img src="img/BioNSRRC_logo.jpg" alt="Banner" class="banner"></a>
     </div>
 
     <!-- 第三區塊：主內容-三欄位 -->
@@ -318,6 +319,7 @@
                             target="_blank">11/12 2023 Kiss Science</a></li>
                 </ul>
                 <br>
+                <br>
                 <!-- Facebook 外掛 -->
                 <div class="sns-box">
                     <div class="title-side"><img src="img/FB-icon.png" width="30" height="30" class="my-auto" />Facebook
@@ -342,28 +344,36 @@
         </div>
     </div>
 
-    
-    <!-- Load Facebook SDK for JavaScript -->
+    <!-- Facebook 即時聊天框代碼 -->
+    <!-- Messenger 洽談外掛程式 Code -->
     <div id="fb-root"></div>
-    <script>
-        window.fbAsyncInit = function() {
-        FB.init({
-            xfbml            : true,
-            version          : 'v18.0'
-        });
-        };
 
-        (function(d, s, id) {
+    <!-- Your 洽談外掛程式 code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "171213682723432");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v18.0'
+        });
+      };
+
+      (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+      }(document, 'script', 'facebook-jssdk'));
     </script>
-
-    <!-- Your Chat Plugin code -->
-    <div class="fb-customerchat" attribution="install_email" attribution_version="biz_inbox" page_id="171213682723432"></div>
     <br>
 
     <!-- 最下層：底部 footer -->
