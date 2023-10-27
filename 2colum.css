@@ -8,6 +8,30 @@
     margin: 40px 20px; /*第一個值為上下，第二個值為左右 */
     }
 
+/* 左側欄位 On This Page 文字區塊設定 */
+.RAinfo {
+    margin-top: 10px;
+    padding-left: 10px;
+    line-height: 2;
+    color:#024870;
+    display: flex; /* 使用 flex 布局 */
+    flex-direction: column; /* 文字、圖片變成上下排列 */
+  }
+  
+  .page-link:hover {
+    text-decoration: underline;
+    font-style: italic;
+  }
+  
+  /* 左側欄位 On This Page 跳轉設定 */
+  #RAinfo1,
+  #RAinfo2,
+  #RAinfo3,
+  #RAinfo4,
+  #RAinfo5 {
+    scroll-margin-top: 100px; /* 跳轉到該區塊距離頂部的哪一個位置 */
+  }
+
 .text1-navyblue {
     margin: -5px 200px 10px 200px;
     font-size: 22px;
