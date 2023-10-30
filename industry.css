@@ -1,4 +1,8 @@
 /* (Why Choose Us & application) 卡片組件內設定  */
+.card, .card-img-top {      /* 圓角設定，含 Application Procedure 內卡片*/
+  border-radius: 20px;
+}
+
 .card-body {
     font-family:'Text Me One' ;
     font-size: 16px;
@@ -6,26 +10,48 @@
     color:#4d4a4a;
   }
   
-  .card-title {
-    font-family:'Fugaz One' ;
-    color:#353535;
-    font-size: 18px ;
-    
-  }
+.card-title {
+  font-family:'Fugaz One' ;
+  color:#353535;
+  font-size: 18px ;
   
-  .card-title a {
-    color:#faa84a;
-    text-decoration: none;
-  }
-  
-  .card-title a:hover {
-    font-weight: bold;
-    font-style: italic;
-    background-color: #faa84a;
-    color:white;
+}
+
+.card-title a {
+  color:#faa84a;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  font-weight: bold;
+  font-style: italic;
+  background-color: #faa84a;
+  color:white;
+}
+
+/* 照片設定 */
+/* 圓角設定 */
+.rounded-start {     
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* 位置設定 (手機直式瀏覽時，照片位置置中) */
+@media (max-width: 767px) {
+  /* 使用媒體查詢以適應手機瀏覽 */
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;  /* 移除固定高度 */
   }
 
-  /* Application Procedure*/
+  .img-fluid {
+      width: 80%;
+}
+}
+
+/* Application Procedure*/
 .list {
     font-weight: bold;
     font-size: 20px;
@@ -50,7 +76,10 @@
     margin-bottom: 10px;
 }
 
-
+/* Facebook 區塊設定 */
+.fb-page {
+  margin-left: 20px;
+}
 
 
 /* 螢幕寬度小於768px時，套用這個區塊的css */
