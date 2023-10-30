@@ -1,5 +1,5 @@
 /* (Why Choose Us & application) 卡片組件內設定  */
-.card, .card-img-top {      /* 圓角設定，含 Application Procedure 內卡片*/
+.card, .card-img-top {      /* 圓角設定，含 Application Procedure、右邊欄位 Contacrs 內卡片*/
   border-radius: 20px;
 }
 
@@ -29,11 +29,17 @@
   color:white;
 }
 
-/* 照片設定 */
+/* 中間欄位照片設定 */
 /* 圓角設定 */
 .rounded-start {     
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+/* 右邊欄位駿翔照片設定 */
+.manager-photo {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 /* 位置設定 (手機直式瀏覽時，照片位置置中) */
