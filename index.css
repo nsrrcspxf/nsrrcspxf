@@ -1,10 +1,6 @@
-/* 外掛顯示設定 */
-.sns-box {
-   justify-content: center;
-}
-
+/* Facebook 區塊設定 */
 .fb-page {
-   margin-left:30px;
+   margin-left:20px;
 }
 
 /* 表格樣式設定 */   
@@ -64,7 +60,8 @@ background-color: #f2f2f2;
 /* 右側欄位 NEWS */
 .news a {
     color:black !important;
-    font-family: Verdana, sans-serif;
+    font-family:'Text Me One';
+    font-weight: bold;
 }
 
 .news a:hover {
