@@ -33,77 +33,7 @@
 
     <!-- 連結自設的CSS樣式表-->
     <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
-
-    <style>
-      .GM-title {
-        font-family: 'Fugaz One';
-        font-size: 48px;
-        color: #1f2e36;
-        text-shadow: 1px 1px 2px rgba(1, 48, 75, 0.5);
-        /* box-shadow: 0 5px 10px rgba(150, 161, 163, 0.5);  添加陰影效果 */
-        text-align: center;
-        margin: 40px 20px; /*第一個值為上下，第二個值為左右 */
-        }
-
-      .card-body p {
-        line-height: 1.0;
-        /* 設置行高 */
-      }
-
-      .card-title {
-        font-size: 14px;
-        font-weight: bold;
-      }
-
-      .card-name {
-        font-size: 12px;
-      }
-
-      .card-text {
-        font-size: 12px;
-        display: inline-block; /* bg顏色只包住文字 */
-        background-color: rgb(242, 223, 250);  /* Support Staf的背景色，其他職稱直接設定在html內 */
-        padding: 4px;
-        border-radius: 5px;
-      }
-
-      .px-mail,
-      .px-tel {
-        color: #888888;
-        font-size: 12px;
-        font-weight: bold;
-        /* 滑鼠懸停在e-mail 上方時，旁邊出現黑底白字的小說明框預設值 */
-        position: relative;
-        text-decoration: none;
-      }
-
-      /* 滑鼠懸停在e-mail 上方時，旁邊出現黑底白字的小說明框 */
-      .px-mail:hover::before {
-        content: "E-mail";
-        display: block;
-        position: absolute;
-        background-color: rgb(63, 63, 63);
-        color: white;
-        padding: 5px;
-        border-radius: 5px;
-        Right: 105%;
-        top: -1;
-        white-space: nowrap;
-      }
-
-      .px-tel:hover::before {
-        content: "Phone";
-        display: block;
-        position: absolute;
-        background-color: rgb(63, 63, 63);
-        color: white;
-        padding: 5px;
-        border-radius: 5px;
-        Right: 105%;
-        top: -1;
-        white-space: nowrap;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="staff.css" /> <!--staff頁面樣式-->
   </head>
 
   <!-- body:網頁內文 -->
@@ -191,14 +121,11 @@
       </nav>
     </header>
 
-    <!-- 第二區塊：網頁上方圖片 -->
+    <!-- 第二區塊：網頁上方圖片(合照) -->
     <div class="text-center">
-      <img src="Banner/Banner_1920_450_Oct30.svg" alt="Banner" class="banner">
+      <img src="img2/PX-group1.JPG" alt="Banner" class="banner">
     </div>
-    <div class="container mb-5">
-      <img src="img2/PX-group1.JPG" class="banner">
-    </div>
-
+    
     <!-- 第三區塊：Title -->
     <div class="GM-title">
       <p> Group Members</p>
