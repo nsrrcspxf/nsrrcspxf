@@ -1,3 +1,4 @@
+ /* text-align: center;  調整文字對齊方式 center-置中；justify-分散對齊*/
 /* 主標題 */
 .title {
   font-family: 'Fugaz One';
@@ -96,18 +97,17 @@
     font-family: 'Amaranth';
     color: #FEFEFE;
     font-size: 28px;
-    border-radius: 5px;
     text-align: center;
+    border-radius: 5px;
     background-size: cover;
     box-shadow: 0 3px 5px rgba(75, 43, 1, 0.5); /* 添加陰影效果 */
   /* 水平偏移、垂直偏移、模糊半徑 顏色(半透明(0.5)黑色) */
-    background-image: linear-gradient(to bottom,#1d3c50, #1f2e36) 
+    background-image: linear-gradient(to bottom,#1d3c50, #1f2e36)
 }
 
-/* 分散對齊中間欄位BL說明文字 */
-.justify-text {
-    text-align: justify;
-    line-height: 2; /* 調整行距 */
+/* 調整中間欄位BL說明文字行距 */
+.justify-text { 
+    line-height: 2; 
   }
 /* 設定第一个字母的字體大小 
 .justify-text::first-letter {
@@ -118,7 +118,7 @@
   li.BLManual-Ch a {
     color: #358abb !important; /* 設定中文列表項的文字顏色 */
     font-weight: bold; /* 設定粗體字體 */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode'; /* 設定字體 */
+    font-family: 'Text Me One'; /* 設定字體 */
     font-size: 16px; /* 設定字體大小 */
     line-height: 2.5; /* 2.5倍行高，可以根據需要調整 */
   }
@@ -126,7 +126,7 @@
   li.BLManual-En a {
     color: #f7a567 !important; /* 設定英文列表項的文字顏色 */
     font-style: italic; /* 設定斜體字體 */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode'; /* 設定字體 */
+    font-family: 'Text Me One'; /* 設定字體 */
     font-size: 16px; /* 設定字體大小 */
     line-height: 2.5; /* 2.5倍行高，可以根據需要調整 */
     font-weight: bold;
@@ -165,8 +165,7 @@
 .title3 {
     font-family: 'Amaranth';  
     color: #023655;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
     line-height: 2;
     margin-left: 15px;
     margin-top: 10px;
@@ -208,6 +207,7 @@ ul.challeng-list {
   font-weight: bold ; 
 }
 
+
    /* 螢幕寬度小於1200px時，套用這個區塊的css */
    @media (max-width: 1200px) { 
       .title {font-size: 28px; margin:10px;}
@@ -232,6 +232,8 @@ ul.challeng-list {
       .title3 {margin-top: 5px;}
       .BLtechiques {font-size: 14px;}
       .main-content {margin: 0;}
+      .card-title {font-size: 16px;}
+      .card-body {font-size: 14px;}
    }
 
     /* 螢幕寬度小於576px時，套用這個區塊的css */
