@@ -23,7 +23,6 @@
 }
 
 .card-title a:hover {
-  font-weight: bold;
   font-style: italic;
   background-color: #faa84a;
   color:white;
@@ -34,6 +33,11 @@
 .rounded-start {     
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+/* Why Choose Us 卡片組件內按鈕設定((more information) */
+.botton-left {
+  margin-left:15px;
 }
 
 /* 右邊欄位駿翔照片設定 */
@@ -68,7 +72,7 @@
     margin-left: 30px;
 }
 
-/* 按鈕位置 (2_Apply for user identity) */
+/* Application Procedure 按鈕位置 (click me) */
 .botton-center {
   text-align: center;
 }
