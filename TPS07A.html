@@ -35,6 +35,7 @@
     <!-- 連結自設的CSS樣式表-->
     <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
     <link rel="stylesheet" type="text/css" href="beamline-gray.css" /> <!--Beamline頁面樣式-->
+    <link rel="stylesheet" type="text/css" href="index.css" /> <!--表格樣式-->
 
     <!-- 連結 Java Script 樣式 -->
     <script src="beamline.js"></script>
@@ -145,11 +146,12 @@
                         Page</div>
                     <ul class="BLinfo">
                         <a class="page-link" href="#blinfo1">1. Beamline Description</a>
-                        <a class="page-link" href="#blinfo2">2. Beamline Manuals</a>
-                        <a class="page-link" href="#blinfo3">3. Beamline Gallery</a>
-                        <a class="page-link" href="#blinfo4">4. Schematic Layout</a>
-                        <a class="page-link" href="#blinfo5">5. Beamline Location</a>
-                        <a class="page-link" href="#blinfo6">6. Contacts</a>
+                        <a class="page-link" href="#blinfo2">2. Beam Properties</a>
+                        <a class="page-link" href="#blinfo3">3. Beamline Manuals</a>
+                        <a class="page-link" href="#blinfo4">4. Beamline Gallery</a>
+                        <a class="page-link" href="#blinfo5">5. Schematic Layout</a>
+                        <a class="page-link" href="#blinfo6">6. Beamline Location</a>
+                        <a class="page-link" href="#blinfo7">7. Contacts</a>
                     </ul>
                 </div>
             </div>
@@ -165,7 +167,7 @@
                     protein/nucleic acid
                     complexes. In addition, the beamline also support the high-throughput data collection for
                     pharmaceutical drug design. TPS 07A covers the energy range 6-20 keV (2.06-0.62 Å) to a focal
-                    point of 2.9 x 1.8 &microm FWHM (H x V). At 12.7 keV the flux at the sample is 8.6
+                    point of 2.9 x 1.8 &microm FWHM (H x V). At 12.7 keV the flux at the sample is 8.3
                     &times;10<sup>11</sup> photons s<sup>-1</sup>.The
                     beamline endstation is equipped with a micro-diffractometer (MD3), a photon-counting pixel
                     area detector (EIGER2 X 16M), fluorescence detector, cryogenic sample cooler and automated sample changer
@@ -177,7 +179,50 @@
                     provided.</p>
                 <br>
 
-                <div class="title2" id="blinfo2">Beamline Manuals</div>
+                <div class="title2" id="blinfo2">Beam Properties</div>
+                <br>
+                <!-- 表格 -->
+                <table class="center">
+                    <tr> <!--首列 -->
+                        <th>Beam Size (&microm)</th>
+                        <th>
+                            <span> Defined Flux (photons/sec) </span>
+                        </th>
+                        <th>
+                            <span> Flux Density (photons/sec/&microm<sup>2</sup>) </span>
+                        </th>
+                        <th>
+                            <span> Time to 10 MGy (sec) </span>
+                        </th>
+                    </tr>
+                    <tr> <!--第二列 -->
+                        <td>100</td> <!--欄1 -->
+                        <td>8.3&times;10<sup>12</sup></td> <!--欄2 -->
+                        <td>9.4&times;10<sup>8</sup></td> <!--欄3 -->
+                        <td>21.3</td> <!--欄4 -->
+                    </tr>
+                    <tr> <!--第三列 -->
+                        <td>50</td>
+                        <td>8.6&times;10<sup>12</sup></td>
+                        <td>3.7&times;10<sup>9</sup></td>
+                        <td>5.35</td>
+                    </tr>
+                    <tr> <!--第四列 -->
+                        <td>20</td>
+                        <td>6.5&times;10<sup>12</sup></td>
+                        <td>1.6&times;10<sup>10</sup></td>
+                        <td>1.23</td>
+                    </tr>
+                    <tr> <!--第五列 -->
+                        <td>2</td>
+                        <td>8.6&times;10<sup>11</sup></td>
+                        <td>1.6&times;10<sup>11</sup></td>
+                        <td>0.12</td>
+                    </tr>
+                </table>
+                <br>
+
+                <div class="title2" id="blinfo3">Beamline Manuals</div>
                 <br>
                 <ul>
                     <li class="BLManual-Ch"><a
@@ -195,7 +240,7 @@
                 </ul>
 
                 <!-- Beamline Photo 幻燈片輪播形式 -->
-                <div class="title2" id="blinfo3">Beamline Gallery</div>
+                <div class="title2" id="blinfo4">Beamline Gallery</div>
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -227,11 +272,11 @@
                 </div>
 
                 <!-- Schematic Layout -->
-                <div class="title2" id="blinfo4">Schematic Layout</div>
+                <div class="title2" id="blinfo5">Schematic Layout</div>
                 <div class="BLphoto">
                     <img src="img/TPS07A.jpg" alt="TPS07A Layout" />
                 </div>
-                <div class="title2" id="blinfo5">Beamline Location</div><br>
+                <div class="title2" id="blinfo6">Beamline Location</div><br>
                 <div class="BLphoto">
                     <p class="justify-text">TPS 07A Micro-focus Protein Crystallography Beamline is located at the 7th
                         port of the
@@ -257,7 +302,7 @@
                     <li style="font-weight: bold">High throughput crystallography</li>
                     <li style="font-weight: bold">0.7~2 Å MAD/SAD phasing</li>
                 </ul>
-                <div class="title-side"><img src="img/TPS-icon.png" width="30" height="30" class="my-auto" />Beam
+                <div class="title-side"><img src="img/TPS-icon.png" width="30" height="30" class="my-auto" />Beamline
                     Properties</div>
                 <ul class="BLtechiques">
                     <li style="font-weight: bold">Energy range: 6~20 keV</li>
@@ -269,7 +314,7 @@
                 </ul>
                 <br>
                 <div class="title-side"><img src="img/telphone.png" width="22" height="22" style="margin-right: 8px;"
-                        class="my-auto" id="blinfo6" />Contacts</div>
+                        class="my-auto" id="blinfo7" />Contacts</div>
                 <div class="title3">End Station</div>
                 <div class="info">
                     <a class="px-tel" href="tel:+886-3-578-0281,2071">+886-3-578-0281 Ext. 2071</a>
