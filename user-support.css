@@ -1,0 +1,76 @@
+/* 主標題 */
+.title {
+    font-family: 'Fugaz One';
+    font-size: 48px;
+    color: #1f2e36;
+    text-shadow: 1px 1px 2px rgba(1, 48, 75, 0.5);
+    /* box-shadow: 0 5px 10px rgba(150, 161, 163, 0.5);  添加陰影效果 */
+    text-align: center;
+    margin: 40px 20px; /*第一個值為上下，第二個值為左右 */
+    }
+
+.colorbox {
+    height: 50px;
+}
+
+    
+.text {
+    border: 1px solid #bbb;
+    padding: 15px;
+    box-shadow: 5px 10px 10px rgba(150, 161, 163, 0.5); /* 添加陰影效果 */
+    /* 水平偏移、垂直偏移、模糊半徑 顏色(半透明(0.5)黑色) */
+}
+
+.us-title {
+    font-family: 'Fugaz One';
+    text-align: center;
+    font-size: 24px;
+}
+
+.us-list {
+    font-family: 'Text Me One';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.us-img, .text {
+    margin-bottom: 15px;
+}
+
+.colorbox {
+    width:auto;
+    margin-bottom: 15px;
+}
+
+.sub-container {
+    display: flex;
+}
+
+
+    
+/* 螢幕寬度小於1200px時，套用這個區塊的css */
+@media (max-width: 1200px) { 
+    .title {font-size: 28px; margin:10px;}
+    
+ }
+
+ /* 螢幕寬度小於992px時，套用這個區塊的css */
+ @media (max-width: 992px) {
+    .title {font-size: 30px; margin:15px;}
+    .us-title {font-size: 22px;}
+    .us-list {font-size: 18px;}
+    .colorbox {height: 20px;}
+    }
+    
+ 
+
+ /* 螢幕寬度小於768px時，套用這個區塊的css */
+ @media (max-width: 768px) {
+    .title {font-size: 26px; margin:15px;}  
+ }
+
+  /* 螢幕寬度小於576px時，套用這個區塊的css */
+  @media (max-width: 576px) {
+    .us-title {font-size: 20px;}
+    .us-list {font-size: 16px;}
+  }
