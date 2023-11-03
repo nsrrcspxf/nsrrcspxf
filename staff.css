@@ -43,7 +43,7 @@
 
 /* 滑鼠懸停在e-mail 上方時，旁邊出現黑底白字的小說明框 */
 .px-mail:hover::before {
-    content: "E-mail";
+    content: "E-mail";    /* 說明框內顯示的文字 */
     display: block;
     position: absolute;
     background-color: rgb(63, 63, 63);
@@ -55,8 +55,9 @@
     white-space: nowrap;
 }
 
+/* 滑鼠懸停在Tel 上方時，旁邊出現黑底白字的小說明框 */
 .px-tel:hover::before {
-    content: "Phone";
+    content: "Phone";     /* 說明框內顯示的文字 */
     display: block;
     position: absolute;
     background-color: rgb(63, 63, 63);
