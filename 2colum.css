@@ -9,23 +9,40 @@
     flex-direction: column; /* 文字、圖片變成上下排列 */
   }
   
-  .page-link:hover {
-    text-decoration: underline;
-    font-style: italic;
-  }
-  
-  /* 左側欄位 On This Page 跳轉設定 */
-  /* 特別for RA 分頁，因為要指定 industry 裡的 button 連結至 shipping information*/
-  #RAinfo1,
-  #RAinfo2,
-  #RAinfo3,
-  #RAinfo4,
-  #RAinfo5 {
+.page-link:hover {
+text-decoration: underline;
+font-style: italic;
+}
+
+/* 左側欄位 On This Page 跳轉設定 */
+/* 特別for RA 分頁，因為要指定 industry 裡的 button 連結至 shipping information*/
+#RAinfo1,
+#RAinfo2,
+#RAinfo3,
+#RAinfo4,
+#RAinfo5 {
     scroll-margin-top: 100px; /* 跳轉到該區塊距離頂部的哪一個位置 */
-  }
+    }
+
+/* Uni-puck&Tool Borrowing  */
+/* "Contact 樣式 */
+.left-purple {    
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    color:rgb(17, 17, 17);
+    font-size: 18px;
+    font-weight: bold;
+    margin:10px 0 10px 15px;
+    }
+
+.Ina {
+    color: #393939;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
 
 .text1-navyblue {
-    margin: -5px 200px 10px 200px;
+    margin: -5px 200px 10px 200px; 
     font-size: 22px;
     font-weight: bold;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -45,25 +62,6 @@
 
 .text3-lineheight {
     line-height: 1.6;
-}
-
-.left-title {
-    color: #282f4d;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: #eae9fc;
-    border-radius: 6px;
-    padding: 5px;
-    text-align: left;
-    display:flex;        /* 使用 flex 布局，以便控制內容的排列方式 */   
-  }
-
-.left-orange {
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    color:rgb(230, 131, 2);
-    font-size: 20px;
-    font-weight: bold;
-    margin:10px 0 10px 15px;
 }
 
 .bold-orange {
@@ -125,17 +123,26 @@ ol li {
 }
 
 /* 卡片組件內的beamline名稱 */
-.BL-name {
+.BL-name a {
     font-family: Georgia, Times, 'Times New Roman', serif;
-    color: black !important;
+    font-weight: bold;
+    color: rgb(96, 115, 221);
 }
 
 .BL-name:hover {
     font-style: italic;
 }
 
-.px-tel,
-.px-member {
+
+.BLmanager {
+    color: #393939;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.px-tel {
     color: #393939;
     font-size: 14px;
     text-decoration: none;
@@ -145,6 +152,41 @@ ol li {
     color: #393939;
     font-size: 12px;
     text-decoration: none;
+}
+
+/* 滑鼠懸停在e-mail 上方時，旁邊出現黑底白字的小說明框預設值 */
+.px-mail,
+.px-tel {
+    position: relative;
+    text-decoration: none;
+}
+
+/* 滑鼠懸停在e-mail 上方時，旁邊出現黑底白字的小說明框 */
+.px-mail:hover::before {
+    content: "E-mail";   /* 說明框內顯示的文字 */
+    display: block;
+    position: absolute;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    Right: 105%;
+    top: -1;
+    white-space: nowrap;
+}
+
+/* 滑鼠懸停在Tel 上方時，旁邊出現黑底白字的小說明框 */
+.px-tel:hover::before {
+    content: "Phone";  /* 說明框內顯示的文字 */
+    display: block;
+    position: absolute;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    Right: 105%;
+    top: -1;
+    white-space: nowrap;
 }
 
 .note {
