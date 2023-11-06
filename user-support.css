@@ -17,12 +17,13 @@
 .text {
     border: 1px solid #bbb;
     padding: 15px;
-    box-shadow: 5px 10px 10px rgba(150, 161, 163, 0.5); /* 添加陰影效果 */
+    box-shadow: 5px 10px 10px rgba(150, 161, 163, 0.7); /* 添加陰影效果 */
     /* 水平偏移、垂直偏移、模糊半徑 顏色(半透明(0.5)黑色) */
 }
 
 .us-title {
     font-family: 'Fugaz One';
+    text-shadow: 1px 1px 3px rgba(226, 205, 226, 0.6);
     text-align: center;
     font-size: 24px;
 }
@@ -30,7 +31,7 @@
 .us-list {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
-
+    color:#334a57;
 }
 
 .us-img, .text {
