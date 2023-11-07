@@ -10,30 +10,31 @@
     }
 
 
-.colorbox1, .colorbox2, .colorbox5{
+.colorbox1, .colorbox5{
     height: 50px;
     width:auto;
     margin-bottom: 15px;
+    box-shadow: 5px 5px 5px rgba(150, 161, 163, 0.7);
 }
 
 .colorbox3 {
     height:30px; 
     width: 50%; 
     margin-right:5px;
-    margin-bottom: 15px;
+    margin-bottom: 11px;
 }
 
-.colorbox4 {
+.colorbox2, .colorbox4 {
     height: 30px;
     width:auto;
-    margin-bottom: 15px;
+    margin-bottom: 11px;
 }
     
 .text {
     border: 1px solid #bbb;
     padding: 15px;
-    box-shadow: 5px 5px 5px rgba(150, 161, 163, 0.7); /* 添加陰影效果 */
-    /* 水平偏移、垂直偏移、模糊半徑 顏色(半透明(0.5)黑色) */
+    /* box-shadow: 5px 5px 5px rgba(150, 161, 163, 0.7); /* 添加陰影效果 
+     水平偏移、垂直偏移、模糊半徑 顏色(半透明(0.5)黑色) */
 }
 
 .us-title {
@@ -81,8 +82,7 @@
  @media (max-width: 768px) {
     .title {font-size: 26px; margin:15px;}
     .colorbox1, .colorbox3, .colorbox5 {display:none;}
-    .colorbox1, .colorbox2, .colorbox4, .colorbox5 {height: 20px;}
-    .text {box-shadow: none;}
+    .colorbox2, .colorbox4 {height: 20px; box-shadow: none;}
  }
 
   /* 螢幕寬度小於576px時，套用這個區塊的css */
