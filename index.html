@@ -17,10 +17,11 @@
     <!-- 網頁標籤icon & 名稱-->
     <link rel="icon" type="image/png" href="img/NSRRC_logo3.jpg">
     <title> NSRRC-SPXF </title>
-    
+
     <!-- FB 外掛 -->
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v18.0" nonce="4uge5zH5"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v18.0"
+        nonce="4uge5zH5"></script>
 
     <!-- 控制裝置縮放維持在一倍-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,7 +36,7 @@
 
     <!-- 連結Google提供的字體-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth|Fugaz One|Text Me One|Monoton" />
-                                                                <!-- 三欄位內標題 | 大標題   |industry 內文|Navbar-SPXF -->
+    <!-- 三欄位內標題 | 大標題   |industry 內文|Navbar-SPXF -->
 
     <!-- 連結自設的CSS樣式表-->
     <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
@@ -52,8 +53,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <!-- Logo -->
-                    <img src="img/NSRRC_logo3.jpg" width="50" height="50"
-                        style="border-radius: 50%; margin-right: 15px;">
+                <img src="img/NSRRC_logo3.jpg" width="50" height="50" style="border-radius: 50%; margin-right: 15px;">
                 <!-- <a class="navbar-brand" href="index.html">SPXF</a>  -->
 
                 <!-- 第一部分：手機版 -->
@@ -147,24 +147,28 @@
                     <ul class="BLinfo">
                         <a class="page-link" href="#blinfo1">1. About Us</a>
                         <a class="page-link" href="#blinfo2">2. Beamline Information</a>
+                        <a class="page-link" href="#blinfo3">3. Publications</a>
                     </ul>
                 </div>
                 <br>
-                <section id="sns">
-                    <div class="wrapper">
-                    <!-- 影片 -->
-                        <div class="sns-box">
-                            <div class="title-side"><img src="img/video.jpg" width="30" height="30" class="my-auto" />Video
-                            </div>
-                            <br>
-                            <video width="100%"  controls preload="auto" poster="img/video-poster.jpg">  
-                                            <!-- controls preload="auto":預先下載，以及設定 video影片首圖 -->
-                                <source src="video/NSRRC_TPS05A_07A_video_20231017_v7.mp4" type="video/mp4"> 
-                                Video of SPXF at NSRRC
-                            </video>
-                        </div>
-                    </div>
-                </section>
+                <!-- News -->
+                <div class="title-side"><img src="img/News.png" width="30" height="30" class="my-auto" />News
+                </div>
+                <ul class="BLtechiques">
+                    <li class="news"><a
+                            href="https://www.nsrrc.org.tw/chinese/30thAnniv/assets/puclic/NSRRC_Commemorative_Publication.pdf"
+                            target="_blank">NSRRC 光源啟用30周年紀念</a></li>
+                    <li class="news"><a href="https://www.nsrrc.org.tw/OpenHouse/" target="_blank">2023/11/12 NSRRC Open
+                            House</a></li>
+                    <li class="news"><a
+                            href="https://www.kissscience.tw/motion.asp?newsid=12084&menuid=14256&lgid=1&siteid=100613"
+                            target="_blank">2023/11/12 2023 Kiss Science</a></li>
+                    <li class="news"><a href="https://userportal.nsrrc.org.tw/APNSR/EX004/" target="_blank">2023/12/25 ~
+                            2024/2/14 TLS Machine Maintenance/Shutdown</a></li>
+                    <li class="news"><a href="https://userportal.nsrrc.org.tw/APNSR/EX004/" target="_blank">2024/1/12 ~
+                            2/15 TPS Machine Maintenance/Shutdown</a></li>
+                </ul>
+
             </div>
             <!-- 中間欄位 -->
             <div class="col-12 col-lg-6 main-content"> <!-- 文字靠左(可自行設定)-->
@@ -300,28 +304,68 @@
                         <td>YES</td>
                     </tr>
                 </table>
+                <br>
+                <!-- Publications -->
+                <div class="title2" id="blinfo3"> Publications (High Impac) </div>
+                <br>
+                <ol>
+                    <li class="publications"> Yuan, L., Ma, X., Yang, Y. et al. Phosphoantigens glue butyrophilin 3A1
+                        and 2A1 to activate Vγ9Vδ2 T cells. <i>Nature</i>, <b>621</b>, 840–848 (2023).
+                        [doi: <a href="https://doi.org/10.1038/s41586-023-06525-3"
+                            target="_blank">10.1038/s41586-023-06525-3</a>]</li><br>
+                    <li class="publications"> Huang, KY.A., Chen, X., Mohapatra, A. et al. Structural basis for a
+                        conserved neutralization epitope on the receptor-binding domain of SARS-CoV-2. <i>Nat Commun</i>,
+                        <b>14</b>,311 (2023). [doi: <a href="https://doi.org/10.1038/s41467-023-35949-8"
+                            target="_blank">10.1038/s41467-023-35949-8</a>]</li><br>
+                    <li class="publications"> Chen, NC., Wang, CH., Yoshimura, M. et al. Structures of
+                        honeybee-infecting Lake Sinai virus reveal domain functions and capsid assembly with dynamic
+                        motions. <i>Nat Commun</i>, <b>14</b>,545 (2023). [doi: <a
+                            href="https://doi.org/10.1038/s41467-023-36235-3"
+                            target="_blank">10.1038/s41467-023-36235-3</a>]</li><br>
+                    <li class="publications"> Nguyen, H.T.V., Chen, X., Parada, C. et al. Structure of the
+                        heterotrimeric membrane protein complex FtsB-FtsL-FtsQ of the bacterial divisome.
+                        <i>Nat Commun</i>, <b>14</b>,1903 (2023). [doi: <a
+                            href="https://doi.org/10.1038/s41467-023-37543-4"
+                            target="_blank">10.1038/s41467-023-37543-4</a>]</li><br>
+                    <li class="publications"> Wang, YL., Chang, CY., Hsu, NS. et al. <i>N</i>-Formimidoylation/-iminoacetylation
+                        modification in aminoglycosides requires FAD-dependent and ligand-protein NOS bridge dual
+                        chemistry. <i>Nat Commun</i>, <b>14</b>, 2528 (2023).
+                        [doi: <a href="https://doi.org/10.1038/s41467-023-38218-w"
+                            target="_blank">10.1038/s41467-023-38218-w</a>]</li><br>
+                    <li class="publications"> Yang, CS., Ko, TP., Chen, CJ. et al. Crystal structure and functional
+                        implications of cyclic di-pyrimidine-synthesizing cGAS/DncV-like nucleotidyltransferases. <i>Nat
+                            Commun</i>,<b>14</b>, 5078 (2023). [doi: <a href="https://doi.org/10.1038/s41467-023-40787-9"
+                            target="_blank">10.1038/s41467-023-40787-9</a>]</li><br>
+                    <li class="publications"> Roshan Satange, Chih-Chun Chang, Long‐Yuan Li, Sheng-Hao Lin, Stephen
+                        Neidle, Ming-Hon Hou, Synergistic binding of actinomycin D and echinomycin to DNA mismatch sites
+                        and their combined anti-tumour effects. <i>Nucleic Acids Research</i>, <b>51 (8)</b>,3540-3555 (2023). [doi: <a
+                            href="https://doi.org/10.1093/nar/gkad156"
+                            target="_blank">10.1093/nar/gkad156</a>]</li><br>
+                    <li class="publications"> Salila Pengthaisong, Beatriz Piniello, Gideon J. Davies, Carme Rovira* and James R. Ketudat Cairns, Reaction Mechanism of Glycoside Hydrolase Family 116 Utilizes Perpendicular Protonation.
+                        <i>ACS Catal.</i> <b>13</b>,5850-5863 (2023). [doi: <a
+                            href="https://doi.org/10.1021/acscatal.3c00620"
+                            target="_blank">10.1021/acscatal.3c00620</a>]</li><br>
+                </ol>
             </div>
             <!-- 右邊欄位 -->
             <div class="col-12 col-lg-3 fixed-right"> <!-- col-2(數字) 決定欄寬，total12份 -->
                 <br>
-                <div class="title-side"><img src="img/News.png" width="30" height="30" class="my-auto" />News
-                </div>
-                <ul class="BLtechiques">
-                    <li class="news"><a
-                            href="https://www.nsrrc.org.tw/chinese/30thAnniv/assets/puclic/NSRRC_Commemorative_Publication.pdf"
-                            target="_blank">NSRRC 光源啟用30周年紀念</a></li>
-                    <li class="news"><a href="https://www.nsrrc.org.tw/OpenHouse/" target="_blank">2023/11/12 NSRRC Open
-                            House</a></li>
-                    <li class="news"><a
-                            href="https://www.kissscience.tw/motion.asp?newsid=12084&menuid=14256&lgid=1&siteid=100613"
-                            target="_blank">2023/11/12 2023 Kiss Science</a></li>
-                    <li class="news"><a
-                        href="https://userportal.nsrrc.org.tw/APNSR/EX004/"
-                        target="_blank">2023/12/25 ~ 2024/2/14 TLS Machine Maintenance/Shutdown</a></li>
-                    <li class="news"><a
-                        href="https://userportal.nsrrc.org.tw/APNSR/EX004/"
-                        target="_blank">2024/1/12 ~ 2/15 TPS Machine Maintenance/Shutdown</a></li>
-                </ul>
+                <section id="sns">
+                    <div class="wrapper">
+                        <!-- 影片 -->
+                        <div class="sns-box">
+                            <div class="title-side"><img src="img/video.jpg" width="30" height="30"
+                                    class="my-auto" />Video
+                            </div>
+                            <br>
+                            <video width="100%" controls preload="auto" poster="img/video-poster.jpg">
+                                <!-- controls preload="auto":預先下載，以及設定 video影片首圖 -->
+                                <source src="video/NSRRC_TPS05A_07A_video_20231017_v7.mp4" type="video/mp4">
+                                Video of SPXF at NSRRC
+                            </video>
+                        </div>
+                    </div>
+                </section>
                 <br>
                 <br>
                 <!-- Facebook 外掛 -->
@@ -334,7 +378,8 @@
                         data-tabs="timeline" data-width="300" data-height="400" data-small-header="false"
                         data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                         <blockquote cite="https://www.facebook.com/profile.php?id=61552212643537&amp;mibextid=LQQJ4d"
-                            class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=61552212643537&amp;mibextid=LQQJ4d">
+                            class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/profile.php?id=61552212643537&amp;mibextid=LQQJ4d">
                                 SPXF at NSRRC</a>
                         </blockquote>
                     </div>
@@ -342,7 +387,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Facebook 即時聊天框代碼 -->
     <!-- Messenger 洽談外掛程式 Code -->
     <div id="fb-root"></div>
@@ -351,31 +396,31 @@
     <div id="fb-customer-chat" class="fb-customerchat"></div>
 
     <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "171213682723432");
-      chatbox.setAttribute("attribution", "biz_inbox");
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "171213682723432");
+        chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
     <!-- Your SDK code -->
     <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v18.0'
-        });
-      };
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
     <br>
 
-   
+
     <!-- 最下層：底部 footer -->
     <footer>
         <div class="container" style="max-width: 85%;">
@@ -400,7 +445,8 @@
                         <a href="https://www.nstc.gov.tw/" target="_blank"><img src="img/NSTC.jpg" alt="NSTC"></a>
                     </div>
                     <div class="FA">
-                        <a href="https://ncfb.nycu.edu.tw/index.html" target="_blank"><img src="img/NCFB.jpg" alt="NCFB"></a>
+                        <a href="https://ncfb.nycu.edu.tw/index.html" target="_blank"><img src="img/NCFB.jpg"
+                                alt="NCFB"></a>
                     </div>
                 </div>
                 <div class="col-12 col-md-2 my-auto funding-agencies">
