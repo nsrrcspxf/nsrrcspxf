@@ -35,7 +35,7 @@
         <!-- 連結自設的CSS樣式表-->
         <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
         <link rel="stylesheet" type="text/css" href="beamline-gray.css" /> <!--Beamline頁面樣式-->
-        <link rel="stylesheet" type="text/css" href="2colum.css" /> <!--Service頁面樣式-->
+        <link rel="stylesheet" type="text/css" href="index.css" /> <!--表格樣式-->
     </head>
 
     <!-- body:網頁內文 -->
@@ -136,21 +136,143 @@
         <!-- 第三區塊：主標題 title-->
         <div class="title">Available Software</div>
         <br>
-        <div>
-            <p class="ra-text" style="font-size:60px; text-align: center; color:rgb(172, 32, 32);">Webpage under
-                construction~ ~~~ </p>
+        
+
+        <!-- 第四區塊：主內容-二欄位 -->
+        <div class="container-fluid-main"> <!-- fluid: 水流樣式，for RWD -->
+        <div class="row justify-content-center"> <!-- 水平置中 (col少的份數變成左右空白) -->
+            <!-- 左邊欄位 -->
+            <div class="col-12 col-lg-4 fixed-left"> <!-- col-2(數字) 決定欄寬，total12份 -->
+                <br>
+                <div class="page-guiline">
+                    <div class="onthispage"><img src="img/News.png" width="30" height="30" class="my-auto" />On This
+                        Page</div>
+                    <ul class="BLinfo">
+                        <a class="page-link" href="#blinfo1">1. Data Collection & Strategy</a>
+                        <a class="page-link" href="#blinfo2">2. Data Process</a>
+                        <a class="page-link" href="#blinfo3">3. Structure Determination</a>
+                    </ul>
+                </div>
+                <br>
+            </div>
+            <!-- 右邊主欄位 -->
+            <div class="col-12 col-lg-7 main-content"> <!-- 文字靠左(可自行設定)-->
+                <!-- 次標題 title2-->
+                <!-- Data Collection & Strategy -->
+                <div class="title2" id="blinfo1">Data Collection & Strategy</div><br>
+
+                <!-- 表格： css樣式 software-table 設定不同的欄寬 -->
+                <table class="center  software-table"> 
+                    <tr> <!--首列 -->
+                        <th>Name</th>
+                        <th>
+                            <span> Description </span>
+                        </th>
+                    </tr>
+                    <tr> <!--第二列 -->
+                        <td>Adxv</td> <!--欄1 -->
+                        <td>Visualisaion of X-ray diffraction data</td> <!--欄2 -->
+                        
+                    </tr>
+                    <tr> <!--第三列 -->
+                        <td><a href="http://www.embl-hamburg.de/BEST/" target="_blank">Best</a></td>
+                        <td>Optimal planning of X-ray data collection from protein crystals</td>
+                        
+                    </tr>
+                    <tr> <!--第四列 -->
+                        <td><a href="https://smb.slac.stanford.edu/research/developments/blu-ice/" target="_blank">Blu-Ice</a></td>
+                        <td>software for data acquisition and instrument control at macromolecular crystallography beamlines</td>
+                        
+                    </tr>
+                    <tr> <!--第五列 -->
+                        <td><a href="https://raddose.de/" target="_blank">RADDOSE-3D</a></td>
+                        <td>Calculation of absorbed X-ray dose by protein crystals</td>   
+                    </tr>
+                </table>
+                <br>
+                
+                <!-- Data Process  -->
+                <div class="title2" id="blinfo2">Data Process</div><br>
+                <!-- 表格 -->
+                <table class="center software-table" >
+                    <tr> <!--首列 -->
+                        <th>Name</th>
+                        <th>
+                            <span> Description </span>
+                        </th>
+                    </tr>
+                    <tr> <!--第二列 -->
+                        <td><a href="https://legacy.ccp4.ac.uk/tutorials/tutorial_files/blend_tutorial/BLEND_tutorial.html" target="_blank">Blend</a></td> <!--欄1 -->
+                        <td>Multicrystal and wedge data prescaling analysis</td> <!--欄2 -->
+                        
+                    </tr>
+                    <tr> <!--第三列 -->
+                        <td><a href="https://hkl-xray.com/hkl-2000" target="_blank">HKL2000</a></td>
+                        <td>Advanced crystallography software with GUI for data process</td>
+                        
+                    </tr>
+                    <tr> <!--第四列 -->
+                        <td><a href="https://journals.iucr.org/d/issues/2018/05/00/wa5117/" target="_blank">KAMO</a></td>
+                        <td>automate whole data-processing tasks in the case of multiple small-wedge data sets</td>
+                        
+                    </tr>
+                    <tr> <!--第五列 -->
+                        <td><a href="https://www.mrc-lmb.cam.ac.uk/harry/imosflm/ver740/introduction.html" target="_blank">Mosflm</a></td>
+                        <td>Program for integrating single crystal diffraction data</td>   
+                    </tr>
+                    <tr> <!--第六列 -->
+                        <td><a href="https://xds.mr.mpg.de/" target="_blank">XDS</a></td>
+                        <td>Software for processing single-crystal monochromatic diffraction data</td>   
+                    </tr>
+                </table>
+                <br>
+
+                <!-- Structure Determination  -->
+                <div class="title2" id="blinfo3">Structure Determination</div><br>   
+                <!-- 表格 -->
+                <table class="center software-table" >
+                    <tr> <!--首列 -->
+                        <th>Name</th>
+                        <th>
+                            <span> Description </span>
+                        </th>
+                    </tr>
+                    <tr> <!--第二列 -->
+                        <td><a href="http://www.embl-hamburg.de/ARP/" target="_blank">Arp-Warp</a></td> <!--欄1 -->
+                        <td>Crystallographic macromolecular model building software</td> <!--欄2 -->
+                        
+                    </tr>
+                    <tr> <!--第三列 -->
+                        <td><a href="https://www.ccp4.ac.uk/" target="_blank">CCP4</a></td>
+                        <td>Integrated suite of programs for determination of macromolecular structures</td>
+                        
+                    </tr>
+                    <tr> <!--第四列 -->
+                        <td><a href="https://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/" target="_blank">Coot</a></td>
+                        <td>Macromolecular model building, model completion and validation software</td>
+                        
+                    </tr>
+                    <tr> <!--第五列 -->
+                        <td><a href="https://doi.org/10.1107/S2053273315099702" target="_blank">Dimple</a></td>
+                        <td>Difference map calculation pipeline for fast ligand binding determination</td>   
+                    </tr>
+                    <tr> <!--第六列 -->
+                        <td><a href="https://phenix-online.org/" target="_blank">Phenix</a></td>
+                        <td>Software for automated determination of macromolecular structures</td>   
+                    </tr>
+                    <tr> <!--第七列 -->
+                        <td><a href="http://www.shelx.org/" target="_blank">SHELX</a></td>
+                        <td>Progams for De novo structure solution and refinement</td>   
+                    </tr>
+                </table>
+                <br>
+                   
+                </div>
+                <br>
+            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    </div>
+
 
 
         <!-- 最下層：底部 footer -->
