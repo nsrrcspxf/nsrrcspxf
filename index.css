@@ -1,3 +1,5 @@
+/* 主要為表格樣式設定 */
+
 /* 左側欄位 NEWS */
 .news a {
    color:black !important;
@@ -65,7 +67,13 @@ tr:first-child {
 td:first-child {
    background-color: #EFEFEF;  /* 首列背景顏色 */
 }
-   /* --單數/偶行添加底色 
+
+/* 特定表格的樣式調整 */
+.software-table th:first-child, .software-table td:first-child {
+   width: 20%;
+}
+
+/* --單數/偶行添加底色 software
 tr:nth-child(odd/even) {                
 background-color: #f2f2f2;
 }
