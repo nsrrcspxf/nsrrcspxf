@@ -35,7 +35,7 @@
         <!-- 連結自設的CSS樣式表-->
         <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
         <link rel="stylesheet" type="text/css" href="beamline-gray.css" /> <!--Beamline頁面樣式-->
-        <link rel="stylesheet" type="text/css" href="2colum.css" /> <!--Service頁面樣式-->
+        <link rel="stylesheet" type="text/css" href="index.css" /> <!--表格樣式-->
     </head>
 
     <!-- body:網頁內文 -->
@@ -136,21 +136,71 @@
         <!-- 第三區塊：主標題 title-->
         <div class="title">Useful Links</div>
         <br>
-        <div>
-            <p class="ra-text" style="font-size:60px; text-align: center; color:rgb(172, 32, 32);">Webpage under
-                construction~ ~~~ </p>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        
+        <!-- 第四區塊：主內容-二欄位 -->
+        <div class="container-fluid-main"> <!-- fluid: 水流樣式，for RWD -->
+            <div class="row justify-content-center"> <!-- 水平置中 (col少的份數變成左右空白) -->
+                <!-- 左邊欄位 -->
+                <div class="col-12 col-lg-4 fixed-left"> <!-- col-2(數字) 決定欄寬，total12份 -->
+                    <br>
+                    <div class="page-guiline">
+                        <div class="onthispage"><img src="img/News.png" width="30" height="30" class="my-auto" />On This
+                            Page</div>
+                        <ul class="BLinfo">
+                            <a class="page-link" href="#blinfo1">1. Useful Links</a>
+                            <a class="page-link" href="#blinfo2">2. Recommended Channels</a>
+                        </ul>
+                    </div>
+                    <br>
+                </div>
+                <!-- 右邊主欄位 -->
+                <div class="col-12 col-lg-7 main-content"> <!-- 文字靠左(可自行設定)-->
+                    <!-- 次標題 title2-->
+                    <!-- Data Collection & Strategy -->
+                    <div class="title2" id="blinfo1">Useful Links</div><br>
+                    <!-- 表格 -->
+                    <table class="center software-table" >
+                        <tr> <!--首列 -->
+                            <th>Name</th>
+                            <th>
+                                <span> Description </span>
+                            </th>
+                        </tr>
+                        <tr> <!--第二列 -->
+                            <td><a href="http://www.bmsc.washington.edu/scatter/AS_index.html" target="_blank">X-ray Anomalous Scattering</a></td> <!--欄1 -->
+                            <td>Database, Tutorial, MAD Phasing</td> <!--欄2 -->
+                            
+                        </tr>
+                        <tr> <!--第三列 -->
+                            <td><a href="http://skuld.bmsc.washington.edu/scatter/AS_periodic.html" target="_blank">X-ray Absorption Edges</a></td>
+                            <td>Periodic table interface to X-ray absorption edge tabulations</td>
+                            
+                        </tr>
+                        <tr> <!--第四列 -->
+                            <td><a href="https://csb.wfu.edu/tools/vmcalc/vm.html" target="_blank">VM (Matthews Coefficient) Calculator</a></td>
+                            <td>The webpage for calculating the Matthews Coefficient is provided by The Center for Structural Biology at Wake Forest University.</td>
+                            
+                        </tr>
+                        <tr> <!--第五列 -->
+                            <td><a href="https://hamptonresearch.com/" target="_blank">Hampton Research</a></td>
+                            <td>provides tools for crystallography and structural biology</td>   
+                        </tr>
+                        <tr> <!--第六列 -->
+                            <td><a href="https://www.mitegen.com/" target="_blank">MiTeGen</a></td>
+                            <td>provides tools for crystallography and structural biology</td>   
+                        </tr>
+                    </table>
+                    <br>
+                    <!-- Data Process  -->
+                    <div class="title2" id="blinfo2">Recommended Channels</div><br>
+    
+
+    
+                       
+                    
+                    <br>
+                </div>
+            </div>
 
 
         <!-- 最下層：底部 footer -->
