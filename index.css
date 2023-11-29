@@ -59,11 +59,11 @@ th a:hover {
    color: white;
 }
 
-/* 設定表格的首行 */
+/* 設定表格的首列 */
 tr:first-child {
    background-color: #EFEFEF;   /* 首行背景顏色 */
 }
-/* 設定表格的首列 */
+/* 設定表格的首行 */
 td:first-child {
    background-color: #EFEFEF;  /* 首列背景顏色 */
 }
