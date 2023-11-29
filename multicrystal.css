@@ -1,0 +1,79 @@
+
+
+/* 調整左側的外邊距 */
+label[for="nas"]  {
+    margin-left: 30px; 
+}
+
+/* 設定 "nc" 和 ""inputc" 在同一列 */
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container label {
+    margin-right: 10px;
+}
+
+.input-container .or-text {
+    margin: 0 10px;
+    margin-bottom: 0;
+    color:red;
+}
+
+/* 設定 alertArea 樣式 */
+#alertArea {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: red;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-top: 10px;
+    line-height: 2;
+}
+
+/* 表格樣式設定 */   
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #323B67;
+    background-color:white;
+    flex-wrap: wrap;
+ }
+ 
+ /* 表格設定 */
+ th, td { 
+    padding: 12px;   /* 表格列高 */
+    text-align: left;
+    border: 1px solid #ddd; /* 設定內部邊框線 */
+    white-space: normal;    /* 强制表格列文字換行 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px; /* 根據需要設置最大寬度 */
+    }
+
+ /* 首列設定 */
+ th, 
+ tr:nth-child(5) th {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+ }
+ 
+/* 設定表格的首列和第五列的背景顏色 */
+tr:first-child,
+tr:nth-child(5) {
+    background-color: #EFEFEF;
+}
+
+ /* 不顯示此表單 */
+ .epValue {
+    display: none;
+}
