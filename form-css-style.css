@@ -1,0 +1,95 @@
+/* form styles.css */
+body {background-color:rgb(252, 252, 252);
+}
+
+.title {
+    font-family: 'Fugaz One';
+    font-size: 48px;
+    color: #732383;
+    text-shadow: 1px 1px 2px rgba(1, 48, 75, 0.5);
+    /* box-shadow: 0 5px 10px rgba(150, 161, 163, 0.5);  添加陰影效果 */
+    text-align: center;
+    margin: 40px 20px; /*第一個值為上下，第二個值為左右 */
+    }
+
+/* 可選的樣式，用於美化表單 */
+.TCform {
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    width: 800px; /* 設定表單寬度 */
+    padding: 20px; /* 增加內部填充 */
+    border: 1px solid #ccc; /* 增加邊框 */
+    border-radius: 5px; /* 圓角邊框 */
+    
+}
+
+/* 調整 "field" 格式 */
+legend {
+    margin-bottom: 20px;  /* 個人資訊和姓名之間的行距 */
+    font-size: 20px;      /* 改變 field 字體大小 */
+    font-weight: bold;    /* field 改為粗體字 */
+}
+
+/* 調整 checkbox 大小 */
+input[type="checkbox"] {
+    width: 20px; 
+    height: 20px; 
+}
+
+/* 設定輸入框的高度 */
+input[type="text"] {
+    height: 20px; 
+}
+
+/* 調整左側的外邊距 */
+label[for="gender"] {
+    margin-left: 20px; 
+}
+
+label[for="other"] {
+    margin-left: 30px; 
+}
+
+/* 設定 <span> 元素中文字的顏色 */
+span {
+    color: red; 
+}
+
+.bed {
+    font-size: 18px;      /* 改變 field 字體大小 */
+    font-weight: bold;
+}
+
+
+   /*螢幕寬度小於1250px時，套用這個區塊的css*/
+   @media (max-width:1250px) {
+    .Manual{flex-wrap: wrap;}  /*允許項目變成向下排列 (根據寬度"width"決定)*/
+    .item {width:30%;   /*每個項目寬度占螢幕比例的30%，如會超過則自動向下排列(換行顯示)*/
+            margin-top:10px;
+            margin-bottom:10px; 
+    }
+    .title {font-size:30px;}
+    .bed {font-size:16px;}
+    form {width: 800px;} 
+   }
+
+   /*螢幕寬度小於650px時，套用這個區塊的css*/
+   @media (max-width:650px) {
+    .item {width:60%;
+        margin-top:10px;
+        margin-bottom:10px;
+        font-size:12px; 
+        }      
+    .title {font-size:20px;}
+    .bed {font-size:14px;}
+    form {width: 400px;
+        font-size: 8px;
+        }
+        label[for="gender"] {
+            flex-basis: 100%; /* 將 label 設為佔滿一整行 */
+            margin-bottom: 10px; /* 增加底部間距 */
+    }
+    
+   }
