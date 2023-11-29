@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡單計算器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>簡單計算器</h1>
+
+    <form id="calculatorForm">
+        <label for="num1">數字1：</label>
+        <input type="number" id="num1" required>
+        <br>
+        <label for="num2">數字2：</label>
+        <input type="number" id="num2" required>
+        <br>
+        <button type="button" onclick="calculate()">計算</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function calculate() {
+            // 獲取用戶輸入的數字
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+
+            // 進行運算
+            var result = num1 + num2;
+
+            // 顯示運算結果
+            document.getElementById('result').innerHTML = '結果：' + result;
+        }
+    </script>
+
+</body>
+</html>
