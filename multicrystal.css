@@ -107,6 +107,12 @@ tr:nth-child(6) {
     font-family: 'Text Me One';
 }
 
+.note {
+    color:#673232;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
  /* 不顯示此表單 */
  .epValue {
     display: none;
