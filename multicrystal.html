@@ -25,7 +25,6 @@
 
     <!-- 連結自設的CSS樣式表-->
     <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
-    <link rel="stylesheet" type="text/css" href="form-css-style.css" /> <!--表單樣式-->
     <link rel="stylesheet" type="text/css" href="multicrystal.css" />  
 
     <!-- 連結 Java Script 樣式 -->
@@ -130,112 +129,131 @@
         <img src="Banner/Banner_1920_450_07A.svg" alt="Banner" class="banner">
     </div>
 
-    <!--第三區塊：表單-->
+    <!-- 第三區塊：主標題 title-->
     <div class="title">Multi-crystal Data Collection</div>
 
-    <!-- post:表單內容不會顯示在url中 ("get:會將標單內容顯示在url，不適於有個人訊息的資料") -->
-    <form class="TCform" target="_self" method="post">
-        <fieldset> <!--框架 -->
-            <legend> Information </legend> <!--標題 -->
-                <label for="pg">Space group：</label>                  <!-- pg: Point group-->
-                <select id="pg" name="PointGroup" onchange="updatenas()" >       <!-- nas: number of asymmetric-->
-                    <option value="p1" selected>P1</option>
-                    <option value="p2">P2/C2</option>
-                    <option value="P222">P222/C222</option>
-                    <option value="p4">P4</option>
-                    <option value="p422">P422</option>
-                    <option value="p3">P3</option>
-                    <option value="p312">P312</option>
-                    <option value="p321">P321</option>
-                    <option value="p6">P6</option>
-                    <option value="p622">P622</option>
-                    <option value="i23">I23/P23</option>
-                    <option value="i432">I432/P432</option>
-                </select>
-                <label for="nas">Number of asymmetric：</label>          <!-- nas: number of asymmetric-->
-                <input type="number" id="nas" name="NumberofAsymmetric" readonly>
-                <br> <!--換行 -->
-                <br> <!--再空一行 -->
-                <label for="deg"> Total oscillation range： </label>
-                <input type="number" id="deg" name="TotalOscillationRange" size=5 value="10" step="0.1" required /> <!-- step="0.1": 指定填入數值需為1位數小數-->
-                <br> <!--換行 -->
-                <br> <!--再空一行 -->
-                <label for="mo"> Crystal mosaicity： </label>
-                <input type="number" id="mo" name="CrystalMosaicity" size=5 value="0.50" step="0.01" required /> <!-- step="0.01": 指定填入數值需為2位數小數-->
-                <br> <!--換行 -->
-                <br> <!--再空一行 -->
-                <label for="nc"> Number of crystals： </label>
-                <input type="number" id="nc" name="NumberofCrystals" size=5 value="20" step="1"/> <!-- step="1": 指定填入數值需為整數-->
+    <!--第四區塊：表單-->
+    <div class="container-fluid-main"> <!-- fluid: 水流樣式，for RWD -->
+        <div class="row justify-content-center"> <!-- 水平置中 (col少的份數變成左右空白) -->   
+            
+            <!-- 中間欄位 -->
+            <div class="col-12 col-lg-6 main-content"> <!-- 文字靠左(可自行設定)-->
+                <!-- post:表單內容不會顯示在url中 ("get:會將標單內容顯示在url，不適於有個人訊息的資料") -->
+                <form class="TCform" target="_self" method="post">
+                    <fieldset style="max-width: 100%;"> <!--框架 -->
+                        <legend> Information </legend> <!--標題 -->
+                            <label for="pg">Space group：</label>                  <!-- pg: Point group-->
+                            <select id="pg" name="PointGroup" onchange="updatenas()" >       <!-- nas: number of asymmetric-->
+                                <option value="p1" selected>P1</option>
+                                <option value="p2">P2/C2</option>
+                                <option value="P222">P222/C222</option>
+                                <option value="p4">P4</option>
+                                <option value="p422">P422</option>
+                                <option value="p3">P3</option>
+                                <option value="p312">P312</option>
+                                <option value="p321">P321</option>
+                                <option value="p6">P6</option>
+                                <option value="p622">P622</option>
+                                <option value="i23">I23/P23</option>
+                                <option value="i432">I432/P432</option>
+                            </select>
+                            <br> <!--換行 -->
+                            <br> <!--再空一行 -->
+                            <label for="nas">Number of asymmetric：</label>          <!-- nas: number of asymmetric-->
+                            <input type="number" id="nas" name="NumberofAsymmetric" readonly>
+                            <br> <!--換行 -->
+                            <br> <!--再空一行 -->
+                            <label for="deg"> Total oscillation range： </label>
+                            <input type="number" id="deg" name="TotalOscillationRange" size=5 value="10" step="0.1" required /> <!-- step="0.1": 指定填入數值需為1位數小數-->
+                            <br> <!--換行 -->
+                            <br> <!--再空一行 -->
+                            <label for="mo"> Crystal mosaicity： </label>
+                            <input type="number" id="mo" name="CrystalMosaicity" size=5 value="0.50" step="0.01" required /> <!-- step="0.01": 指定填入數值需為2位數小數-->
+                            <br> <!--換行 -->
+                            <br> <!--再空一行 -->
+                            <label for="nc"> Number of crystals： </label>
+                            <input type="number" id="nc" name="NumberofCrystals" size=5 value="20" step="1"/> <!-- step="1": 指定填入數值需為整數-->
+                            <br>
+                            <br>
+                    </fieldset>
+                    <button type="button" onclick="calculate()">Calculate</button>
+                </form>
+
+                <!-- 提醒選擇 piont group -->
+                <div id="alertArea" class="result"></div>
+
+                <!-- 此部分表單因CSS設置，在網頁上為隱藏 -->
+                <form class="epValue" target="_self" method="post">    
+                    <fieldset style="max-width: 100%;"> <!--框架 -->
+                        <legend> Result </legend> <!--標題 -->
+                            <label for="evalue">Effect range：</label>          <!-- nas: number of asymmetric-->
+                            <input type="number" id="evalue" name="EffectRange" readonly>
+                            <br> <!--換行 -->
+                            <br> <!--再空一行 -->
+                            <label for="pvalue"> p value： </label>
+                            <input type="number" id="pvalue" name="pvalue" readonly/> 
+                            <br> <!--換行 --> 
+                    </fieldset>
+                </form>
+
+                <form class="TCform" target="_self" method="post">
+                    <fieldset style="max-width: 100%;"> <!--框架 -->
+                        <legend> Result </legend> <!--標題 -->
+                        <table class="center">    
+                            <tr> <!--首列 -->   
+                                <th colspan="2"> Native </th>       <!--th: 標準格 -->
+                                <th colspan="2"> Anomalous </th>
+                            </tr>
+                            <tr> <!--第二列 -->
+                                <td> Completeness (%) </td> <!--欄1 -->
+                                <td> Average multiplicity </td> <!--欄2 -->
+                                <td> Completeness (%) </td> <!--欄3 -->
+                                <td> Average multiplicity </td> <!--欄3 -->
+                            </tr>
+                            <tr class="outvalue"> <!--第三列 -->
+                                <td id="outC"> </td>                <!--td: 實際數據 -->
+                                <td id="outaveM"> </td>
+                                <td id="outanoC"> </td>
+                                <td id="outanoaveM"> </td>
+                            </tr>
+                            <tr> <!--第四列 -->
+                                <th colspan="4">  </th>
+                            </tr>
+                            <tr> <!--第五列 -->
+                                <th colspan="4"> How many crystals do you need? </th>
+                            </tr>
+                            <tr> <!--第六列 -->
+                                <th colspan="2"> Native </th>
+                                <th colspan="2"> Anomalous </th>
+                            </tr>
+                            <tr> <!--第七列 -->
+                                <td> Completeness 99.99% </td>
+                                <td> Completeness 90.0% </td> 
+                                <td> Completeness 99.99% </td>
+                                <td> Completeness 90.0% </td>
+                            </tr>
+                            <tr class="outvalue"> <!--第八列 -->
+                                <td id="outC999"> </td>
+                                <td id="outC90"> </td>
+                                <td id="outanoC999"> </td>
+                                <td id="outanoC90"> </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </fieldset>
+                    <div class="note">
+                        <p><strong>Note 1:</strong> The calculations above are based on the article titled <i>In meso in situ serial X-ray crystallography of soluble and membrane proteins,</i> Acta Cryst., (2015) D71, 1238–1256.</p>
+                    </div>
+                    <div class="note">
+                        <p><strong>Note 2:</strong> The calculated values are relatively optimistic.</p>
+                    </div>
+                </form> 
                 <br>
-                <br>
-        </fieldset>
-        <button type="button" onclick="calculate()">Calculate</button>
-    </form>
+            </div>
 
-    <!-- 提醒選擇 piont group -->
-    <div id="alertArea" class="result"></div>
-
-    <!-- post:表單內容不會顯示在url中 ("get:會將標單內容顯示在url，不適於有個人訊息的資料") -->
-    <form class="epValue" target="_self" method="post">    
-        <fieldset> <!--框架 -->
-            <legend> Result </legend> <!--標題 -->
-                <label for="evalue">Effect range：</label>          <!-- nas: number of asymmetric-->
-                <input type="number" id="evalue" name="EffectRange" readonly>
-                <br> <!--換行 -->
-                <br> <!--再空一行 -->
-                <label for="pvalue"> p value： </label>
-                <input type="number" id="pvalue" name="pvalue" name="EffectRange" readonly/> 
-                <br> <!--換行 --> 
-        </fieldset>
-    </form>
-
-    <form class="TCform" target="_self" method="post">
-        <fieldset> <!--框架 -->
-            <legend> Result </legend> <!--標題 -->
-            <table class="center">    
-                <tr> <!--首列 -->   
-                    <th colspan="2"> Native </th>       <!--th: 標準格 -->
-                    <th colspan="2"> Anomalous </th>
-                </tr>
-                <tr> <!--第二列 -->
-                    <td> Completeness (%) </td> <!--欄1 -->
-                    <td> Average multiplicity </td> <!--欄2 -->
-                    <td> Completeness (%) </td> <!--欄3 -->
-                    <td> Average multiplicity </td> <!--欄3 -->
-                </tr>
-                <tr> <!--第三列 -->
-                    <td id="outC"> </td>                <!--td: 實際數據 -->
-                    <td id="outaveM"> </td>
-                    <td id="outanoC"> </td>
-                    <td id="outanoaveM"> </td>
-                </tr>
-                <tr> <!--第四列 -->
-                    <th colspan="4">  </th>
-                </tr>
-                <tr> <!--第五列 -->
-                    <th colspan="4"> How many crystals do you need? </th>
-                </tr>
-                <tr> <!--第六列 -->
-                    <th colspan="2"> Native </th>
-                    <th colspan="2"> Anomalous </th>
-                </tr>
-                <tr> <!--第七列 -->
-                    <td> Completeness 99.99% </td>
-                    <td> Completeness 90.0% </td> 
-                    <td> Completeness 99.99% </td>
-                    <td> Completeness 90.0% </td>
-                </tr>
-                <tr> <!--第八列 -->
-                    <td id="outC999"> </td>
-                    <td id="outC90"> </td>
-                    <td id="outanoC999"> </td>
-                    <td id="outanoC90"> </td>
-                </tr>
-            </table>
-            <br>
-        </fieldset>
-    </form> 
-    <br>
+            
+        </div>
+    </div>
 
     <script>
          // 確保在頁面加載時 updatenas 函數被調用，並且 nas 的初始值被正確設置。
