@@ -137,7 +137,7 @@
     <form class="TCform" target="_self" method="post">
         <fieldset> <!--框架 -->
             <legend> Information </legend> <!--標題 -->
-                <label for="pg">Point group：</label>                  <!-- pg: Point group-->
+                <label for="pg">Space group：</label>                  <!-- pg: Point group-->
                 <select id="pg" name="PointGroup" onchange="updatenas()" >       <!-- nas: number of asymmetric-->
                     <option value="p1" selected>P1</option>
                     <option value="p2">P2/C2</option>
@@ -164,13 +164,8 @@
                 <input type="number" id="mo" name="CrystalMosaicity" size=5 value="0.50" step="0.01" required /> <!-- step="0.01": 指定填入數值需為2位數小數-->
                 <br> <!--換行 -->
                 <br> <!--再空一行 -->
-                <div class="input-container">
-                    <label for="nc"> Number of crystals： </label>
-                    <input type="number" id="nc" name="NumberofCrystals" size=5 value="20" step="1"/> <!-- step="1": 指定填入數值需為整數-->
-                    <h6 class="or-text"> or </h6>
-                    <label for="inputC"> Completeness (%)： </label>
-                    <input type="number" id="inputC" name="input Completeness" size=5 />  
-                </div>
+                <label for="nc"> Number of crystals： </label>
+                <input type="number" id="nc" name="NumberofCrystals" size=5 value="20" step="1"/> <!-- step="1": 指定填入數值需為整數-->
                 <br>
                 <br>
         </fieldset>
@@ -197,9 +192,9 @@
     <form class="TCform" target="_self" method="post">
         <fieldset> <!--框架 -->
             <legend> Result </legend> <!--標題 -->
-            <table class="center">
-                <tr> <!--首列 -->
-                    <th colspan="2"> Native </th>
+            <table class="center">    
+                <tr> <!--首列 -->   
+                    <th colspan="2"> Native </th>       <!--th: 標準格 -->
                     <th colspan="2"> Anomalous </th>
                 </tr>
                 <tr> <!--第二列 -->
@@ -209,7 +204,7 @@
                     <td> Average multiplicity </td> <!--欄3 -->
                 </tr>
                 <tr> <!--第三列 -->
-                    <td id="outC"> </td>
+                    <td id="outC"> </td>                <!--td: 實際數據 -->
                     <td id="outaveM"> </td>
                     <td id="outanoC"> </td>
                     <td id="outanoaveM"> </td>
@@ -221,6 +216,16 @@
                     <th colspan="4"> How many crystals do you need? </th>
                 </tr>
                 <tr> <!--第六列 -->
+                    <th colspan="2"> Native </th>
+                    <th colspan="2"> Anomalous </th>
+                </tr>
+                <tr> <!--第七列 -->
+                    <td> Completeness 99.99% </td>
+                    <td> Completeness 90.0% </td> 
+                    <td> Completeness 99.99% </td>
+                    <td> Completeness 90.0% </td>
+                </tr>
+                <tr> <!--第八列 -->
                     <td id="outC999"> </td>
                     <td id="outC90"> </td>
                     <td id="outanoC999"> </td>
@@ -248,7 +253,6 @@
             var degValue = parseFloat(document.getElementById("deg").value);
             var moValue = parseFloat(document.getElementById("mo").value);
             var ncValue = parseFloat(document.getElementById("nc").value);
-            var inputCValue = parseFloat(document.getElementById("inputC").value);
 
             // 檢查 "deg" 和 "mo" 是否有填寫
             if (isNaN(degValue) || degValue <= 0 || isNaN(moValue) || moValue < 0) {
@@ -272,8 +276,8 @@
             document.getElementById("pvalue").value = pValue;
 
             // 檢查 "nc" 是否大於 0
-            if (isNaN(ncValue) || ncValue <= 0) {
-            showResultAlert("Please fill in a valid value for 'Number of crystals' (nc) greater than 0. \n 晶體數量請填入正整數。", "alert-warning");
+            if (!isNaN(ncValue) && ncValue <= 0) {
+            showResultAlert("Please fill in a valid value for 'Number of crystals' greater than 0. \n 晶體數量請填入正整數。", "alert-warning");
             document.getElementById("nc").style.border = isNaN(ncValue) || ncValue <= 0 ? "2px solid red" : "";     //輸入框醒目提示
             return;
             }
@@ -302,32 +306,19 @@
 
                 // 清空提醒區域
                 document.getElementById("alertArea").innerHTML = "";
+            }
 
-            } else {
-                // 計算 Completeness 99.9%, 90% 需要多少顆晶體
-                var outC999 = (Math.pow(0.01, (1 - pValue)) / (2 * nasValue))
+                // 計算 Completeness 99.99%, 需要多少顆晶體。 
+                var outC999 = Math.ceil(Math.log(0.0001) / Math.log(1 - pValue) / (2 * nasValue));   //Math.ceil() 函數讓結果無條件進位至整數。
+                var outC90 = Math.ceil(Math.log(0.1) / Math.log(1 - pValue) / (2 * nasValue));
+                var outanoC999 = outC999 * 2
+                var outanoC90 = outC90 * 2
 
                 // 將計算結果填入表格
                 document.getElementById("outC999").innerHTML = outC999.toFixed(0);
-
-            /*    
-            } else {
-                // 檢查 "inputC" 是否有填寫
-                if (isNaN(inputCValue)) {
-                    showResultAlert("'Number of crystals' or 'Completeness (%)'' must be filled. \n 請填寫 Number of crystals (nc) 或 Completeness (%)。", "alert-warning");
-                    return;
-                } else if (inputCValue <= 0) {
-                    showResultAlert("Completeness(%) must be a positive number. \n Completeness(%) 數值必須為正數。", "alert-danger");
-                    return;
-                } else {
-                    // 檢查是否大於等於100，如果是，則以99.9進行計算
-                    var resultB = nasValue * pValue * (inputCValue >= 100 ? 99.9 : inputCValue);
-                    document.getElementById("xvalue").value = resultB;
-
-                    // 清空提醒區域
-                    document.getElementById("alertArea").innerHTML = "";
-                } */
-            }
+                document.getElementById("outC90").innerHTML = outC90.toFixed(0);
+                document.getElementById("outanoC999").innerHTML = outanoC999.toFixed(0);
+                document.getElementById("outanoC90").innerHTML = outanoC90.toFixed(0);
         }
 
         // showResultAlert 指令
