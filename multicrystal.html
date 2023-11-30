@@ -167,9 +167,9 @@
                 <div class="input-container">
                     <label for="nc"> Number of crystals： </label>
                     <input type="number" id="nc" name="NumberofCrystals" size=5 value="20" step="1"/> <!-- step="1": 指定填入數值需為整數-->
-                    <h6 class="or-text"> or </h6>
+  <!--                  <h6 class="or-text"> or </h6>
                     <label for="inputC"> Completeness (%)： </label>
-                    <input type="number" id="inputC" name="input Completeness" size=5 />
+                    <input type="number" id="inputC" name="input Completeness" size=5 />  -->
                 </div>
                 <br>
                 <br>
@@ -252,7 +252,7 @@
 
             // 檢查 "deg" 和 "mo" 是否有填寫
             if (isNaN(degValue) || degValue <= 0 || isNaN(moValue) || moValue < 0) {
-                showResultAlert("Please fill in both 'Total oscillation range' and/or 'Crystal mosaicity' correctly. \n 請正確填寫 'Total oscillation range' 以及(或) 'Crystal mosaicity'。", "alert-warning");
+                showResultAlert("Please fill in 'Total oscillation range' and/or 'Crystal mosaicity' correctly. \n 請正確填寫 'Total oscillation range' 以及(或) 'Crystal mosaicity'。", "alert-warning");
                 
                 document.getElementById("deg").style.border = isNaN(degValue) || degValue <= 0 ? "2px solid red" : ""; //輸入框醒目提示
                 document.getElementById("mo").style.border = isNaN(moValue) || moValue < 0 ? "2px solid red" : "";
