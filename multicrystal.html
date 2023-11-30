@@ -230,7 +230,7 @@
                                 <th colspan="4">  </th>
                             </tr>
                             <tr> <!--第五列 -->
-                                <th colspan="4"> How many crystals do you need? </th>
+                                <th colspan="4" id="howmanycrystals"> How many crystals do you need? </th>
                             </tr>
                             <tr> <!--第六列 -->
                                 <th colspan="2"> Native </th>
@@ -252,16 +252,13 @@
                         <br>
                     </fieldset>
                     <div class="note">
-                        <p><strong>Note 1:</strong> The calculations are based on the article entitled <i>In meso in situ serial X-ray crystallography of soluble and membrane proteins,</i> Acta Cryst., (2015) D71, 1238–1256.</p>
-                    </div>
-                    <div class="note">
-                        <p><strong>Note 2:</strong> The calculated values are relatively optimistic.</p>
+                        <p>* The prediction is relatively optimistic. You may need more crystals.</p>
+                        <p>*<b>Ref:</b> C.-Y. Huang, <i>et al.</i> In meso in situ serial X-ray crystallography of soluble and membrane proteins. <i>Acta Cryst.</i>, <b>(2015)</b> D71, 1238–1256.[doi: <a href="https://scripts.iucr.org/cgi-bin/paper?S1399004715005210"
+                            target="_blank">10.1107/S1399004715005210.</a>]</p>
                     </div>
                 </form> 
                 <br>
-            </div>
-
-            
+            </div>   
         </div>
     </div>
 
@@ -347,6 +344,25 @@
                 document.getElementById("outC90").innerHTML = outC90.toFixed(0);
                 document.getElementById("outanoC999").innerHTML = outanoC999.toFixed(0);
                 document.getElementById("outanoC90").innerHTML = outanoC90.toFixed(0);
+                
+                // 檢查是否已經有 "nc" 的值，如果沒有，則將"outC999"計算結果填入 "nc" 的輸入框
+                var ncInput = document.getElementById("nc");
+                if (ncInput.value === "") {
+                    ncInput.value = outC999.toFixed(0);
+                    ncInput.style.color = "red";  // 設定文字顏色為紅色
+                }
+
+                // 用"outC999"的數值計算 outC、outanoC、outaveM、outanoaveM
+                var outC = (1 - Math.pow((1 - pValue), outC999 * 2 * nasValue)) * 100;
+                var outanoC = (1 - Math.pow((1 - pValue), outC999 * nasValue)) * 100;
+                var outaveM = outC999 * pValue * 2 * nasValue;
+                var outanoaveM = outC999 * pValue * nasValue;
+
+                // 將計算結果填入表格
+                document.getElementById("outC").innerHTML = outC.toFixed(2);
+                document.getElementById("outanoC").innerHTML = outanoC.toFixed(2);
+                document.getElementById("outaveM").innerHTML = outaveM.toFixed(1);
+                document.getElementById("outanoaveM").innerHTML = outanoaveM.toFixed(1);
         }
 
         // showResultAlert 指令
