@@ -45,7 +45,7 @@ function updatenas() {
             nas = "1"; 
     }
 
-    // 更新價格輸入框的值
+    // 更新number of asymmetric輸入框的值
     document.getElementById("nas").value = nas;
 }
 
