@@ -1,24 +1,48 @@
+.title {
+    font-family: 'Fugaz One';
+    font-size: 48px;
+    color: #732383;
+    text-shadow: 1px 1px 2px rgba(1, 48, 75, 0.5);
+    /* box-shadow: 0 5px 10px rgba(150, 161, 163, 0.5);  添加陰影效果 */
+    text-align: center;
+    margin: 40px 20px; /*第一個值為上下，第二個值為左右 */
+    }
 
+/* 可選的樣式，用於美化表單 */
+.TCform {
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    width: auto; /* 設定表單寬度 */
+    padding: 20px; /* 增加內部填充 */
+    border: 1px solid #ccc; /* 增加邊框 */
+    border-radius: 5px; /* 圓角邊框 */   
+}
+
+/* 調整 "field" 格式 */
+legend {
+    margin-bottom: 20px;  /* 個人資訊和姓名之間的行距 */
+    font-size: 24px;      /* 改變 field 字體大小 */
+    font-weight: bold;    /* field 改為粗體字 */
+    text-align: center; /* 讓文字在 fieldset 中水平置中 */
+}
+
+/* 設定下拉選單的寬度為 200 像素 */
+select {
+    width: 150px;
+    height: 30px;
+}
+
+/* 將唯讀輸入框背景顏色設為灰色 */
+input[readonly] {
+    background-color: #f1f1f1;
+    border: 1px solid #dddddd; /* 將邊框顏色設為灰色 */
+}
 
 /* 調整左側的外邊距 */
-label[for="nas"]  {
-    margin-left: 30px; 
-}
-
-/* 設定 "nc" 和 ""inputc" 在同一列 */
-.input-container {
-    display: flex;
-    align-items: center;
-}
-
-.input-container label {
-    margin-right: 10px;
-}
-
-.input-container .or-text {
-    margin: 0 10px;
-    margin-bottom: 0;
-    color:red;
+label, button {
+    margin-left: 40px; 
 }
 
 /* 設定 alertArea 樣式 */
@@ -38,9 +62,10 @@ label[for="nas"]  {
 
 /* 表格樣式設定 */   
 table {
+    margin: 0 auto; /* 將表格置中 */
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    width: 90%; /* 設定表格寬度為 100% */
     border: 1px solid #ddd;
     font-size: 14px;
     color: #323B67;
@@ -60,20 +85,42 @@ table {
     }
 
  /* 首列設定 */
- th, 
- tr:nth-child(5) th {
+ th,
+ tr:nth-child(5) th,
+ tr:nth-child(6) th {
     text-align: center;
     font-weight: bold;
     font-size: 16px;
- }
+}
  
-/* 設定表格的首列和第五列的背景顏色 */
+/* 設定表格的首列、第五列和第六列的背景顏色 */
 tr:first-child,
-tr:nth-child(5) {
+tr:nth-child(5),
+tr:nth-child(6) {
     background-color: #EFEFEF;
+}
+
+.outvalue {
+    color:rgb(95, 17, 240);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Text Me One';
 }
 
  /* 不顯示此表單 */
  .epValue {
     display: none;
 }
+
+/* 螢幕寬度小於768px時，套用這個區塊的css */
+@media (max-width: 768px) {
+    .title {font-size: 26px; margin:15px;}
+ }
+
+  /* 螢幕寬度小於576px時，套用這個區塊的css */
+  @media (max-width: 576px) {
+    label, button {margin-left: 0;} 
+    input[readonly] {width: 100px;}
+    table {max-width: 90%;}
+    .note {font-size: 12px;}
+  }
