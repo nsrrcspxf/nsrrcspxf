@@ -237,6 +237,12 @@
          updatenas();
 
         function calculate() {
+            // 清空之前計算的結果
+            document.getElementById("outC").innerHTML = "";
+            document.getElementById("outanoC").innerHTML = "";
+            document.getElementById("outaveM").innerHTML = "";
+            document.getElementById("outanoaveM").innerHTML = "";
+
             // 獲取輸入的值
             var nasValue = parseFloat(document.getElementById("nas").value);
             var degValue = parseFloat(document.getElementById("deg").value);
@@ -245,11 +251,18 @@
             var inputCValue = parseFloat(document.getElementById("inputC").value);
 
             // 檢查 "deg" 和 "mo" 是否有填寫
-            if (isNaN(degValue) || isNaN(moValue) || degValue <= 0 || moValue <= 0) {
-                showResultAlert("Please fill in both 'Total oscillation range' and 'Crystal mosaicity correctly'. \n 請正確填寫 'Total oscillation range' 以及 'Crystal mosaicity'。", "alert-warning");
+            if (isNaN(degValue) || degValue <= 0 || isNaN(moValue) || moValue < 0) {
+                showResultAlert("Please fill in both 'Total oscillation range' and/or 'Crystal mosaicity' correctly. \n 請正確填寫 'Total oscillation range' 以及(或) 'Crystal mosaicity'。", "alert-warning");
+                
+                document.getElementById("deg").style.border = isNaN(degValue) || degValue <= 0 ? "2px solid red" : ""; //輸入框醒目提示
+                document.getElementById("mo").style.border = isNaN(moValue) || moValue < 0 ? "2px solid red" : "";
                 return;
             }
-
+            
+            // 如果填寫正確，清除提醒及邊框顏色
+            document.getElementById("deg").style.border = ""; // 清除邊框顏色
+            document.getElementById("mo").style.border = ""; // 清除邊框顏色
+                
             // 計算 eValue
             var eValue = degValue - 2 * moValue;
             document.getElementById("evalue").value = eValue;
@@ -258,13 +271,28 @@
             var pValue = eValue / 180;
             document.getElementById("pvalue").value = pValue;
 
-            // 檢查 "nc" 是否有填寫
+            // 檢查 "nc" 是否大於 0
+            if (isNaN(ncValue) || ncValue <= 0) {
+            showResultAlert("Please fill in a valid value for 'Number of crystals' (nc) greater than 0. \n 晶體數量請填入正整數。", "alert-warning");
+            document.getElementById("nc").style.border = isNaN(ncValue) || ncValue <= 0 ? "2px solid red" : "";     //輸入框醒目提示
+            return;
+            }
+
+            // 如果填寫正確，清除提醒及邊框顏色
+            document.getElementById("nc").style.border = ""; // 清除邊框顏色
+
             if (!isNaN(ncValue)) {
                 // 計算 outC、outanoC、outaveM、outanoaveM
                 var outC = (1 - Math.pow((1 - pValue), ncValue * 2 * nasValue)) * 100;
                 var outanoC = (1 - Math.pow((1 - pValue), ncValue * nasValue)) * 100;
                 var outaveM = ncValue * pValue * 2 * nasValue;
                 var outanoaveM = ncValue * pValue * nasValue;
+
+                // 檢查計算結果是否為正值
+                if (outC <= 0 || outanoC <= 0 || outaveM <= 0 || outanoaveM <= 0) {
+                    showResultAlert("Crystal mosaicity is too high, try increasing the 'Total oscillation range'. \n 晶體 mosaicity 過大，可嘗試增加 'Total oscillation range'。", "alert-danger");
+                    return; // 停止執行後續計算
+                }
 
                 // 將計算結果填入表格
                 document.getElementById("outC").innerHTML = outC.toFixed(2);
