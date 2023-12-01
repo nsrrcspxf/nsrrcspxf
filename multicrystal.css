@@ -67,12 +67,13 @@ table {
     margin: 0 auto; /* 將表格置中 */
     border-collapse: collapse;
     border-spacing: 0;
-    width: 90%; /* 設定表格寬度為 100% */
+    width: 90%;       /* 設定表格寬度為90% */
     border: 1px solid #ddd;
     font-size: 14px;
     color: #323B67;
     background-color:white;
     flex-wrap: wrap;
+   
  }
  
  /* 表格設定 */
@@ -80,10 +81,11 @@ table {
     padding: 12px;   /* 表格列高 */
     text-align: left;
     border: 1px solid #ddd; /* 設定內部邊框線 */
-    white-space: normal;    /* 强制表格列文字換行 */
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100px; /* 根據需要設置最大寬度 */
+    max-width: 94px; /* 根據需要設置最大寬度 */
+    white-space: normal;
+    word-wrap: break-word;
     }
 
  /* 首列設定 */
@@ -111,8 +113,6 @@ tr:nth-child(6) {
 
 .note {
     color:#673232;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
 }
 
  /* 不顯示此表單 */
@@ -125,10 +125,10 @@ tr:nth-child(6) {
     .title {font-size: 26px; margin:15px;}
  }
 
-  /* 螢幕寬度小於576px時，套用這個區塊的css */
+  /* 螢幕寬度小於420px時，套用這個區塊的css */
   @media (max-width: 576px) {
     label, button {margin-left: 0;} 
     input[readonly] {width: 100px;}
-    table {max-width: 90%;}
+    table {font-size: 12px;}
     .note {font-size: 12px;}
   }
