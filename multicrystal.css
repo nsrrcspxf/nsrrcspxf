@@ -79,13 +79,14 @@ table {
  /* 表格設定 */
  th, td { 
     padding: 12px;   /* 表格列高 */
+    max-width: 94px;    /* 根據需要設置最大寬度 */
     text-align: left;
     border: 1px solid #ddd; /* 設定內部邊框線 */
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 94px; /* 根據需要設置最大寬度 */
     white-space: normal;
     word-wrap: break-word;
+    font-weight: bold;
     }
 
  /* 首列設定 */
