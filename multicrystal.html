@@ -173,7 +173,7 @@
                             <input type="number" id="nas" name="NumberofAsymmetric" readonly>
                             <br> <!--換行 -->
                             <br> <!--再空一行 -->
-                            <label for="deg"> Total oscillation range： </label>
+                            <label for="deg"> Total oscillation range (max:180)： </label>
                             <input type="number" id="deg" name="TotalOscillationRange" size=5 value="10" step="0.1" required /> <!-- step="0.1": 指定填入數值需為1位數小數-->
                             <br> <!--換行 -->
                             <br> <!--再空一行 -->
@@ -252,7 +252,7 @@
                         <br>
                     </fieldset>
                     <div class="note">
-                        <p>* The prediction is relatively optimistic. You may need more crystals.</p>
+                        <p>* The prediction is relatively optimistic. You may need more crystals. 此估算值較為樂觀，實作上需要更多晶體。</p>
                         <p>*<b>Ref:</b> C.-Y. Huang, <i>et al.</i> <i>In meso in situ</i> serial X-ray crystallography of soluble and membrane proteins. <i>Acta Cryst.</i>, <b>(2015)</b> D71, 1238–1256.[doi: <a href="https://scripts.iucr.org/cgi-bin/paper?S1399004715005210"
                             target="_blank">10.1107/S1399004715005210.</a>]</p>
                     </div>
@@ -278,6 +278,13 @@
             document.getElementById("outanoC999").innerHTML = "";
             document.getElementById("outanoC90").innerHTML = "";
 
+            // 在 calculate 函數的一開始將 'nc'' 'outC', 'outanoC', 'outaveM', 'outanoaveM' 的文字顏色設為預設顏色
+            ['nc','outC', 'outanoC', 'outaveM', 'outanoaveM'].forEach(function (elementId) {
+                var outputElement = document.getElementById(elementId);
+                outputElement.innerHTML = "";
+                outputElement.removeAttribute("style"); // 清空所有樣式
+            });
+
 
             // 獲取輸入的值
             var nasValue = parseFloat(document.getElementById("nas").value);
@@ -291,6 +298,13 @@
                 
                 document.getElementById("deg").style.border = isNaN(degValue) || degValue <= 0 ? "2px solid red" : ""; //輸入框醒目提示
                 document.getElementById("mo").style.border = isNaN(moValue) || moValue < 0 ? "2px solid red" : "";
+                return;
+            }
+
+            // 檢查 "deg" 是否大於 180
+            if (degValue > 180) {
+                showResultAlert("Please enter a value for 'Total oscillation range' that is not greater than 180 degrees. \n 'Total oscillation range' 不可超過 180 度。", "alert-warning");
+                document.getElementById("deg").style.border = "2px solid red"; // 輸入框醒目提示
                 return;
             }
             
@@ -319,9 +333,9 @@
             document.getElementById("outanoC90").innerHTML = outanoC90.toFixed(0);
 
             // 檢查 "nc" 是否大於 0
-            if (!isNaN(ncValue) && ncValue <= 0) {
+            if (!isNaN(ncValue) && (ncValue <= 0 || Math.floor(ncValue) !== ncValue)) {
             showResultAlert("Please fill in a valid value for 'Number of crystals' greater than 0. \n 晶體數量請填入正整數。", "alert-warning");
-            document.getElementById("nc").style.border = isNaN(ncValue) || ncValue <= 0 ? "2px solid red" : "";     //輸入框醒目提示
+            document.getElementById("nc").style.border = isNaN(ncValue) || ncValue <= 0 || Math.floor(ncValue) !== ncValue? "2px solid red" : "";     //輸入框醒目提示
             return;
             }
 
@@ -356,24 +370,35 @@
                 return;
             }
                 
-            // 檢查 "nc" 是否為空白，如果是，則將 "outC999" 數值用紅色字體填入 "nc" 的輸入框中
+            // 檢查 "nc" 是否為空白，如果為空白，則將"outC999"的數值用紅字填入"nc"輸入格中
             var ncInput = document.getElementById("nc");
             if (ncInput.value === "") {
                 ncInput.value = outC999.toFixed(0);
-                ncInput.style.color = "red";  // 設定文字顏色為紅色
+                ncInput.style.color = "red";   // 設定文字顏色為紅色
 
-                // 用"outC999"的數值計算 outC、outanoC、outaveM、outanoaveM
-                var outC = (1 - Math.pow((1 - pValue), outC999 * 2 * nasValue)) * 100;
-                var outanoC = (1 - Math.pow((1 - pValue), outC999 * nasValue)) * 100;
-                var outaveM = outC999 * pValue * 2 * nasValue;
-                var outanoaveM = outC999 * pValue * nasValue;
-
-                // 將計算結果填入表格
-                document.getElementById("outC").innerHTML = outC.toFixed(2);
-                document.getElementById("outanoC").innerHTML = outanoC.toFixed(2);
-                document.getElementById("outaveM").innerHTML = outaveM.toFixed(1);
-                document.getElementById("outanoaveM").innerHTML = outanoaveM.toFixed(1);
+                // 用"outC999"的數值計算 outC、outanoC、outaveM、outanoaveM，並將結果用紅字填入表格中
+                ['outC', 'outanoC', 'outaveM', 'outanoaveM'].forEach(function (elementId) {
+                    var value = calculateValue(elementId);
+                    document.getElementById(elementId).innerHTML = value.toFixed(value === parseInt(value, 10) ? 0 : 2);
+                    document.getElementById(elementId).style.color = "red";
+                });
             }
+            
+            // 算式
+            function calculateValue(elementId) {
+                switch (elementId) {
+                    case 'outC':
+                        return (1 - Math.pow((1 - pValue), outC999 * 2 * nasValue)) * 100;
+                    case 'outanoC':
+                        return (1 - Math.pow((1 - pValue), outC999 * nasValue)) * 100;
+                    case 'outaveM':
+                        return outC999 * pValue * 2 * nasValue;
+                    case 'outanoaveM':
+                        return outC999 * pValue * nasValue;
+                    default: 
+                        return 0;    // default 是一個用來處理未知情況的保護機制。
+                }
+            }   
         }
 
         // showResultAlert 指令
