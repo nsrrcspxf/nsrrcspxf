@@ -182,7 +182,7 @@
                             <br> <!--換行 -->
                             <br> <!--再空一行 -->
                             <label for="nc"> Number of crystals： </label>
-                            <input type="number" id="nc" name="NumberofCrystals" size=5 value="20" step="1"/> <!-- step="1": 指定填入數值需為整數-->
+                            <input type="number" id="nc" name="NumberofCrystals" size=5 step="1" placeholder="填入正整數或留白"/> <!-- step="1": 指定填入數值需為整數-->
                             <br>
                             <br>
                     </fieldset>
@@ -334,7 +334,7 @@
 
             // 檢查 "nc" 是否大於 0
             if (!isNaN(ncValue) && (ncValue <= 0 || Math.floor(ncValue) !== ncValue)) {
-            showResultAlert("Please fill in a valid value for 'Number of crystals' greater than 0. \n 晶體數量請填入正整數。", "alert-warning");
+            showResultAlert("'Number of crystals' can be left blank or filled with a positive integer. \n 晶體數量可不填或填入正整數。", "alert-warning");
             document.getElementById("nc").style.border = isNaN(ncValue) || ncValue <= 0 || Math.floor(ncValue) !== ncValue? "2px solid red" : "";     //輸入框醒目提示
             return;
             }
