@@ -263,15 +263,21 @@
     </div>
 
     <script>
-         // 確保在頁面加載時 updatenas 函數被調用，並且 nas 的初始值被正確設置。
-         updatenas();
+        // 確保在頁面加載時 updatenas 函數被調用，並且 nas 的初始值被正確設置。
+        updatenas();
 
+        // 主程式開始
         function calculate() {
             // 清空之前計算的結果
             document.getElementById("outC").innerHTML = "";
             document.getElementById("outanoC").innerHTML = "";
             document.getElementById("outaveM").innerHTML = "";
             document.getElementById("outanoaveM").innerHTML = "";
+            document.getElementById("outC999").innerHTML = "";
+            document.getElementById("outC90").innerHTML = "";
+            document.getElementById("outanoC999").innerHTML = "";
+            document.getElementById("outanoC90").innerHTML = "";
+
 
             // 獲取輸入的值
             var nasValue = parseFloat(document.getElementById("nas").value);
@@ -299,6 +305,18 @@
             // 計算 pValue
             var pValue = eValue / 180;
             document.getElementById("pvalue").value = pValue;
+
+            // 計算 Completeness 99.99%, 需要多少顆晶體。 
+            var outC999 = Math.ceil(Math.log(0.0001) / Math.log(1 - pValue) / (2 * nasValue));   //Math.ceil() 函數讓結果無條件進位至整數。
+            var outC90 = Math.ceil(Math.log(0.1) / Math.log(1 - pValue) / (2 * nasValue));
+            var outanoC999 = outC999 * 2
+            var outanoC90 = outC90 * 2
+
+            // 將計算結果填入表格
+            document.getElementById("outC999").innerHTML = outC999.toFixed(0);
+            document.getElementById("outC90").innerHTML = outC90.toFixed(0);
+            document.getElementById("outanoC999").innerHTML = outanoC999.toFixed(0);
+            document.getElementById("outanoC90").innerHTML = outanoC90.toFixed(0);
 
             // 檢查 "nc" 是否大於 0
             if (!isNaN(ncValue) && ncValue <= 0) {
@@ -333,24 +351,16 @@
                 document.getElementById("alertArea").innerHTML = "";
             }
 
-                // 計算 Completeness 99.99%, 需要多少顆晶體。 
-                var outC999 = Math.ceil(Math.log(0.0001) / Math.log(1 - pValue) / (2 * nasValue));   //Math.ceil() 函數讓結果無條件進位至整數。
-                var outC90 = Math.ceil(Math.log(0.1) / Math.log(1 - pValue) / (2 * nasValue));
-                var outanoC999 = outC999 * 2
-                var outanoC90 = outC90 * 2
-
-                // 將計算結果填入表格
-                document.getElementById("outC999").innerHTML = outC999.toFixed(0);
-                document.getElementById("outC90").innerHTML = outC90.toFixed(0);
-                document.getElementById("outanoC999").innerHTML = outanoC999.toFixed(0);
-                document.getElementById("outanoC90").innerHTML = outanoC90.toFixed(0);
+            // 檢查 "nc" 是否已經有數值，如果是，則停止後續運算
+            if (!isNaN(ncValue)) {
+                return;
+            }
                 
-                // 檢查是否已經有 "nc" 的值，如果沒有，則將"outC999"計算結果填入 "nc" 的輸入框
-                var ncInput = document.getElementById("nc");
-                if (ncInput.value === "") {
-                    ncInput.value = outC999.toFixed(0);
-                    ncInput.style.color = "red";  // 設定文字顏色為紅色
-                }
+            // 檢查 "nc" 是否為空白，如果是，則將 "outC999" 數值用紅色字體填入 "nc" 的輸入框中
+            var ncInput = document.getElementById("nc");
+            if (ncInput.value === "") {
+                ncInput.value = outC999.toFixed(0);
+                ncInput.style.color = "red";  // 設定文字顏色為紅色
 
                 // 用"outC999"的數值計算 outC、outanoC、outaveM、outanoaveM
                 var outC = (1 - Math.pow((1 - pValue), outC999 * 2 * nasValue)) * 100;
@@ -363,6 +373,7 @@
                 document.getElementById("outanoC").innerHTML = outanoC.toFixed(2);
                 document.getElementById("outaveM").innerHTML = outaveM.toFixed(1);
                 document.getElementById("outanoaveM").innerHTML = outanoaveM.toFixed(1);
+            }
         }
 
         // showResultAlert 指令
