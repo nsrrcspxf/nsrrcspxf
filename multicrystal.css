@@ -22,10 +22,12 @@
 
 /* 調整 "field" 格式 */
 legend {
-    margin-bottom: 20px;  /* 個人資訊和姓名之間的行距 */
-    font-size: 24px;      /* 改變 field 字體大小 */
+    margin-bottom: 20px;  /* 項目距離 */
+    font-family: Amaranth;
+    font-size: 28px;      /* 改變 field 字體大小 */
     font-weight: bold;    /* field 改為粗體字 */
     text-align: center; /* 讓文字在 fieldset 中水平置中 */
+    color:rgb(53, 19, 3);
 }
 
 /* 設定下拉選單的寬度為 200 像素 */
