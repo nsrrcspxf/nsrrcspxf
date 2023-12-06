@@ -112,6 +112,12 @@ tr:nth-child(6) {
     font-family: 'Text Me One';
 }
 
+#howmanycrystals {
+    color: orange;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .note {
     color:#673232;
 }
@@ -132,4 +138,5 @@ tr:nth-child(6) {
     input[readonly] {width: 100px;}
     table {font-size: 12px;}
     .note {font-size: 12px;}
+    #howmanycrystals {font-size: 18px;}
   }
