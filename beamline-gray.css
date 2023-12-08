@@ -1,4 +1,6 @@
- /* text-align: center;  調整文字對齊方式 center-置中；justify-分散對齊*/
+/* 主要為整體網頁顏色與大小標題字體設定 */
+
+/* text-align: center;  調整文字對齊方式 center-置中；justify-分散對齊*/
 /* 主標題 */
 .title {
   font-family: 'Fugaz One';
@@ -227,7 +229,6 @@ ul.challeng-list {
    /* 螢幕寬度小於768px時，套用這個區塊的css */
    @media (max-width: 768px) {
       .title {font-size: 26px; margin:15px;}
-      .title2 {font-size: 16px;}
       .title-side {font-size: 20px;}
       .title3 {margin-top: 5px;}
       .BLtechiques {font-size: 14px;}
@@ -238,6 +239,7 @@ ul.challeng-list {
 
     /* 螢幕寬度小於576px時，套用這個區塊的css */
     @media (max-width: 576px) {
+       .title2 {font-size: 16px;}
        .justify-text {font-size:14px;}   /* 中間主欄位介紹 beamline 的文字 */ 
        li.BLManual-Ch a, li.BLManual-En a {   /* Manual 文字和行距 */
           font-size:14px; line-height: 1.5;}   
