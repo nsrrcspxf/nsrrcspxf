@@ -1,0 +1,142 @@
+/* 主標題 */
+.title {
+    font-family: 'Fugaz One';
+    font-size: 48px;
+    color: #1f2e36;
+    text-shadow: 1px 1px 2px rgba(1, 48, 75, 0.5);
+    /* box-shadow: 0 5px 10px rgba(150, 161, 163, 0.5);  添加陰影效果 */
+    text-align: center;
+    margin: 40px 20px; /*第一個值為上下，第二個值為左右 */
+    }
+
+/* 上方橫向選單 */
+.custom-nav {
+    width: 100%;
+    justify-content: center;
+    text-align:center;
+}
+    
+.activite-nav {
+    display: flex;
+    justify-content: space-between; 
+    background-color: #474747;
+    overflow: hidden;  
+}
+    
+.activite-link {
+    height: 100px;
+    display: flex;
+    flex: 1;
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
+    text-align: center; /* 文字水平置中 */
+    flex-direction: column; /* 讓元素的內容(中文、英文) 以垂直方向排列 */
+    position: relative;
+    border: 1px solid #ccc; /* 可選：添加邊框以視覺檢查元素的高度 */
+    color:rgb(197, 197, 196);
+    text-decoration: none;
+    font-family:'Text Me One';
+    font-weight: bold;
+    font-size: 24px;
+    border-bottom: 15px solid #000;
+}
+
+/* 滑鼠懸停時效果設定 */
+.activite-link::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 0;
+    height: 15px;
+    border-top: 15px solid rgb(248, 248, 224);
+    transition: width 0.5s ease; /* 加入漸變效果 */
+  }
+  
+.activite-link:hover::before {
+    width: 100%;
+}
+
+.activite-link:hover {
+    color: white; /* 悬停时更改文字颜色 */
+}
+.activite-link span {
+    margin-top: 5px; /* 可調整間距 */
+    font-size: 14px; /* 可調整字體大小 */
+}
+  
+/* 調整中間主欄位 */
+.main-content {
+    padding: 30px 40px;    
+    background-color: none;
+}
+
+/* 中間欄位標題 */
+.title2 {
+    font-family: 'Amaranth';
+    color: #FEFEFE;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 5px;
+    background-size: cover;
+    box-shadow: 0 3px 5px rgba(75, 43, 1, 0.5); /* 添加陰影效果 */
+  /* 水平偏移、垂直偏移、模糊半徑 顏色(半透明(0.5)黑色) */
+    background-image: linear-gradient(to bottom,#1d3c50, #1f2e36)
+}
+
+/* 卡片組件字型 */
+.card-body {
+    font-family:'Text Me One';
+    font-weight: bold;
+}
+/* 圖片格式，避免加上超連結後超出父容器 */
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* This ensures the image respects its container's width */
+    margin: 0 auto; /* Optional: Center the image horizontally within the card */
+}
+
+/* 活動名稱超連結樣式 */
+.activite {
+    font-weight: bold;
+}
+
+.activite a{
+    color: #eeaf52;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px /* 用來增加BG顯示範圍 */
+}
+
+.activite a:hover{
+    color: rgb(250, 249, 249);
+    background-color:#eeaf52 ;
+}
+
+/* 日期格式 */
+.date {
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+
+   /* 螢幕寬度小於1200px時，套用這個區塊的css */
+   @media (max-width: 1200px) { 
+    .title {font-size: 28px; margin:10px;}
+}
+
+ /* 螢幕寬度小於992px時，套用這個區塊的css */
+ @media (max-width: 992px) {
+    .title {font-size: 30px; margin:15px;}
+ }
+
+ /* 螢幕寬度小於768px時，套用這個區塊的css */
+ @media (max-width: 768px) {
+    .title {font-size: 26px; margin:15px;}
+ }
+
+  /* 螢幕寬度小於576px時，套用這個區塊的css */
+  @media (max-width: 576px) {
+     .title2 {font-size: 16px;}  
+  }
