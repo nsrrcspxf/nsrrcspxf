@@ -30,7 +30,7 @@
 
         <!-- 連結自設的CSS樣式表-->
         <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
-        <link rel="stylesheet" type="text/css" href="beamline-gray.css" /> <!--Beamline頁面樣式-->
+        <link rel="stylesheet" type="text/css" href="activites.css" /> <!--Beamline頁面樣式-->
     </head>
 
     <!-- body:網頁內文 -->
@@ -40,7 +40,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <!-- Logo -->
-                        <img src="img/NSRRC_logo3.jpg" width="50" height="50"
+                    <img src="img/NSRRC_logo3.jpg" width="50" height="50"
                             style="border-radius: 50%; margin-right: 15px;">
                     <a class="navbar-brand" href="index.html">SPXF</a>
 
@@ -129,43 +129,44 @@
 
         <!-- 第三區塊：主標題 title-->
         <div class="title">Activites</div>
-        <br>
 
         <!-- 第四區塊：主內容-二欄位 -->
         <div class="container-fluid-main"> <!-- fluid: 水流樣式，for RWD -->
-            <div class="row justify-content-center"> <!-- 水平置中 (col少的份數變成左右空白) -->
-                <!-- 左邊欄位 -->
-                <div class="col-12 col-lg-4 fixed-left"> <!-- col-2(數字) 決定欄寬，total12份 -->
-                    <br>
-                    <div class="page-guiline">
-                        <div class="onthispage"><img src="img/News.png" width="30" height="30" class="my-auto" />On This
-                            Page</div>
-                        <ul class="BLinfo">
-                            <a class="page-link" href="#blinfo1">1. Training Course</a>
-                            <a class="page-link" href="#blinfo2">2. Workshop</a>
-                            <a class="page-link" href="#blinfo3">3. Others</a>
-                        </ul>
+            <div class="row justify-content-center"> <!-- 水平置中 (col少的份數變成左右空白) --> 
+                <!-- 中間主欄位 -->
+                <div class="col-12 col-lg-8 main-content"> <!-- 文字靠左(可自行設定)-->
+                    <div class="custom-nav" aria-label="...">
+                        <div class="activite-nav">
+                          <a class="activite-link" href="#blinfo1"> 訓練課程
+                                <span>Training Course</span>
+                          </a>
+                          <a class="activite-link" href="#blinfo2">研討會
+                                <span>Workshop</span></a>
+                          <a class="activite-link" href="#blinfo3">其他活動
+                                <span>Others</a></span>
+                        </div>
                     </div>
                     <br>
-                </div>
-                <!-- 右邊主欄位 -->
-                <div class="col-12 col-lg-7 main-content"> <!-- 文字靠左(可自行設定)-->
                     <!-- 次標題 title2-->
                     <!-- Training Course -->
                     <div class="title2" id="blinfo1">Training Course</div><br>
                     <!-- 卡片組件 -->
                     <div class="card-group">
                         <div class="card">
-                            <img src="img/2023TC1-01.JPG" class="CoverImage" alt="2023 TC-1">
+                            <a href="2023TC1.html">
+                                <img src="img/2023TC1-01.JPG" class="CoverImage" alt="2023 TC-1">
+                            </a>
                             <div class="card-body">
-                                <h5 class="activite" style="font-family: Amaranth"><a href="#" target="_blank">2023 蛋白質結晶學訓練課程 (第一梯次)</a></h5>
+                                <h5 class="activite"><a href="2023TC1.html" target="_blank">2023 蛋白質結晶學訓練課程 (第一梯次)</a></h5>
                                 <p class="date">Date: 2023/7/17 ~ 7/21</p><br>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="img/2023TC2-01.JPG" class="CoverImage" alt="2023 TC-2">
+                            <a href="2023TC2.html">
+                                <img src="img/2023TC2-01.JPG" class="CoverImage" alt="2023 TC-2">
+                            </a>
                             <div class="card-body">
-                                <h5 class="activite" style="font-family: Amaranth"><a href="TPS07A.html" target="_blank">2023 蛋白質結晶學訓練課程 (第二梯次)</a></h5>
+                                <h5 class="activite"><a href="2023TC2.html" target="_blank">2023 蛋白質結晶學訓練課程 (第二梯次)</a></h5>
                                 <p class="date">Date: 2023/7/24 ~ 7/28</p><br>
                             </div>
                         </div>
@@ -175,9 +176,11 @@
                     <!-- Workshop  -->
                     <div class="title2" id="blinfo2">Workshop</div><br>
                     <div class="card">
-                        <img src="img/2023WS-01.JPG" class="CoverImage" alt="2023 TC-1">
+                        <a href="2023WS.html">
+                            <img src="img/2023WS-01.JPG" class="CoverImage" alt="2023WS">
+                        </a>    
                         <div class="card-body">
-                            <h5 class="activite" style="font-family: Amaranth"><a href="#" target="_blank">2023 Micro-beam Data Collection and Processing Workshop</a></h5>
+                            <h5 class="activite"><a href="2023WS.html" target="_blank">2023 Micro-beam Data Collection and Processing Workshop</a></h5>
                             <p class="date">Date: 2023/9/6</p><br>
                         </div>
                     </div>
@@ -186,9 +189,11 @@
                     <!-- Others  -->
                     <div class="title2" id="blinfo3">Others</div><br>   
                     <div class="card">
-                        <img src="img/2023KissScience.jpg" class="CoverImage" alt="2023 Kiss Science">
+                        <a href="https://web.nstc.gov.tw/kissscience/2021/event69.html" target="_blank">
+                            <img src="img/2023KissScience.jpg" class="CoverImage" alt="2023 Kiss Science">
+                        </a>
                         <div class="card-body">
-                            <h5 class="activite" style="font-family: Amaranth"><a href="#" target="_blank">2023 Kiss Science 蛋白質結構大解析</a></h5>
+                            <h5 class="activite" style="font-family: Amaranth"><a href="https://web.nstc.gov.tw/kissscience/2021/event69.html" target="_blank">2023 Kiss Science 蛋白質結構大解析 活動花絮</a></h5>
                             <p class="date">Date: 2023/11/12</p><br>
                         </div>
                     </div>
