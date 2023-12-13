@@ -6,7 +6,7 @@
     text-shadow: 1px 1px 2px rgba(1, 48, 75, 0.5);
     /* box-shadow: 0 5px 10px rgba(150, 161, 163, 0.5);  添加陰影效果 */
     text-align: center;
-    margin: 40px 20px; /*第一個值為上下，第二個值為左右 */
+    margin: 40px 20px 10px 20px; /*第一個值為上下，第二個值為左右 */
     }
 
 /* 上方橫向選單 */
@@ -32,8 +32,7 @@
     text-align: center; /* 文字水平置中 */
     flex-direction: column; /* 讓元素的內容(中文、英文) 以垂直方向排列 */
     position: relative;
-    border: 1px solid #ccc; /* 可選：添加邊框以視覺檢查元素的高度 */
-    color:rgb(197, 197, 196);
+    color:rgb(180, 178, 180);
     text-decoration: none;
     font-family:'Text Me One';
     font-weight: bold;
@@ -49,7 +48,7 @@
     left: 0;
     width: 0;
     height: 15px;
-    border-top: 15px solid rgb(248, 248, 224);
+    border-top: 15px solid #eeaf52;
     transition: width 0.5s ease; /* 加入漸變效果 */
   }
   
@@ -67,7 +66,7 @@
   
 /* 調整中間主欄位 */
 .main-content {
-    padding: 30px 40px;    
+    padding: 20px 30px;    
     background-color: none;
 }
 
@@ -89,12 +88,25 @@
     font-family:'Text Me One';
     font-weight: bold;
 }
+
 /* 圖片格式，避免加上超連結後超出父容器 */
 .card img {
     max-width: 100%;
     height: auto;
     display: block; /* This ensures the image respects its container's width */
     margin: 0 auto; /* Optional: Center the image horizontally within the card */
+}
+
+/* more information按鈕 */
+.botton-left {
+    margin-left:15px;
+  }
+
+button a{
+    font-size: 16px;
+    font-weight: bold;
+    color:rgb(250, 250, 250); 
+    text-decoration: none;
 }
 
 /* 活動名稱超連結樣式 */
@@ -111,7 +123,7 @@
 
 .activite a:hover{
     color: rgb(250, 249, 249);
-    background-color:#eeaf52 ;
+    background-color:#eeaf52;
 }
 
 /* 日期格式 */
@@ -121,22 +133,25 @@
 }
 
 
-   /* 螢幕寬度小於1200px時，套用這個區塊的css */
-   @media (max-width: 1200px) { 
-    .title {font-size: 28px; margin:10px;}
+/* 螢幕寬度小於1200px時，套用這個區塊的css */
+@media (max-width: 1200px) { 
+.title {font-size: 28px;}
 }
 
  /* 螢幕寬度小於992px時，套用這個區塊的css */
  @media (max-width: 992px) {
-    .title {font-size: 30px; margin:15px;}
+    .title {font-size: 30px;}
  }
 
  /* 螢幕寬度小於768px時，套用這個區塊的css */
  @media (max-width: 768px) {
-    .title {font-size: 26px; margin:15px;}
+    .title {font-size: 26px; margin:30px 15px 0 15px; }
+    .main-content {padding: 0 30px;}
+    .activite-nav {display:none;}
+    .none-left {display:none;}
  }
 
   /* 螢幕寬度小於576px時，套用這個區塊的css */
   @media (max-width: 576px) {
-     .title2 {font-size: 16px;}  
+     .title2 {font-size: 20px;}  
   }
