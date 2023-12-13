@@ -30,6 +30,19 @@
         <!-- 連結自設的CSS樣式表-->
         <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css"/> <!--導覽列樣式-->   
     </head> 
+    <style>
+        .pdf-container {
+            width: 100%;
+            text-align: center;  /* 將內容水平置中 */
+            }
+    
+        .pdf-iframe {
+            width: 100%;
+            height: 1500px;
+            border: 0;
+            margin: 75px auto 0;  /* 將 pdf 檔案下移 75px，並水平置中 */
+            }
+        </style>
 
     <!-- body:網頁內文 -->
     <body> 
@@ -122,7 +135,9 @@
         </header> 
 
         <!-- 第三區塊：Support Schedule -->
-        <iframe src="pdf/User_Support_Schedule_2023-2.pdf" width="100%" height="1000px" frameborder="0"></iframe> 
+        <div class="pdf-container">
+            <iframe class="pdf-iframe" src="pdf/User_Support_Schedule_2023-2.pdf"></iframe> 
+        </div>  
 
         <!-- 最下層：底部 footer -->
         <footer>
