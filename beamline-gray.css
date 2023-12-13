@@ -239,7 +239,7 @@ ul.challeng-list {
 
     /* 螢幕寬度小於576px時，套用這個區塊的css */
     @media (max-width: 576px) {
-       .title2 {font-size: 16px;}
+       .title2 {font-size: 20px;}
        .justify-text {font-size:14px;}   /* 中間主欄位介紹 beamline 的文字 */ 
        li.BLManual-Ch a, li.BLManual-En a {   /* Manual 文字和行距 */
           font-size:14px; line-height: 1.5;}   
