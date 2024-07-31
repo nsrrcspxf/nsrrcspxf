@@ -116,6 +116,18 @@
   font-size: 2em; 
 } */
 
+/* publications 超連結顏色設定 */
+.publications a {
+  color:rgb(79, 132, 247) !important;
+  font-size: 16px;
+}
+
+.publications {
+  font-family: 'Text Me One'; /* 設定字體 */
+  font-weight: bold; /* 設定粗體字體 */
+}
+
+
 /* 指定中文和英文列表項的不同樣式 */  /* 如果只想改變圓點顏色，就不要加 a */
   li.BLManual-Ch a {
     color: #358abb !important; /* 設定中文列表項的文字顏色 */
