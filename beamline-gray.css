@@ -118,7 +118,7 @@
 
 /* publications 超連結顏色設定 */
 .publications a {
-  color:rgb(79, 132, 247) !important;
+  background-color:rgb(79, 132, 247);
   font-size: 16px;
 }
 
