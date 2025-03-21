@@ -35,6 +35,7 @@
         <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
         <link rel="stylesheet" type="text/css" href="beamline-gray.css" /> <!--Beamline頁面樣式-->
         <link rel="stylesheet" type="text/css" href="2colum.css" /> <!--Service頁面樣式-->
+        <link rel="stylesheet" type="text/css" href="index.css" /> <!--表格樣式-->
     </head>
 
     <!-- body:網頁內文 -->
@@ -197,8 +198,39 @@
 
                         <!-- Which detector you used -->
                         <p class="text2-blue">Which detector you used:</p>
-                        <p>Rayonix MX300HE CCD, Rayonix MX300HS CCD, Dectris EIGER2 X 9M or Dectris EIGER2 X 16M</p>
-
+                        <!-- 表格 -->
+                        <table class="center">
+                            <tr> <!--首列 -->
+                                <th>Beamline</th>
+                                <th>
+                                    <span> Date Range </span>
+                                </th>
+                                <th>
+                                    <span> Detector </span>
+                                </th>
+                            </tr>
+                            <tr> <!--第二列 -->
+                                <td>TPS 07A</td> <!--欄1 -->
+                                <td>2021/07/06 ~ Present</td> <!--欄2 -->
+                                <td>Dectris EIGER2 X 16M</td> <!--欄3 -->
+                            </tr>
+                            <tr> <!--第三列 -->
+                                <td>TPS 05A</td> <!--欄1 -->
+                                <td>2020/07/10 ~ 2022/11/22</td> <!--欄2 -->
+                                <td> Rayonix MX300HS CCD</td> <!--欄3 -->
+                            </tr>
+                            <tr> <!--第四列 -->
+                                <td></td> <!--欄1 -->
+                                <td>2022/11/23 ~ Present</td> <!--欄2 -->
+                                <td>Dectris EIGER2 X 9M</td> <!--欄3 -->
+                            </tr>
+                            <tr> <!--第五列 -->
+                                <td>TLS 15A</td> <!--欄1 -->
+                                <td>2013/10/18 ~ Present</td> <!--欄2 -->
+                                <td>Rayonix MX300HE CCD</td> <!--欄3 -->
+                            </tr>
+                        </table>
+                        <br>
                         <!-- Data processing software you used -->
                         <p class="text2-blue">Data collection software you used:</p>
                         <p class="" style="font-style: italic;">Blu-Ice</p>
