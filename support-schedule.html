@@ -35,6 +35,9 @@
             position: relative;
             padding-top: 80px; /* ✅ 預留空間避開導覽列（65px + 安全緩衝 10px） */
             text-align: center;
+            background-color: #d7dbfa;
+            font-family: 'Text Me One'; /* 設定字體 */
+            font-weight: bold; /* 設定粗體字體 */
         }
 
         .pdf-iframe {
@@ -142,11 +145,18 @@
         <!-- 第二區塊：Support Schedule -->
         <div class="pdf-wrapper">
             <div class="pdflink">
+            <br>
+              <p>為獲得最佳瀏覽體驗，請使用桌機開啟此頁面。 For the best experience, please view this page on a desktop browser.</p>
               <p>使用手機瀏覽時，可能無法完整開啟此pdf檔，請 
                 <a href="https://drive.google.com/file/d/18MDckivSdR21pPdwcX4Kaf9OfBwNAIdh/view?usp=sharing" download>
                   點此下載 PDF
                 </a>。
-              </p>
+            <p>
+                If you're using a mobile device, the PDF may not display correctly. 
+                <a href="https://drive.google.com/file/d/18MDckivSdR21pPdwcX4Kaf9OfBwNAIdh/view?usp=sharing" download>
+                    Click here to download it instead.
+                </a>
+            </p>
             </div> 
             <iframe class="pdf-iframe" src="pdf/User_Support_Schedule_2025-1.pdf"></iframe> 
         </div>  
