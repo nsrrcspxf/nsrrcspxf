@@ -28,26 +28,31 @@
                                                                     <!-- 三欄位內標題 | 大標題   |industry 內文|Navbar-SPXF -->
     
         <!-- 連結自設的CSS樣式表-->
-        <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css"/> <!--導覽列樣式-->   
+        <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css"/> <!--導覽列樣式-->
     </head> 
     <style>
-        .pdf-container {
-            width: 100%;
-            text-align: center;  /* 將內容水平置中 */
-            }
-    
+        .pdf-wrapper {
+            position: relative;
+            padding-top: 80px; /* ✅ 預留空間避開導覽列（65px + 安全緩衝 10px） */
+            text-align: center;
+        }
+
         .pdf-iframe {
             width: 100%;
             height: 1500px;
             border: 0;
-            margin: 75px auto 0;  /* 將 pdf 檔案下移 75px，並水平置中 */
-            }
+        }
+
+        .pdflink {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
         </style>
 
     <!-- body:網頁內文 -->
     <body> 
         <header>
-            <!-- 第一區塊：導覽列 -->
+        <!-- 第一區塊：導覽列 -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <!-- Logo -->
@@ -132,12 +137,20 @@
                     </div>    
                 </div>
             </nav>
-        </header> 
+        </header>
 
-        <!-- 第三區塊：Support Schedule -->
-        <div class="pdf-container">
+        <!-- 第二區塊：Support Schedule -->
+        <div class="pdf-wrapper">
+            <div class="pdflink">
+              <p>若無法瀏覽完整檔案(三頁)，請 
+                <a href="https://drive.google.com/file/d/18MDckivSdR21pPdwcX4Kaf9OfBwNAIdh/view?usp=sharing" download>
+                  點此下載 PDF
+                </a>。
+              </p>
+            </div> 
             <iframe class="pdf-iframe" src="pdf/User_Support_Schedule_2025-1.pdf"></iframe> 
         </div>  
+        
 
         <!-- 最下層：底部 footer -->
         <footer>
