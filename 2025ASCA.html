@@ -36,8 +36,45 @@
         <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
         <link rel="stylesheet" type="text/css" href="beamline-gray.css" /> <!--Beamline頁面樣式-->
         <link rel="stylesheet" type="text/css" href="industry.css" /> <!--Industry頁面樣式-->
-        <link rel="stylesheet" type="text/css" href="2colum.css" /> <!--Service頁面樣式-->
+        
     </head>
+    <style>
+       .poster-box {
+            width: 60%;
+            margin: -5px auto 10px auto;
+            border: 1px solid slategrey;   /* 把框線移到外層 */
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        /* 原本的 poster-title 不需要 border */
+        .poster-title {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #326F91;
+        }
+
+        .auth {
+            font-family: Georgia, 'Times New Roman', Times, serif;  
+            color: #023655;
+            font-size: 18px;
+            line-height: 2;
+        }
+
+        /* 手機版 */
+        @media (max-width: 480px) {
+            .poster-box {
+                width: 85%;
+            }
+            .poster-title {
+                font-size: 16px;
+            }
+            .auth {
+                font-size: 14px;
+            }
+        }
+    </style>
 
     <!-- body:網頁內文 -->
     <body>
@@ -137,16 +174,15 @@
         <!-- 第三區塊：主標題 title-->
             <div>
                 <div class="title">2025 AsCA Poster</div>
-                <p class="text1-navyblue">
-                    Micro-beam Helical Scanning Combined with Intensity-based Hierarchical Clustering for Resolving Intra-crystal Heterogeneity
-                </p>
-                <p> Chung-Kuang, Chou <i>et al.</i></p>
-                <br>
-                <br>
-                <div class="title-side">Micro-beam Helical Scanning Combined with Intensity-based Hierarchical Clustering for Resolving Intra-crystal Heterogeneity</div>
-                <div class="title3">Chung-Kuang, Chou <i>et al.</i></div>
-                <br>  
+                <div class="poster-box">
+                    <p class="poster-title">
+                        Micro-beam Helical Scanning Combined with Intensity-based Hierarchical Clustering 
+                        for Resolving Intra-crystal Heterogeneity
+                    </p>
+                    <p class="auth">Chung-Kuang, Chou <i>et al.</i></p>
+                </div>
             </div>
+            <br>
             <div>
                 <div class="botton-center">
                     <button type="button" class="btn btn-secondary btn-sm">
