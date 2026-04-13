@@ -1,0 +1,310 @@
+<!DOCTYPE html> <!-- 文件型態宣告(固定) -->
+<html lang="en">
+    <!-- head:網頁的額外資訊，不在主畫面內 -->
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNEE4KVX62"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VNEE4KVX62');
+        </script>
+
+        <!-- 控制裝置縮放維持在一倍-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+        <meta charset="utf-8" /> <!-- 網頁編碼是utf-8(萬國碼)-->
+        
+        <!-- 網頁標籤icon & 名稱-->
+        <link rel="icon" type="image/png" href="img/NSRRC_logo3.jpg">
+        <title> Activities </title> 
+
+        <!-- Boostrap 導入程式 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        <!-- 連結Google提供的字體-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth|Fugaz One|Text Me One|Monoton" />
+                                                                <!-- 三欄位內標題 | 大標題   |industry 內文|Navbar-SPXF -->
+
+        <!-- 連結自設的CSS樣式表-->
+        <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
+        <link rel="stylesheet" type="text/css" href="activites.css" /> <!--Beamline頁面樣式-->
+    </head>
+
+    <!-- body:網頁內文 -->
+    <body>
+        <header>
+            <!-- 第一區塊：導覽列 -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <img src="img/NSRRC_logo3.jpg" width="50" height="50"
+                            style="border-radius: 50%; margin-right: 15px;">
+                    <a class="navbar-brand" href="index.html">SPXF</a>
+
+                    <!-- 第一部分：手機版 -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar" aria-controls="linkbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span> <!-- 產生下拉選單按鈕 -->
+                    </button>
+
+                    <!-- 第二部分：電腦版 -->
+                    <div class="collapse navbar-collapse" id="linkbar">
+
+                        <!-- 導覽列內容 -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Home</a>
+                                <!-- Beamline 下拉式選單 -->
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="index.html">Home</a>
+                                    <a class="dropdown-item" href="https://www.nsrrc.org.tw" target="_blank">NSRRC</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Beamline</a>
+                                <!-- Beamline 下拉式選單 -->
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="TPS07A.html">TPS 07A</a>
+                                    <a class="dropdown-item" href="TPS05A.html">TPS 05A</a>
+                                    <a class="dropdown-item" href="TLS15A.html">TLS 15A</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Service</a>
+                                <!-- Remote Access 下拉式選單 -->
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="user-support.html">User Support Service </a>
+                                    <a class="dropdown-item" href="RA.html">Remote Access</a>
+                                    <a class="dropdown-item" href="mail-in.html">Mail-in Service</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Schedule</a>
+                                <!-- Schedule 下拉式選單 -->
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="support-schedule.html">Support Schedule</a>
+                                    <a class="dropdown-item" href="https://userportal.nsrrc.org.tw/APNSR/EX005/"
+                                        target="_blank">Beamline Schedule</a>
+                                    <a class="dropdown-item" href="https://userportal.nsrrc.org.tw/APNSR/EX004/"
+                                        target="_blank">Light Source Schedule</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="industry.html">Industry</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="staff.html">Staff</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="activities.html">Activities</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">User Info.</a>
+                                <!-- User Information 下拉式選單 -->
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="https://userportal.nsrrc.org.tw/APNSR/index/"
+                                        target="_blank">NSRRC User Portal </a>
+                                    <a class="dropdown-item" href="available-software.html">Available Software</a>
+                                    <a class="dropdown-item" href="acknowledgment-statements.html">Acknowledgment Statements</a>
+                                    <a class="dropdown-item" href="useful-links.html">Useful Links </a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="manual.html">Download</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="Tec-report.html">Technical Reports</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- 第二區塊：網頁上方圖片 -->
+        <div class="text-center">
+            <img src="Banner/Banner_1920_450_Oct30.svg" alt="Banner" class="banner">
+        </div>
+
+        <!-- 第三區塊：主標題 title-->
+        <div class="title">Activities</div>
+
+        <!-- 第四區塊：主內容-二欄位 -->
+        <div class="row justify-content-center"> <!-- 水平置中 (col少的份數變成左右空白) -->
+            <!-- 中間主欄位 -->
+            <div class="col-12 col-lg-8 main-content"> <!-- 文字靠左(可自行設定)-->
+                    <div class="activite-nav">
+                        <a class="activite-link" href="#blinfo1"> 訓練課程
+                            <span>Training Course</span>
+                        </a>
+                        <a class="activite-link" href="#blinfo2">研討會
+                            <span>Workshop</span></a>
+                        <a class="activite-link" href="#blinfo3">其他活動
+                            <span>Others</a></span>
+                    </div>
+                <br>
+                <!-- 次標題 title2-->
+                <!-- Training Course -->
+                <div class="title2" id="blinfo1">Training Course 蛋白質結晶學訓練課程</div>
+<br>
+
+<div class="section-label mt-4 mb-3">
+    <span class="badge-status upcoming">即將舉辦 Upcoming</span>
+</div>
+
+<div class="card upcoming-card shadow mb-5">
+    <div class="row g-0">
+        <div class="col-md-5">
+            <a href="2026TC.html" target="_blank">
+                <img src="img/2026TC_post.jpg" class="img-fluid rounded-start h-100" style="object-fit: cover;" alt="2026TC">
+            </a>
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <h4 class="activite"><a href="2026TC.html" target="_blank">2026 蛋白質結晶學訓練課程</a></h4>
+                <p class="date mt-3">
+                    <strong style="color: #1d3c50;">活動日期：</strong> 2026/08/31 (一) ~ 2026/09/04 (五)
+                </p>
+                <p class="card-text text-muted" style="font-weight: normal;">課程涵蓋結晶、基礎繞射、數據收集、相位解析原理與數據處理、結構解析等軟體操作。</p>
+                <div class="botton-left mt-4">
+                    <button type="button" class="btn btn-secondary btn-lg">
+                        <a href="2026TC.html" target="_blank"> 課程資訊</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section-label mb-3">
+    <span class="badge-status archive">歷年回顧 Past Activities</span>
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+    <div class="col">
+        <div class="card h-100 archive-card shadow-sm">
+            <a href="2025TC.html" target="_blank">
+                <img src="img/2025TC_post.png" class="card-img-top" alt="2025TC">
+            </a>
+            <div class="card-body text-center">
+                <h5 class="activite"><a href="2025TC.html" target="_blank">2025 訓練課程</a></h5>
+                <p class="date small">2025/08/18 ~ 08/29</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm botton-left">
+                    <a href="2025TC.html" target="_blank" style="color: #6c757d;">回顧資訊</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 archive-card shadow-sm">
+            <a href="2024TC.html" target="_blank">
+                <img src="img/2024TC.jpg" class="card-img-top" alt="2024TC">
+            </a>
+            <div class="card-body text-center">
+                <h5 class="activite"><a href="2024TC.html" target="_blank">2024 訓練課程</a></h5>
+                <p class="date small">2024/07/22 ~ 08/02</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm botton-left">
+                    <a href="2024TC.html" target="_blank" style="color: #6c757d;">回顧資訊</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 archive-card shadow-sm">
+            <img src="img/2023TC.jpg" class="card-img-top" alt="2023TC">
+            <div class="card-body text-center">
+                <h5 class="activite"><a href="2023TC.html" target="_blank">2023 訓練課程</a></h5>
+                <p class="date small">2023/07/17 ~ 07/28</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm botton-left">
+                    <a href="2023TC.html" target="_blank" style="color: #6c757d;">回顧資訊</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                
+                <!-- Workshop  -->
+                <div class="title2" id="blinfo2">Workshop</div><br>
+                <div class="card">
+                    <img src="img/2023WS-01.JPG" class="CoverImage" alt="2023WS">  
+                    <div class="card-body">
+                        <h5 class="activite"><a href="2023WS.html" target="_blank">2023 Micro-beam Data Collection and Processing Workshop</a></h5>
+                        <p class="date">Date: 2023/9/6</p>
+                        <div class="botton-left">
+                            <button type="button" class="btn btn-secondary btn-sm">
+                                <a href="2023WS.html" target="_blank"> more information</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <!-- Others  -->
+                <div class="title2" id="blinfo3">Others</div><br>   
+                <div class="card">
+                    <a href="https://www.kissscience.tw/motion.asp?newsid=13488&menuid=14346&lgid=1&siteid=100615" target="_blank">
+                        <img src="img/2023KissScience.jpg" class="CoverImage" alt="2023 Kiss Science">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="activite" style="font-family: Amaranth"> Kiss Science 蛋白質結構大解析 活動花絮</a></h5>
+                        <br>
+                        <div class="botton-left">
+                            <button type="button" class="btn btn-secondary btn-lg">
+                                <a href="https://youtube.com/shorts/xxfHP_UMZnc?feature=share" target="_blank"> 2025 Kiss Science</a>
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-lg">
+                                <a href="https://youtu.be/4BSDcNjdDmc" target="_blank"> 2024 Kiss Science</a>
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-lg">
+                                <a href="https://youtube.com/shorts/iqR5nFuAU_A?si=Yix2TSa8g1WYOTYT" target="_blank"> 2023 Kiss Science</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <!-- 最下層：底部 footer -->
+        <footer>
+            <div class="container" style="max-width: 85%;">
+                <div class="row">
+                    <div class="col-12 col-md-3 my-auto nsrrcinfo">
+                        <p style="font-weight: bold;">財團法人國家同步輻射研究中心</p>
+                        <p>地址：300092 新竹市新安路101號 </p>
+                        <p>電話：+886-3-578-0281</p>
+                        <p>傳真：+886-3-578-9816</p>
+                        <p>版權所有 © 2023 蛋白質繞射小組 </p>
+                    </div>
+                    <div class="col-12 col-md-4 my-auto nsrrcinfo">
+                        <p style="font-weight: bold;">National Synchrotron Radiation Research Center (NSRRC)</p>
+                        <p>101 Hsin-Ann Road, Hsinchu Science Park, Hsinchu 300092, Taiwan, R.O.C</p>
+                        <p>TEL：+886-3-578-0281</p>
+                        <p>FAX：+886-3-578-9816</p>
+                        <p>Copyright © 2023 Protein Diffraction Group </p>
+                    </div>
+                    <div class="col-12 col-md-3 my-auto funding-agencies">
+                        <p>Funding Agencies</p>
+                        <div class="FA">
+                            <a href="https://www.nstc.gov.tw/" target="_blank"><img src="img/NSTC.jpg" alt="NSTC"></a>
+                        </div>
+                        <div class="FA">
+                            <a href="https://ncfb.nycu.edu.tw/index.html" target="_blank"><img src="img/NCFB.jpg" alt="NCFB"></a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2 my-auto funding-agencies">
+                        <p>Acknowledgment</p>
+                        <p>Structure Courtesy of Dr. Che Ma</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body> 
+</html>
+
+
+      
