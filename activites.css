@@ -132,6 +132,119 @@ button a{
     font-size: 18px;
 }
 
+/* 區塊標籤樣式 */
+.section-label {
+    text-align: left;
+    border-bottom: 2px solid #5A6E79;
+    padding-bottom: 5px;
+}
+
+.badge-status {
+    padding: 5px 15px;
+    font-family: 'Amaranth';
+    font-weight: bold;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.badge-status.upcoming {
+    background-color: #eeaf52; /* 延用你的橘色 */
+}
+
+.badge-status.archive {
+    background-color: #5A6E79; /* 延用你的導覽列灰色 */
+}
+
+/* 即將舉辦大卡片強化 */
+.upcoming-card {
+    border: 2px solid #eeaf52 !important;
+    transition: transform 0.3s;
+}
+
+.upcoming-card:hover {
+    transform: scale(1.01);
+}
+
+.upcoming-card .btn-primary {
+    background-color: #1d3c50; /* 延用你的深藍色 */
+    border: none;
+}
+
+/* 歷年活動小卡片 */
+.archive-card {
+    transition: 0.3s;
+    border: 1px solid #ddd;
+}
+
+.archive-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+.archive-card .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* 修復原有卡片按鈕內的 A 標籤顏色 */
+button a:hover {
+    color: white;
+}
+
+/* --- 新增：2025 成果展示專屬樣式 --- */
+
+/* 成果展示大標題修飾 */
+#tc2025-results.title2 {
+    border-left: 5px solid #eeaf52; /* 延用橘色 */
+}
+
+/* 數據亮點卡片 */
+.highlight-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* 數據顏色 (延用你的配色) */
+.text-primary {
+    color: #1d3c50 !important; /* 延用深藍色 */
+}
+
+.text-orange {
+    color: #eeaf52 !important; /* 延用橘色 */
+}
+
+.bg-primary {
+    background-color: #1d3c50 !important;
+}
+
+.bg-orange {
+    background-color: #eeaf52 !important;
+}
+
+.bg-orange-light {
+    background-color: #ffdca8 !important; /* 橘色亮色版，用於語錄和進度條 */
+}
+
+/* 進度條背景色 (延用導覽列灰色) */
+.progress {
+    background-color: #e9ecef;
+    border-radius: 10px;
+}
+
+/* 語錄卡片 */
+.quote-card {
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.quote-card .blockquote-footer {
+    color: #5A6E79; /* 延用導覽列灰色 */
+}
+
 
 /* 螢幕寬度小於1200px時，套用這個區塊的css */
 @media (max-width: 1200px) { 
