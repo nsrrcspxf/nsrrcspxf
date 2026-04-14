@@ -1,6 +1,6 @@
-<!DOCTYPE html>  <!-- 文件型態宣告(固定) -->
-    <!-- head:網頁的額外資訊，不在主畫面內 -->
-    <head> 
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNEE4KVX62"></script>
         <script>
@@ -10,14 +10,14 @@
 
         gtag('config', 'G-VNEE4KVX62');
         </script>
-        
+
         <!-- 控制裝置縮放維持在一倍-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
         <meta charset="utf-8" /> <!-- 網頁編碼是utf-8(萬國碼)-->
         
         <!-- 網頁標籤icon & 名稱-->
         <link rel="icon" type="image/png" href="img/NSRRC_logo3.jpg">
-        <title> 2025 Training Course </title> 
+        <title> 2025 蛋白質結晶學訓練課程 </title> 
 
         <!-- Boostrap 導入程式 -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -25,49 +25,92 @@
 
         <!-- 連結Google提供的字體-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth|Fugaz One|Text Me One|Monoton" />
-                                                                    <!-- 三欄位內標題 | 大標題   |industry 內文|Navbar-SPXF -->
-    
+                                                                <!-- 三欄位內標題 | 大標題   |industry 內文|Navbar-SPXF -->
+
         <!-- 連結自設的CSS樣式表-->
-        <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css"/> <!--導覽列樣式-->
-    </head> 
+        <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
+        <link rel="stylesheet" type="text/css" href="activites.css" /> <!--Beamline頁面樣式-->
+
     <style>
-        .pdf-wrapper {
-            position: relative;
-            padding-top: 80px; /* ✅ 預留空間避開導覽列（65px + 安全緩衝 10px） */
+        :root {
+            --primary-blue: #1d3c50;
+            --accent-orange: #eeaf52;
+            --bg-gray: #f4f7f9;
+        }
+
+        body {
+            background-color: var(--bg-gray);
+            font-family: 'Text Me One', 'Amaranth', sans-serif;
+        }
+
+        /* 頂部橫幅 */
+        .hero-banner {
+            background: linear-gradient(rgba(29, 60, 80, 0.9), rgba(29, 60, 80, 0.9)), 
+                        url('img/2025TC_post.png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 140px 5px 60px;
+            margin-top: 2 px;
             text-align: center;
-            background-color: #d7dbfa;
-            font-family: 'Text Me One'; /* 設定字體 */
-            font-weight: bold; /* 設定粗體字體 */
         }
 
-        .pdf-iframe {
-            width: 100%;
-            height: 1500px;
-            border: 0;
+        /* 區塊標題 */
+        .section-title {
+            border-left: 6px solid var(--accent-orange);
+            padding-left: 15px;
+            margin: 50px 0 30px;
+            color: var(--primary-blue);
+            font-weight: bold;
         }
 
-        .pdflink {
-            margin-bottom: 1rem;
-            font-size: 1rem;
+        /* 統計卡片 */
+        .stat-card {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
-        </style>
+        .stat-card:hover { transform: translateY(-5px); }
 
-    <!-- body:網頁內文 -->
-    <body> 
-        <header>
-        <!-- 第一區塊：導覽列 -->
+        /* 進度條樣式 */
+        .progress { height: 10px; border-radius: 5px; background-color: #e9ecef; }
+        .bg-nsrrc-blue { background-color: var(--primary-blue); }
+        .bg-nsrrc-orange { background-color: var(--accent-orange); }
+
+        /* 課程表樣式 */
+        .schedule-table thead { background-color: var(--primary-blue); color: white; }
+        .table-container { background: white; border-radius: 10px; overflow: hidden; }
+
+        /* 學員語錄 */
+        .quote-box {
+            background-color: white;
+            border-radius: 10px;
+            border-right: 5px solid var(--accent-orange);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            padding: 25px;
+            height: 100%;            /* 確保繼承欄位的高度 */
+            display: flex;           /* 開啟彈性佈局 */
+            flex-direction: column;  /* 內容垂直堆疊 */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+         <!-- 第一區塊：導覽列 -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <!-- Logo -->
-                        <img src="img/NSRRC_logo3.jpg" width="50" height="50"
+                    <img src="img/NSRRC_logo3.jpg" width="50" height="50"
                             style="border-radius: 50%; margin-right: 15px;">
                     <a class="navbar-brand" href="index.html">SPXF</a>
 
                     <!-- 第一部分：手機版 -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
-                        <span class="navbar-toggler-icon"></span>  <!-- 產生下拉選單按鈕 -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar" aria-controls="linkbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span> <!-- 產生下拉選單按鈕 -->
                     </button>
-                    
+
                     <!-- 第二部分：電腦版 -->
                     <div class="collapse navbar-collapse" id="linkbar">
 
@@ -137,34 +180,266 @@
                                 <a class="nav-link" href="Tec-report.html">Technical Reports</a>
                             </li>
                         </ul>
-                    </div>    
+                    </div>
                 </div>
             </nav>
-        </header>
+    </header>
 
-        <!-- 第二區塊：Support Schedule -->
-        <div class="pdf-wrapper">
-            <div class="pdflink">
-            <br>
-              <p>為獲得最佳瀏覽體驗，請使用桌機開啟此頁面。 For the best experience, please view this page on a desktop browser.</p>
-              <p>使用手機瀏覽時，可能無法完整開啟此pdf檔，請 
-                <a href="https://drive.google.com/file/d/1R2kOxh_y1p5j5J6O8xV0Onjr-7rNAPiU/view?usp=sharing" download>
-                  點此下載 PDF
-                </a>。
-            <p>
-                If you're using a mobile device, the PDF may not display correctly. 
-                <a href="https://drive.google.com/file/d/1R2kOxh_y1p5j5J6O8xV0Onjr-7rNAPiU/view?usp=sharing" download>
-                    Click here to download it instead.
-                </a>
-            </p>
-            </div> 
-            <div class="pdf-container">
-                <iframe class="pdf-iframe" src="pdf/2025TC_2025_05_06.pdf"></iframe> 
-            </div> 
-        </div>  
+    <section class="hero-banner">
+        <div class="container">
+            <h1 class="display-4 fw-bold">2025 成果回顧報告</h1>
+            <p class="fs-4">蛋白質結晶學訓練課程問卷摘要</p>
+            <p class="lead mt-4">同步輻射蛋白質結晶學核心設施 | 國家同步輻射研究中心</p>
+        </div>
+    </section>
+
+    <div class="container pb-5">
         
+        <div class="row g-4 mt-n5">
+            <div class="col-md-3">
+                <div class="card stat-card p-4 text-center">
+                    <h2 class="display-5 fw-bold text-primary">28</h2>
+                    <p class="text-muted mb-0">總培訓學員人數</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card p-4 text-center">
+                    <h2 class="display-5 fw-bold text-warning">100%</h2>
+                    <p class="text-muted mb-0">認可對研究有實質幫助</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card p-4 text-center">
+                    <h2 class="display-5 fw-bold text-primary">100%</h2>
+                    <p class="text-muted mb-0">MR 課程非常滿意度</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card p-4 text-center">
+                    <h2 class="display-5 fw-bold text-warning">92.9%</h2>
+                    <p class="text-muted mb-0">SAD 實習非常滿意度</p>
+                </div>
+            </div>
+        </div>
 
-        <!-- 最下層：底部 footer -->
+        <h3 class="section-title">五日訓練日程 Schedule</h3>
+        <div class="table-container shadow-sm">
+            <table class="table table-hover schedule-table mb-0 align-middle text-center">
+                <thead>
+                    <tr>
+                        <th width="20%">Day 1</th>
+                        <th width="20%">Day 2</th>
+                        <th width="20%">Day 3</th>
+                        <th width="20%">Day 4</th>
+                        <th width="20%">Day 5</th>
+                    </tr>
+                </thead>
+                <tbody class="small">
+                    <tr>
+                        <td>蛋白質長晶與晶體對稱性<br>基礎繞射原理</td>
+                        <td>數據收集策略優化<br>XDS 數據處理實作</td>
+                        <td>相位問題與解法原理<br>SAD Phasing 實作</td>
+                        <td>分子置換法實務<br>Ligand Search 實作<br>實驗站導覽</td>
+                        <td>輻射傷害評估<br>低溫結晶學實務</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="section-title">全課程滿意度分析 Satisfaction Analysis</h3>
+        <div class="row g-5">
+            <div class="col-md-6">
+                <h5 class="mb-4 text-secondary"><i class="bi bi-journal-text me-2"></i>理論講授單元 (正面評價總計)</h5>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>蛋白質長晶 (黃駿翔)</span><span>100%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-blue" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>晶體對稱性 (周重光)</span><span>96.5%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-blue" style="width: 96.5%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>數據收集策略 (周重光)</span><span>100%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-blue" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>相位問題與解法 (趙俊雄)</span><span>100%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-blue" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>MAD/MIR/SAD 比較 (曾建璋)</span><span>100%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-blue" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>分子置換法 MR (黃駿翔)</span><span>100%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-blue" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>輻射傷害評估 (陳懿慧)</span><span>92.9%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-blue" style="width: 92.9%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>低溫結晶學實務 (姜政宏)</span><span>92.9%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-blue" style="width: 92.9%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>X-ray 繞射基礎 (趙俊雄)</span><span>85.8%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-blue" style="width: 85.8%"></div></div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h5 class="mb-4 text-secondary"><i class="bi bi-cpu me-2"></i>實習操作單元 (正面評價總計)</h5>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>XDS 數據處理實作</span><span>100%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-orange" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>SAD Phasing 實作評分</span><span>100%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-orange" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>MR Ligand Search 實作</span><span>100%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-orange" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>上機前處理與採集實務</span><span>100%</span></div>
+                    <div class="progress"><div class="progress-bar bg-nsrrc-orange" style="width: 100%"></div></div>
+                </div>
+                <div class="mt-4 p-3 bg-white border rounded shadow-sm">
+                    <h6 class="fw-bold text-primary mb-2">行政與生活滿意度亮點</h6>
+                    <p class="small text-muted mb-1">● <strong>報名程序：</strong> 100% 學員滿意流程順暢度。</p>
+                    <p class="small text-muted mb-1">● <strong>餐食服務：</strong> 獲得學員一致好評，特別感謝訂餐同仁。</p>
+                    <p class="small text-muted mb-0">● <strong>助教表現：</strong> 極高熱忱且專業，能有效引導新手解決問題。</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">主辦人 Organizer</h3>
+        <div class="row mb-4">
+            <div class="col-12 col-md-6">
+                <div class="p-3 bg-white shadow-sm rounded">
+                    <p class="mb-0 fw-bold text-primary" style="font-size: 1.1rem;">黃怡珍 小姐 (Miss Yi-Chen Huang)</p> </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">教學團隊 Team</h3>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+            <div class="col">
+                <div class="p-3 bg-white shadow-sm rounded">
+                    <h6 class="fw-bold border-bottom pb-2">課程講師</h6>
+                    <p class="small mb-0 text-muted">周重光、趙俊雄、黃駿翔、姜政宏、陳懿慧、曾建璋</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-3 bg-white shadow-sm rounded">
+                    <h6 class="fw-bold border-bottom pb-2">實習助教與行政</h6>
+                    <p class="small mb-0 text-muted">李宜靜、柯金伶、陳怡蓉、黃婉婷、葉孋嬋、黃楨盈、陳慧珊、邱采綺</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">學員心聲 Feedback</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="quote-box">
+                    <i class="bi bi-chat-right-quote text-warning fs-3"></i>
+                    <p class="fst-italic mt-3">「非常滿意課程的安排以及內容，受益良多。」</p>
+                    <p class="fst-italic mt-3">「一年一次的結晶學課程為期一週其實差不多已足夠。」</p>
+                    <footer class="text-end fw-bold small mt-auto">— 整體課程建議 </footer>
+                </div>
+            </div>
+            <div class="col">
+                <div class="quote-box">
+                    <i class="bi bi-chat-right-quote text-warning fs-3"></i>
+                    <p class="fst-italic mt-3">「對於結晶學的理論基礎有著更紮實的認識。」</p>
+                    <p class="fst-italic mt-3">「了解整體流程及軟體操作很實用，雖然原理部分可能聽不太懂，但還是很感謝有這樣的課程。」</p>
+                    <footer class="text-end fw-bold small mt-auto">— 課程回饋 </footer>
+                </div>
+            </div>
+            <div class="col">
+                <div class="quote-box">
+                    <i class="bi bi-chat-right-quote text-warning fs-3"></i>
+                    <p class="fst-italic mt-3">「謝謝小老師的幫助和解惑，讓整個實作課程都更加順利。」</p>
+                    <p class="fst-italic mt-3">「我覺得小老師都很好，也對實驗上給了很多意見，這幾天真的收穫很多。」</p>
+                    <footer class="text-end fw-bold small mt-auto">—  實習課程回饋 </footer>
+                </div>
+            </div>
+        </div>
+<!--
+        <h3 class="section-title">活動花絮 Photo Highlights</h3>
+        <p class="text-muted mb-4">記錄 2025 年度訓練課程的精彩瞬間，包含理論授課、軟體實作與實驗站導覽。</p>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-5 gallary-section">
+            <div class="col gallery-item">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="img/gallery/2025TC_photo1.jpg" class="card-img-top gallery-img" alt="理論課程授課現場">
+                    <div class="card-body p-2 text-center">
+                        <p class="card-text small text-muted">理論課程授課現場</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col gallery-item">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="img/gallery/2025TC_photo2.jpg" class="card-img-top gallery-img" alt="SAD Phasing 軟體實作">
+                    <div class="card-body p-2 text-center">
+                        <p class="card-text small text-muted">軟體操作實作 (TC1)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col gallery-item">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="img/gallery/2025TC_photo3.jpg" class="card-img-top gallery-img" alt="助教與學員互動教學">
+                    <div class="card-body p-2 text-center">
+                        <p class="card-text small text-muted">助教耐心指導 (TC1)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col gallery-item">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="img/gallery/2025TC_photo4.jpg" class="card-img-top gallery-img" alt="NSRRC BL15A 實驗站導覽">
+                    <div class="card-body p-2 text-center">
+                        <p class="card-text small text-muted">NSRRC BL15A 實驗站導覽</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col gallery-item">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="img/gallery/2025TC_photo5.jpg" class="card-img-top gallery-img" alt="TC1 結訓大合照">
+                    <div class="card-body p-2 text-center">
+                        <p class="card-text small text-muted">第一梯次 (TC1) 結訓合照</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col gallery-item">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="img/gallery/2025TC_photo6.jpg" class="card-img-top gallery-img" alt="軟體操作實作 TC2">
+                    <div class="card-body p-2 text-center">
+                        <p class="card-text small text-muted">軟體操作實作 (TC2)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col gallery-item">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="img/gallery/2025TC_photo7.jpg" class="card-img-top gallery-img" alt="助教與學員互動教學 TC2">
+                    <div class="card-body p-2 text-center">
+                        <p class="card-text small text-muted">助教協助處理數據 (TC2)</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col gallery-item">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="img/gallery/2025TC_photo8.jpg" class="card-img-top gallery-img" alt="TC2 結訓大合照">
+                    <div class="card-body p-2 text-center">
+                        <p class="card-text small text-muted">第二梯次 (TC2) 結訓合照</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+-->
+    </div>
+
+    <!-- 最下層：底部 footer -->
         <footer>
             <div class="container">
                 <div class="row">
@@ -195,7 +470,5 @@
                 </div>
             </div>
         </footer>
-    </body>
+</body>
 </html>
-       
-                
