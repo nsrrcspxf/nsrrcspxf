@@ -69,6 +69,40 @@
             color: white; border-radius: 30px; transition: 0.3s;
         }
         .btn-register:hover { background-color: #d8963d; transform: scale(1.05); color: white; }
+
+        /* --- 新增：課程表響應式優化 --- */
+
+        /* 在平板與手機版 (寬度小於 992px) 的設定 */
+        @media (max-width: 992px) {
+            .schedule-table thead tr th {
+                font-size: 1rem !important; /* Day 1~5 標題稍微縮小 */
+                padding: 10px 5px !important;
+            }
+            .schedule-table tbody tr td {
+                font-size: 0.9rem !important; /* 內容字體縮小至約 14.4px */
+                padding: 15px 8px !important; /* 減少內距，釋放空間 */
+            }
+            .schedule-table .text-primary {
+                font-size: 1rem !important; /* 每日大主題字體同步縮小 */
+                margin-bottom: 5px !important;
+            }
+        }
+
+        /* 在小型手機版 (寬度小於 576px) 的更進階優化 */
+        @media (max-width: 576px) {
+            .schedule-table thead tr th {
+                font-size: 0.9rem !important;
+                padding: 8px 2px !important;
+            }
+            .schedule-table tbody tr td {
+                font-size: 0.8rem !important; /* 極窄螢幕下字體縮至約 12.8px */
+                padding: 10px 4px !important;
+                letter-spacing: -0.5px; /* 稍微緊縮字距，避免換行 */
+            }
+            .schedule-table .text-primary {
+                font-size: 0.85rem !important;
+            }
+}
     </style>
     </head>
 
@@ -207,7 +241,7 @@
                 </div>
             </div>
 
-            <h3 class="section-title">五日課程日程表 Schedule</h3>
+            <h3 class="section-title"> 課程表 Schedule</h3>
                 <div class="table-responsive shadow-sm bg-white rounded mb-5">
                     <table class="table table-bordered schedule-table mb-0 align-top">
                         <thead>
