@@ -1,6 +1,6 @@
-<!DOCTYPE html>  <!-- 文件型態宣告(固定) -->
-    <!-- head:網頁的額外資訊，不在主畫面內 -->
-    <head> 
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNEE4KVX62"></script>
         <script>
@@ -10,14 +10,14 @@
 
         gtag('config', 'G-VNEE4KVX62');
         </script>
-        
+
         <!-- 控制裝置縮放維持在一倍-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
         <meta charset="utf-8" /> <!-- 網頁編碼是utf-8(萬國碼)-->
         
         <!-- 網頁標籤icon & 名稱-->
         <link rel="icon" type="image/png" href="img/NSRRC_logo3.jpg">
-        <title> 2024 Training Course </title> 
+        <title> 2024 蛋白質結晶學訓練課程 </title> 
 
         <!-- Boostrap 導入程式 -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -25,177 +25,406 @@
 
         <!-- 連結Google提供的字體-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth|Fugaz One|Text Me One|Monoton" />
-                                                                    <!-- 三欄位內標題 | 大標題   |industry 內文|Navbar-SPXF -->
-    
-        <!-- 連結自設的CSS樣式表-->
-        <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css"/> <!--導覽列樣式-->
-    </head> 
-    <style>
-        .pdf-wrapper {
-            position: relative;
-            padding-top: 80px; /* ✅ 預留空間避開導覽列（65px + 安全緩衝 10px） */
-            text-align: center;
-            background-color: #d7dbfa;
-            font-family: 'Text Me One'; /* 設定字體 */
-            font-weight: bold; /* 設定粗體字體 */
-        }
-
-        .pdf-iframe {
-            width: 100%;
-            height: 1500px;
-            border: 0;
-        }
-
-        .pdflink {
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
-        </style>
-
-    <!-- body:網頁內文 -->
-    <body> 
-        <header>
-        <!-- 第一區塊：導覽列 -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <!-- Logo -->
-                        <img src="img/NSRRC_logo3.jpg" width="50" height="50"
-                            style="border-radius: 50%; margin-right: 15px;">
-                    <a class="navbar-brand" href="index.html">SPXF</a>
-
-                    <!-- 第一部分：手機版 -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
-                        <span class="navbar-toggler-icon"></span>  <!-- 產生下拉選單按鈕 -->
-                    </button>
-                    
-                    <!-- 第二部分：電腦版 -->
-                    <div class="collapse navbar-collapse" id="linkbar">
-
-                        <!-- 導覽列內容 -->
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Home</a>
-                                <!-- Beamline 下拉式選單 -->
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="index.html">Home</a>
-                                    <a class="dropdown-item" href="https://www.nsrrc.org.tw" target="_blank">NSRRC</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Beamline</a>
-                                <!-- Beamline 下拉式選單 -->
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="TPS07A.html">TPS 07A</a>
-                                    <a class="dropdown-item" href="TPS05A.html">TPS 05A</a>
-                                    <a class="dropdown-item" href="TLS15A.html">TLS 15A</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Service</a>
-                                <!-- Remote Access 下拉式選單 -->
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="user-support.html">User Support Service </a>
-                                    <a class="dropdown-item" href="RA.html">Remote Access</a>
-                                    <a class="dropdown-item" href="mail-in.html">Mail-in Service</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Schedule</a>
-                                <!-- Schedule 下拉式選單 -->
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="support-schedule.html">Support Schedule</a>
-                                    <a class="dropdown-item" href="https://userportal.nsrrc.org.tw/APNSR/EX005/"
-                                        target="_blank">Beamline Schedule</a>
-                                    <a class="dropdown-item" href="https://userportal.nsrrc.org.tw/APNSR/EX004/"
-                                        target="_blank">Light Source Schedule</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="industry.html">Industry</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="staff.html">Staff</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="activities.html">Activities</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">User Info.</a>
-                                <!-- User Information 下拉式選單 -->
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="https://userportal.nsrrc.org.tw/APNSR/index/"
-                                        target="_blank">NSRRC User Portal </a>
-                                    <a class="dropdown-item" href="available-software.html">Available Software</a>
-                                    <a class="dropdown-item" href="acknowledgment-statements.html">Acknowledgment Statements</a>
-                                    <a class="dropdown-item" href="useful-links.html">Useful Links </a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="manual.html">Download</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="Tec-report.html">Technical Reports</a>
-                            </li>
-                        </ul>
-                    </div>    
-                </div>
-            </nav>
-        </header>
-
-        <!-- 第二區塊：Support Schedule -->
-        <div class="pdf-wrapper">
-            <div class="pdflink">
-            <br>
-              <p>為獲得最佳瀏覽體驗，請使用桌機開啟此頁面。 For the best experience, please view this page on a desktop browser.</p>
-              <p>使用手機瀏覽時，可能無法完整開啟此pdf檔，請 
-                <a href="https://drive.google.com/file/d/1meysE99l6WWJzav0-MWMYOXSfq0Szds-/view?usp=sharing" download>
-                  點此下載 PDF
-                </a>。
-            <p>
-                If you're using a mobile device, the PDF may not display correctly. 
-                <a href="https://drive.google.com/file/d/1meysE99l6WWJzav0-MWMYOXSfq0Szds-/view?usp=sharing" download>
-                    Click here to download it instead.
-                </a>
-            </p>
-            </div> 
-            <div class="pdf-container">
-                <iframe class="pdf-iframe" src="pdf/2024TC總結.pdf"></iframe> 
-            </div> 
-        </div>  
+                                                                <!-- 三欄位內標題 | 大標題   |industry 內文|Navbar-SPXF -->
         
+        <!-- 連結自設的CSS樣式表-->
+        <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
+        <link rel="stylesheet" type="text/css" href="activites.css" /> <!--Beamline頁面樣式-->
 
-        <!-- 最下層：底部 footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-3 my-auto nsrrcinfo">
-                        <p style="font-weight: bold;">財團法人國家同步輻射研究中心</p>
-                        <p>地址：300092 新竹市新安路101號 </p>
-                        <p>電話：+886-3-578-0281</p>
-                        <p>傳真：+886-3-578-9816</p>
-                        <p>版權所有 © 2023 蛋白質繞射小組 </p>
-                    </div>
-                    <div class="col-12 col-md-4 my-auto nsrrcinfo">
-                        <p style="font-weight: bold;">National Synchrotron Radiation Research Center (NSRRC)</p>
-                        <p>101 Hsin-Ann Road, Hsinchu Science Park, Hsinchu 300092, Taiwan, R.O.C</p>
-                        <p>TEL：+886-3-578-0281</p>
-                        <p>FAX：+886-3-578-9816</p>
-                        <p>Copyright © 2023 Protein Diffraction Group </p>
-                    </div>
-                    <div class="col-12 col-md-3 my-auto nsrrcinfo"></div>
-                    <div class="col-12 col-md-2 my-auto funding-agencies">
-                        <p>Funding Agencies</p>
-                        <div class="FA">
-                            <a href="https://www.nstc.gov.tw/" target="_blank"><img src="img/NSTC.jpg" alt="NSTC"></a>
-                        </div>
-                        <div class="FA">
-                            <a href="https://ncfb.nycu.edu.tw/index.html" target="_blank"><img src="img/NCFB.jpg" alt="NCFB"></a>
-                        </div>
+    <style>
+        :root {
+            --px-rose: #c55a6a;    /* 海報右下玫瑰紅 */
+            --px-blue: #6a76a5;    /* 海報右上霧藍 */
+            --px-teal: #548686;    /* 海報左下石板綠 */
+            --px-dark: #2d2926;    /* 海報文字深灰 */
+            --px-bg: #ffffff;
+        }
+
+        body {
+            background-color: var(--px-bg);
+            color: var(--px-dark);
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.7;
+        }
+
+        /* 頂部 Hero 區域：模仿海報斜角設計 */
+        /* 強化版 Hero Banner */
+        .hero-banner {
+            position: relative;
+            background-color: #fcfcfc;
+            /* 加入淡淡的分子鏈背景圖案感 */
+            background-image: radial-gradient(var(--px-teal) 1px, transparent 1px);
+            background-size: 40px 40px; 
+            padding: 120px 0 140px;
+            overflow: hidden;
+        }
+
+        /* 右上：霧藍色塊 (加大) */
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0; right: 0;
+            width: 55%; height: 350px;
+            background-color: var(--px-blue);
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+            opacity: 0.9;
+            z-index: 0;
+        }
+
+        /* 右下：玫瑰紅區塊 (與海報一致) */
+        .hero-banner::after {
+            content: "";
+            position: absolute;
+            bottom: 0; right: 0;
+            width: 20%; height: 300px;
+            background-color: var(--px-rose);
+            clip-path: polygon(100% 0, 25% 100%, 100% 100%);
+            z-index: 0;
+        }
+
+        /* 新增：左下石板綠區塊 (填補空曠感) */
+        .hero-corner-teal {
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 300px; height: 300px;
+            background-color: var(--px-teal);
+            clip-path: polygon(0 20%, 0% 100%, 80% 100%);
+            opacity: 0.7;
+            z-index: 0;
+        }
+
+        /* 新增：模擬分子圓點的浮動裝飾 */
+        .node-deco {
+            position: absolute;
+            width: 150px; height: 150px;
+            background: radial-gradient(circle, var(--px-rose) 20%, transparent 21%);
+            background-size: 30px 30px;
+            top: 10%; left: 5%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .hero-content { 
+            position: relative; 
+            z-index: 10; /* 確保文字在所有色塊上方 */
+        }
+
+        .hero-year {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 5.5rem;
+            font-weight: 800;
+            color: var(--px-dark);
+            line-height: 0.9;
+            margin-bottom: 5px;
+        }
+
+
+
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* 數據方塊 */
+        .stat-section {
+            margin-top: -60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-card {
+            background: white;
+            border: none;
+            border-bottom: 8px solid var(--px-teal);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--px-rose);
+        }
+
+        /* 區塊標題 */
+        .section-header {
+            border-left: 10px solid var(--px-blue);
+            padding-left: 20px;
+            margin: 80px 0 40px;
+            font-weight: 700;
+        }
+
+        /* 課表樣式 */
+        .schedule-table thead { background-color: var(--px-blue); color: white; }
+        .table-container { background: white; border-radius: 10px; overflow: hidden; border: 1px solid #eee; }
+
+        /* 團隊資訊：色塊感 */
+        .team-block {
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--px-blue);
+            padding: 2rem;
+        }
+
+        .team-category {
+            color: var(--px-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 進度條自定義 */
+        .custom-progress {
+            background-color: #eee;
+            height: 10px;
+            margin-bottom: 20px;
+        }
+        .bar-rose { background-color: var(--px-rose); }
+        .bar-teal { background-color: var(--px-teal); }
+
+        /* 學員語錄 */
+        .feedback-bubble {
+            background-color: var(--px-bg);
+            border: 1px solid #eee;
+            padding: 2rem;
+            position: relative;
+            height: 100%;
+        }
+        .feedback-bubble::top-left {
+            border-top: 5px solid var(--px-rose);
+        }
+
+        footer {
+            background-color: var(--px-dark);
+            color: white;
+            padding: 60px 0;
+            position: relative;
+        }
+        footer::before {
+            content: "";
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 150px; height: 150px;
+            background-color: var(--px-teal);
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 第一區塊：導覽列 -->
+    <header id="navbar-placeholder"></header>
+
+    <section class="hero-banner">
+        <div class="hero-corner-teal"></div>
+        <div class="node-deco"></div>
+        
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="mb-2 fw-bold text-uppercase tracking-wider" style="letter-spacing: 2px;">National Synchrotron Radiation Research Center</p>
+                    <h2 class="hero-year">2024</h2>
+                    <h1 class="hero-title">PX TRAINING COURSE</h1>
+                    <p class="fs-4 mt-3 fw-light">同步輻射蛋白質結晶學核心設施 | 活動回顧 </p>
+                    
+                    <div class="mt-4 d-flex gap-2">
+                        <span class="badge rounded-0 p-3 px-3" style="background-color: var(--px-dark);">第一梯次: 07/22-07/26</span>
+                        <span class="badge rounded-0 p-3 px-3" style="background-color: var(--px-dark);">第二梯次: 07/29-08/02</span>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </section>
+
+    <div class="container stat-section">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">36</div>
+                    <div class="small text-muted">總培訓學員人數 </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">100%</div>
+                    <div class="small text-muted">認可對研究有實質幫助</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">99.7%</div>
+                    <div class="small text-muted">理論課程滿意度</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">100%</div>
+                    <div class="small text-muted">實習課程滿意度</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mb-5">
+        
+        <h3 class="section-header">團隊與組織 Organization</h3>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="team-block" style="border-left-color: var(--px-teal);">
+                    <div class="team-category" style="color: var(--px-teal);">Organizer</div>
+                    <p class="h5 fw-bold mb-0">李宜靜 小姐 (Miss Yi-Ching Lee)</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="team-block" style="border-left-color: var(--px-rose);">
+                    <div class="team-category" style="color: var(--px-rose);">Lecturers</div>
+                    <p class="small mb-0">陳懿慧、黃駿翔、周重光、趙俊雄、曾建璋、劉怡君、姜政宏、葉孋嬋</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="team-block" style="border-left-color: var(--px-blue);">
+                    <div class="team-category" style="color: var(--px-blue);">TAs & Staff</div>
+                    <p class="small mb-0">李姿玲、柯金伶、姜政宏、陳怡蓉、陳懿慧、黃怡珍、黃婉婷、葉孋嬋、劉怡君、黃楨盈、陳慧珊、邱采綺</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-header">五日訓練日程 Schedule</h3>
+        <div class="table-container shadow-sm mb-5">
+            <table class="table table-hover schedule-table mb-0 align-middle text-center">
+                <thead>
+                    <tr>
+                        <th width="20%">Day 1</th>
+                        <th width="20%">Day 2</th>
+                        <th width="20%">Day 3</th>
+                        <th width="20%">Day 4</th>
+                        <th width="20%">Day 5</th>
+                    </tr>
+                </thead>
+                <tbody class="small">
+                    <tr>
+                        <td>蛋白質長晶與晶體對稱性<br>基礎繞射原理</td>
+                        <td>數據收集策略優化<br>XDS 數據處理實作</td>
+                        <td>相位問題與解法原理<br>SAD Phasing 實作</td>
+                        <td>分子置換法實務<br>Ligand Search 實作<br>實驗站導覽</td>
+                        <td>輻射傷害評估<br>低溫結晶學實務</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="section-title">課程滿意度分析 Satisfaction Analysis</h3>
+        <div class="row g-5">
+            <div class="col-md-6">
+                <h5 class="mb-4 text-secondary"><i class="bi bi-journal-text me-2"></i>理論講授單元 (正面評價總計)</h5>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>同步輻射的重要性與PX歷史 (陳懿慧)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-teal" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>蛋白質長晶原理介紹 (黃駿翔)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-teal" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>晶體對稱性介紹 (周重光)</span><span>97.2%</span></div>
+                    <div class="progress"><div class="bar-teal" style="width: 97.2%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>基礎繞射原理 (趙俊雄)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-teal" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>數據收集策略 (周重光)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-teal" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>相位問題與解法 (趙俊雄)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-teal" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>MAD/MIR/SAD 比較 (曾建璋)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-teal" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>Se-MAD/SAD與S-SAD 數據收集策略 (曾建璋)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-teal" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>分子置換法 MR (黃駿翔)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-teal" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>輻射傷害評估與對策 (劉怡君)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-teal" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>低溫結晶學實務 (姜政宏)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-teal" style="width: 100%"></div></div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h5 class="mb-4 text-secondary"><i class="bi bi-cpu me-2"></i>實習操作單元 (正面評價總計)</h5>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>XDS 數據處理實作 (周重光)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-rose" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>SAD Phasing 實作 (曾建璋)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-rose" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>MR Ligand Search 實作 (黃駿翔)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-rose" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>晶體挑選、冷凍與上機定位 (葉孋嬋)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-rose" style="width: 100%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1"><span>蛋白質結晶學實驗站分組導覽 (各組助教)</span><span>100%</span></div>
+                    <div class="progress"><div class="bar-rose" style="width: 100%"></div></div>
+                </div>
+                <div class="mt-4 p-3 bg-white border rounded shadow-sm">
+                    <h6 class="fw-bold text-primary mb-2">行政與生活回饋</h6>
+                    <p class="small text-muted mb-1">● <strong>報名程序：</strong> 大部分學員都覺得很棒，但有學員建議"希望可以在回傳食宿調查表後回應有沒有收到"。</p>
+                    <p class="small text-muted mb-1">● <strong>餐食服務：</strong> 餐點變化多樣且美味。</p>
+                    <p class="small text-muted mb-0">● <strong>助教表現：</strong> 助教教學細心、講解清楚且具耐心，能適時補充與引導、有效協助解決問題並提升學習效率。</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-header">學員回饋 Feedback</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feedback-bubble" style="border-top: 5px solid var(--px-rose);">
+                    <p class="fst-italic">「非常有幫助，幫我建立解結構的基礎理論及操作，受益良多學到相當多新知。」</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feedback-bubble" style="border-top: 5px solid var(--px-blue);">
+                    <p class="fst-italic">「實習課程的部分可以把各種不同情況在學生練習的當下說明，加強學生面對不同情況採取更適當的方法。」</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feedback-bubble" style="border-top: 5px solid var(--px-teal);">
+                    <p class="fst-italic">「MR課程有很多圖片和影片搭配著講解，讓抽象的概念變得具象化。」 </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 p-4 bg-light small border">
+            <strong>* 註記：</strong> 2024 年度課程第一梯次期間遇颱風停課，迅速啟動行政應變並調整課程安排。
+        </div>
+    </main>
+
+    <!-- 最下層：底部 footer -->
+        <footer id="footer-placeholder"></footer>
+
+        <script src="nav_footer-loader.js"></script>
     </body>
 </html>
-       
-                
