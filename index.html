@@ -42,7 +42,94 @@
     <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
     <link rel="stylesheet" type="text/css" href="beamline-gray.css" /> <!--Beamline頁面樣式-->
     <link rel="stylesheet" type="text/css" href="index.css" /> <!--表格樣式-->
+    
+    <!-- 臨時新增，TPS 05A 停機公告 style -->
+     <style>
+        /*  彈出窗背景遮罩 */
+        .custom-modal {
+            display: none; /* 預設隱藏，由 JS 控制顯示 */
+            position: fixed;
+            z-index: 9999; /* 確保在最上層 */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px); /* 背景模糊效果 */
+        }
 
+        /* 彈出窗主體 */
+        .custom-modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 0;
+            border-radius: 8px;
+            width: 85%;
+            max-width: 500px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeInDown 0.3s ease-out;
+        }
+
+        /* 動態效果 */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 各區塊樣式 */
+        .custom-modal-header {
+            background-color: #dc3545; /* 警告紅 */
+            color: white;
+            padding: 15px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .custom-modal-header h3 { margin: 0; font-size: 1.2rem; }
+
+        .close-modal-btn {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-modal-btn:hover { color: #ddd; }
+
+        .custom-modal-body {
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .custom-modal-body h4 { margin-top: 0; color: #dc3545; }
+        .chinese-text { color: #666; font-size: 0.95rem; }
+
+        .time-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .custom-modal-footer {
+            padding: 15px;
+            text-align: right;
+            border-top: 1px solid #eee;
+        }
+
+        .modal-confirm-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .modal-confirm-btn:hover { background-color: #555; }
+    </style>
 </head>
 
  <!-- body:網頁內文 -->
@@ -54,6 +141,28 @@
     <div class="top-picture">
         <a class="page-link" href="#blinfo1">
             <img src="Banner/Banner_1920_850_Nov02_lattice_new.svg" alt="Banner" class="banner"></a>
+    </div>
+
+    <!-- 臨時新增，TPS 05A 停機公告 -->
+    <div id="announcementModal" class="custom-modal">
+        <div class="custom-modal-content">
+            <div class="custom-modal-header">
+                <h3>⚠️ Important Notice / 重要公告</h3>
+                <span class="close-modal-btn" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="custom-modal-body">
+                <h4>TPS 05A Upgrade Downtime Notice</h4>
+                <p class="chinese-text">TPS 05A 將進行設備升級，期間將暫停開放使用，造成不便敬請見諒。</p>
+                
+                <div class="time-box">
+                    <strong>Downtime Period / 停機時段：</strong><br>
+                    <span>Sep 2026 ~ Mar 2027</span>
+                </div>
+            </div>
+            <div class="custom-modal-footer">
+                <button class="modal-confirm-btn" onclick="closeModal()">I Understand / 我知道了</button>
+            </div>
+        </div>
     </div>
 
     <!-- 第三區塊：主內容-三欄位 -->
@@ -74,13 +183,34 @@
                 </div>
                 <br>
                 <!-- News -->
-                <div class="title-side"><img src="img/News.png" width="30" height="30" class="my-auto" />News</div>
+                <div class="title-side">
+                    <img src="img/News.png" width="30" height="30" class="my-auto" alt="News Icon" /> News
+                </div>
+
                 <ul class="BLtechiques">
                     <li class="news">
-                        <a href="activities.html#blinfo1" target="_blank"> 2026 Training Course <br> Aug 31 ~ Sep 4, 2026</a></li>
-                        <a href="2026TC.html" target="_blank">
-                        <img src="TC_Photo/2026TC_poster.png" class="w-50" />
+                        <a href="activities.html#blinfo1" target="_blank">
+                            2026 Training Course <br> Aug 31 ~ Sep 4, 2026
                         </a>
+                        <div class="mt-2">
+                            <a href="2026TC.html" target="_blank">
+                                <img src="TC_Photo/2026TC_poster.png" class="w-50" alt="Training Course Poster" />
+                            </a>
+                        </div>
+                    </li>
+                    <br>
+                    <li class="news" style="border-left: 3px solid #dc3545; padding-left: 10px; margin-bottom: 15px;">
+                        <span class="badge" style="background-color: #dc3545; color: white; font-size: 0.8rem; padding: 2px 6px; border-radius: 4px;">Notice</span>
+                        <p class="mt-1 mb-0" style="font-weight: bold; color: #333;">
+                            TPS 05A Upgrade Downtime
+                        </p>
+                        <p class="text-muted mb-1" style="font-size: 0.9rem;">
+                            TPS 05A 升級停機公告
+                        </p>
+                        <span style="color: #d9534f; font-weight: bold;">
+                            Sep 2026 ~ Mar 2027
+                        </span>
+                    </li>
                 </ul>
                 
                 <br>
@@ -414,6 +544,32 @@
     </div>
 
     <script src="script.js"></script>
+
+
+    <!-- 臨時新增，TPS 05A 停機公告 script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        // 獲取今天的日期字串 (格式如: "2026-06-12")
+        const today = new Date().toISOString().split('T')[0];
+        
+        // 檢查瀏覽器是否已有今天的紀錄
+        const hasSeenNotice = localStorage.getItem("tps05a_notice_date");
+
+        if (hasSeenNotice !== today) {
+            // 如果日期不符（代表今天第一次開啟），顯示彈出窗
+            document.getElementById("announcementModal").style.display = "block";
+        }
+        });
+
+        // 關閉彈出窗並記錄今日已讀
+        function closeModal() {
+            document.getElementById("announcementModal").style.display = "none";
+            
+            const today = new Date().toISOString().split('T')[0];
+            // 在本地儲存寫入今天的日期，今天再重新整理網頁就不會再跳出
+            localStorage.setItem("tps05a_notice_date", today);
+        }
+    </script>
 </body>
 
 </html>
