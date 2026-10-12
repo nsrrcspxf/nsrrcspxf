@@ -35,95 +35,6 @@
         <link rel="stylesheet" type="text/css" href="navbar-footer-gray.css" /> <!--導覽列樣式-->
         <link rel="stylesheet" type="text/css" href="beamline-gray.css" /> <!--Beamline頁面樣式-->
         <link rel="stylesheet" type="text/css" href="index.css" /> <!--表格樣式-->
-
-        <!-- 臨時新增，TPS 05A 停機公告 style -->
-        <style>
-            /*  彈出窗背景遮罩 */
-            .custom-modal {
-                display: none; /* 預設隱藏，由 JS 控制顯示 */
-                position: fixed;
-                z-index: 9999; /* 確保在最上層 */
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(3px); /* 背景模糊效果 */
-            }
-
-            /* 彈出窗主體 */
-            .custom-modal-content {
-                background-color: #fff;
-                margin: 15% auto;
-                padding: 0;
-                border-radius: 8px;
-                width: 85%;
-                max-width: 500px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-                animation: fadeInDown 0.3s ease-out;
-            }
-
-            /* 動態效果 */
-            @keyframes fadeInDown {
-                from { opacity: 0; transform: translateY(-20px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-
-            /* 各區塊樣式 */
-            .custom-modal-header {
-                background-color: #dc3545; /* 警告紅 */
-                color: white;
-                padding: 15px;
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .custom-modal-header h3 { margin: 0; font-size: 1.2rem; }
-
-            .close-modal-btn {
-                color: white;
-                font-size: 28px;
-                font-weight: bold;
-                cursor: pointer;
-            }
-            .close-modal-btn:hover { color: #ddd; }
-
-            .custom-modal-body {
-                padding: 20px;
-                color: #333;
-                line-height: 1.6;
-            }
-            .custom-modal-body h4 { margin-top: 0; color: #dc3545; }
-            .chinese-text { color: #666; font-size: 0.95rem; }
-
-            .time-box {
-                background-color: #fff3cd;
-                border-left: 4px solid #ffc107;
-                padding: 12px;
-                margin-top: 15px;
-                border-radius: 4px;
-            }
-
-            .custom-modal-footer {
-                padding: 15px;
-                text-align: right;
-                border-top: 1px solid #eee;
-            }
-
-            .modal-confirm-btn {
-                background-color: #333;
-                color: white;
-                border: none;
-                padding: 8px 20px;
-                border-radius: 4px;
-                cursor: pointer;
-                font-weight: bold;
-            }
-            .modal-confirm-btn:hover { background-color: #555; }
-        </style>
-
     </head>
 
 <!-- body:網頁內文 -->
@@ -136,30 +47,6 @@
         <div class="top-picture">
             <img src="Banner/Banner_1920_450_05A.svg" alt="Banner" class="banner">
         </div>
-
-
-         <!-- 臨時新增，TPS 05A 停機公告 -->
-        <div id="announcementModal" class="custom-modal">
-            <div class="custom-modal-content">
-                <div class="custom-modal-header">
-                    <h3>⚠️ Important Notice / 重要公告</h3>
-                    <span class="close-modal-btn" onclick="closeModal()">&times;</span>
-                </div>
-                <div class="custom-modal-body">
-                    <h4>TPS 05A Upgrade Downtime Notice</h4>
-                    <p class="chinese-text">TPS 05A 將因設備升級暫停開放使用，造成不便敬請見諒。</p>
-                    
-                    <div class="time-box">
-                        <strong>Downtime Period / 設備升級期間：</strong><br>
-                        <span>Sep 2026 - Mar 2027</span>
-                    </div>
-                </div>
-                <div class="custom-modal-footer">
-                    <button class="modal-confirm-btn" onclick="closeModal()">Acknowledged / 我已知悉</button>
-                </div>
-            </div>
-        </div>
-
 
 
         <!-- 第三區塊：主標題 title-->
@@ -187,6 +74,20 @@
                 </div>
                 <!-- 中間欄位 -->
                 <div class="col-12 col-lg-6 main-content"> <!-- 文字靠左(可自行設定)-->
+
+                    <!-- 新增：TPS 05A 升級停機固定公告區塊 -->
+                <div class="alert alert-danger" role="alert" style="background-color: #f8d7da; border-color: #f5c6cb; color: #721c24; border-left: 5px solid #dc3545; border-radius: 5px; padding: 15px; margin-bottom: 25px;">
+                    <h5 style="margin-bottom: 10px; font-weight: bold;">⚠️ TPS 05A Upgrade Downtime Notice</h5>
+                    <p style="margin-bottom: 10px;">
+                        TPS 05A will be temporarily unavailable due to equipment upgrades. We apologize for any inconvenience caused.<br>
+                        TPS 05A 將因設備升級暫停開放使用，造成不便敬請見諒。
+                    </p>
+                    <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 10px; border-radius: 4px; color: #333;">
+                        <strong>Downtime Period / 設備升級期間：</strong><br>
+                        <span style="color: #d9534f; font-weight: bold;">Sep 2026 - Mar 2027</span>
+                    </div>
+                </div>
+
                     <!-- 次標題 title2-->
                     <div class="title2" id="blinfo1">Beamline Description</div>
                     <br>
@@ -382,31 +283,6 @@
         </div>
     
         <script src="script.js"></script>
-
-        <!-- 臨時新增，TPS 05A 停機公告 script -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-            // 獲取今天的日期字串 (格式如: "2026-06-12")
-            const today = new Date().toISOString().split('T')[0];
-            
-            // 檢查瀏覽器是否已有今天的紀錄
-            const hasSeenNotice = localStorage.getItem("tps05a_notice_date");
-
-            if (hasSeenNotice !== today) {
-                // 如果日期不符（代表今天第一次開啟），顯示彈出窗
-                document.getElementById("announcementModal").style.display = "block";
-            }
-            });
-
-            // 關閉彈出窗並記錄今日已讀
-            function closeModal() {
-                document.getElementById("announcementModal").style.display = "none";
-                
-                const today = new Date().toISOString().split('T')[0];
-                // 在本地儲存寫入今天的日期，今天再重新整理網頁就不會再跳出
-                localStorage.setItem("tps05a_notice_date", today);
-            }
-        </script>
 
     </body>
 </html>
